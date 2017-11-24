@@ -1,18 +1,22 @@
-## Get site devices
+Page navigation
 
-# Name
+* [Get worksite devices](#devices)
+* [Get device info](#device)
+* [Create device](#new-device)
+* [Update device](#edit-device)
+* [Delete device](#delete-device)
 
-    Get-IqtDevices
-    
-# Description
+## <a name="devices">Get-IqtDevices</a>
+   
+### Description
 
 Gets page with devices by specified criteria
     
-# Syntax
+### Syntax
 
     Get-IqtDevices [-Connection <Hashtable>] [-SiteId] <String> [[-Filter] <Hashtable>] [[-Skip] <Int32>] [[-Take] <Int32>] [[-Total] <Boolean>] [<CommonParameters>]
     
-# Parameters
+### Parameters
 
 - Connection < Hashtable >
 
@@ -45,28 +49,26 @@ Gets page with devices by specified criteria
     OutBuffer, PipelineVariable и OutVariable. View more in article 
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
-# Example
+### Access security 
+To execute this cmdlet needed site user or higher roles.
+
+### Example
     
     C:\PS>Get-IqtDevices -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-## Get device info
+## <a name="device">Get-IqtDevice</a>
 
-# Name
-
-    Get-IqtDevice
-    
-# Description
+### Description
 
 Gets device by id
     
-# Syntax
+### Syntax
 
     Get-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Id] <String> [<CommonParameters>]
     
-# Parameters
+### Parameters
 
 - Connection < Hashtable >
 
@@ -87,28 +89,26 @@ Gets device by id
     OutBuffer, PipelineVariable и OutVariable. View more in article 
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
-# Example
+### Access security 
+To execute this cmdlet needed site user or higher roles.    
+
+### Example
     
     C:\PS>Get-IqtDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-## Create device
+## <a name="new-device">New-IqtDevice</a>
 
-# Name
-
-    New-IqtDevice
-    
-# Description
+### Description
 
 Creates new device
     
-# Syntax
+### Syntax
 
     New-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Device] <Object> [<CommonParameters>]
     
-# Parameters
+### Parameters
 
 - Connection < Hashtable >
 
@@ -133,7 +133,6 @@ Creates new device
         - deleted: boolean
         - object_id: string
 
-
 - < CommonParameters >
 
     This commandlet supports common parameters: Verbose, Debug,
@@ -141,28 +140,26 @@ Creates new device
     OutBuffer, PipelineVariable и OutVariable. View more in article 
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
-# Example
+### Access security 
+To execute this cmdlet needed site admin or higher roles.
+
+### Example
     
     C:\PS>New-IqtDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Device @{ site_id="9cfaf79bc95b4a9e912314eb3db7a4ba"; model="simulated"; udi="0001"; label="Device01"; active=$true }
 
 ---
 
-## Update device
-
-# Name
-
-    Update-IqtDevice
-    
-# Description
+## <a name="edit-device">Update-IqtDevice</a>
+ 
+### Description
 
 Updates existing device
     
-# Syntax
+### Syntax
 
     Update-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Device] <Object> [<CommonParameters>]
     
-# Parameters
+### Parameters
 
 - Connection < Hashtable >
 
@@ -195,28 +192,26 @@ Updates existing device
     OutBuffer, PipelineVariable и OutVariable. View more in article 
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
-# Example
+### Access security 
+To perform this cmdlet needed site manager or higher roles.
+
+### Example
     
     C:\PS>Update-IqtDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Device @{ site_id="9cfaf79bc95b4a9e912314eb3db7a4ba"; model="simulated"; udi="0001"; label="Device01"; active=$true }
 
 ---
 
-## Delete device
-
-# Name
-
-    Remove-IqtDevice
+## <a name="delete-device">Remove-IqtDevice</a>
     
-# Description
+### Description
 
 Deletes existing device
     
-# Syntax
+### Syntax
 
     Remove-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Id] <String> [<CommonParameters>]
     
-# Parameters
+### Parameters
 
 - Connection < Hashtable >
 
@@ -237,7 +232,9 @@ Deletes existing device
     OutBuffer, PipelineVariable и OutVariable. View more in article 
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
-# Example
+### Access security 
+To perform this cmdlet needed site admin or higher roles.
+
+### Example
     
     C:\PS>Remove-IqtDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
