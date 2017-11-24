@@ -6,6 +6,8 @@ Page navigation
 * [Update device](#edit-device)
 * [Delete device](#delete-device)
 
+---
+
 ## <a name="devices">Get-IqtDevices</a>
    
 ### Description
