@@ -193,7 +193,7 @@ Updates existing device
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
-To perform this cmdlet needed site manager or higher roles.
+To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
@@ -233,7 +233,7 @@ Deletes existing device
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
-To perform this cmdlet needed site admin or higher roles.
+To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
