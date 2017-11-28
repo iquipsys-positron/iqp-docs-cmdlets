@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-## <a name="devices">Get-IqtDevices</a>
+# <a name="devices">Get-IqtDevices</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets page with devices by specified criteria
     
 ### Syntax
 
-    Get-IqtDevices [-Connection <Hashtable>] [-SiteId] <String> [[-Filter] <Hashtable>] [[-Skip] <Int32>] [[-Take] <Int32>] [[-Total] <Boolean>] [<CommonParameters>]
+    Get-IqtDevices [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] << Boolean >>] [<CommonParameters>]
     
 ### Parameters
 
@@ -40,7 +40,7 @@ Gets page with devices by specified criteria
 
     A number of records to return (default: 100)
         
-- Total < Boolean >
+- Total < < Boolean > >
 
     A include total count (default: false)
         
@@ -52,6 +52,7 @@ Gets page with devices by specified criteria
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site user or higher roles.
 
 ### Example
@@ -60,7 +61,7 @@ To execute this cmdlet needed site user or higher roles.
 
 ---
 
-## <a name="device">Get-IqtDevice</a>
+# <a name="device">Get-IqtDevice</a>
 
 ### Description
 
@@ -68,7 +69,7 @@ Gets device by id
     
 ### Syntax
 
-    Get-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Id] <String> [<CommonParameters>]
+    Get-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [<CommonParameters>]
     
 ### Parameters
 
@@ -100,7 +101,7 @@ To execute this cmdlet needed site user or higher roles.
 
 ---
 
-## <a name="new-device">New-IqtDevice</a>
+# <a name="new-device">New-IqtDevice</a>
 
 ### Description
 
@@ -108,7 +109,7 @@ Creates new device
     
 ### Syntax
 
-    New-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Device] <Object> [<CommonParameters>]
+    New-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] <Object> [<CommonParameters>]
     
 ### Parameters
 
@@ -131,8 +132,8 @@ Creates new device
         - udi: string
         - label: string
         - create_time: Date
-        - active: boolean
-        - deleted: boolean
+        - active: < Boolean >
+        - deleted: < Boolean >
         - object_id: string
 
 - < CommonParameters >
@@ -151,7 +152,7 @@ To execute this cmdlet needed site admin or higher roles.
 
 ---
 
-## <a name="edit-device">Update-IqtDevice</a>
+# <a name="edit-device">Update-IqtDevice</a>
  
 ### Description
 
@@ -159,7 +160,7 @@ Updates existing device
     
 ### Syntax
 
-    Update-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Device] <Object> [<CommonParameters>]
+    Update-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] <Object> [<CommonParameters>]
     
 ### Parameters
 
@@ -182,8 +183,8 @@ Updates existing device
         - udi: string
         - label: string
         - create_time: Date
-        - active: boolean
-        - deleted: boolean
+        - active: < Boolean >
+        - deleted: < Boolean >
         - object_id: string
 
 
@@ -203,7 +204,7 @@ To execute this cmdlet needed site manager or higher roles.
 
 ---
 
-## <a name="delete-device">Remove-IqtDevice</a>
+# <a name="delete-device">Remove-IqtDevice</a>
     
 ### Description
 
@@ -211,7 +212,7 @@ Deletes existing device
     
 ### Syntax
 
-    Remove-IqtDevice [-Connection <Hashtable>] [-SiteId] <String> [-Id] <String> [<CommonParameters>]
+    Remove-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [<CommonParameters>]
     
 ### Parameters
 
