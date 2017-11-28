@@ -168,13 +168,14 @@ Creates a new beacon
 - Beacon <Object>
 
     A beacon with the following structure:
-    - id: string
-    - site_id: string
-    - udi: string
-    - label: string
-    - center: any
-    - radius: number
-        
+
+        - id: string
+        - site_id: string
+        - udi: string
+        - label: string
+        - center: any
+        - radius: number
+
 - < CommonParameters >
 
     This commandlet supports common parameters: Verbose, Debug,
@@ -215,12 +216,13 @@ Updates a new beacon
 - Beacon <Object>
 
     A beacon with the following structure:
-    - id: string
-    - site_id: string
-    - udi: string
-    - label: string
-    - center: any
-    - radius: number
+    
+        - id: string
+        - site_id: string
+        - udi: string
+        - label: string
+        - center: any
+        - radius: number
         
 - < CommonParameters >
     
