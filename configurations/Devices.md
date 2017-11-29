@@ -40,7 +40,7 @@ Gets page with devices by specified criteria
 
     A number of records to return (default: 100)
         
-- Total < < Boolean > >
+- Total < Boolean >
 
     A include total count (default: false)
         

@@ -1,6 +1,6 @@
 Page navigation
 
-* [Get worksite sites](#sites)
+* [Get user sites](#sites)
 * [Get site info](#site)
 * [Create site](#new-site)
 * [Update site](#edit-site)
@@ -37,7 +37,7 @@ Gets a page with sites that satisfy specified criteria
 
     A number of records to return (default: 100)
         
-- Total < < Boolean > >
+- Total < Boolean >
 
     A include total count (default: false)
         
@@ -264,7 +264,7 @@ Gets a page with site users by site id
 
     A number of records to return (default: 100)
         
-- Total < < Boolean > >
+- Total < Boolean >
 
     A include total count (default: false)
 

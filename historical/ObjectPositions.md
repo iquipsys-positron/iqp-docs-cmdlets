@@ -1,21 +1,21 @@
 Page navigation
 
-* [Get worksite invitations](#invitations)
-* [Get invitation info](#invitation)
-* [Send invitation](#send-invitation)
-* [Delete invitation](#delete-invitation)
+* [Get worksite object positions](#ObjectPositions)
+* [Add object positions](#new-ObjectPosition)
+* [Add multiple object positions](#new-ObjectPositions)
+* [Delete object positions](#delete-ObjectPositions)
 
 ---
 
-# <a name="invitations">Get-IqtInvitations</a>
+# <a name="ObjectPositions">Get-IqtObjectPositions</a>
    
 ### Description
 
-Gets a page with invitations that satisfy specified criteria
+Gets a page with positions that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtInvitations [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqtObjectPositions [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -56,19 +56,19 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtInvitations -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqtObjectPositions -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="123" } -Take 10
 
 ---
 
-# <a name="invitation">Get-IqtInvitation</a>
+# <a name="new-ObjectPosition">Add-IqtObjectPosition</a>
 
 ### Description
 
-Gets invitation by its unique id
+Adds position to object positions
     
 ### Syntax
 
-    Get-IqtInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Add-IqtObjectPosition [-Connection < Hashtable >] [-SiteId] < String > [-Position] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -80,57 +80,15 @@ Gets invitation by its unique id
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- Id < String >
+- Position < Object >
 
-    A invitation id. Required parameter. Can be retrieved from Get-IqtInvitations
-
-- < CommonParameters >
-
-    This commandlet supports common parameters: Verbose, Debug,
-    ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-    OutBuffer, PipelineVariable и OutVariable. View more in article 
-    about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+    Required parameter. A position with the following structure:
     
-### Access security 
-
-To execute this cmdlet needed site user or higher roles.    
-
-### Example
-    
-    C:\PS>Get-IqtInvitation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
-
----
-
-# <a name="send-invitation">Send-IqtInvitation</a>
-
-### Description
-
-Sends a new invitation
-    
-### Syntax
-
-    Send-IqtInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Invitation] < Object > [< CommonParameters >]
-    
-### Parameters
-
-- Connection < Hashtable >
-
-	A connection object
-        
-- SiteId < String >
-
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
-        
-- Invitation < Object >
-
-    Required parameter. A invitation with the following structure:
-    
-        - id: string
         - site_id: string
-        - site_name: string
-        - invitee_name: string
-        - invitee_email: string
-        - expire_time: Date
+        - object_id: string
+        - time: Date
+        - lat: number
+        - long: number
 
 - < CommonParameters >
 
@@ -141,23 +99,23 @@ Sends a new invitation
     
 ### Access security 
 
-To execute this cmdlet needed site manager or higher roles.
+To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-     C:\PS>Send-IqtInvitation -SiteId 1 -Invitation @{ site_id="1"; site_name="Test site"; invitee_email="test@somewhere.com" 
+    C:\PS>Add-IqtObjectPosition -SiteId 1 -Position @{ site_id="1"; object_id="123"; lat=1; long=1 }
 
 ---
 
-# <a name="delete-invitation">Remove-IqtInvitation</a>
-    
+# <a name="new-ObjectPositions">Add-IqtObjectPositions</a>
+
 ### Description
 
-Removes invitation by its unique id
+Adds multiple object positions
     
 ### Syntax
 
-    Remove-IqtInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Add-IqtObjectPositions [-Connection < Hashtable >] [-SiteId] < String > [-Position] < Object[] > [< CommonParameters >]
     
 ### Parameters
 
@@ -169,9 +127,15 @@ Removes invitation by its unique id
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- Id < String >
+- Position < Object[] >
 
-    A invitation id. Required parameter. Can be retrieved from Get-IqtInvitations
+    Required parameter. An array of positions with the following structure:
+    
+        - site_id: string
+        - object_id: string
+        - time: Date
+        - lat: number
+        - long: number
 
 - < CommonParameters >
 
@@ -182,8 +146,49 @@ Removes invitation by its unique id
     
 ### Access security 
 
-To execute this cmdlet needed site manager or higher roles.
+To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtInvitation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Add-IqtObjectPositions -SiteId 1 -Positions @( @{ site_id="1"; object_id="123"; lat=1; long=1 }, ... )
+
+---
+
+# <a name="delete-ObjectPositions">Remove-IqtObjectPositions</a>
+    
+### Description
+
+Removes positions that match specified filter
+    
+### Syntax
+
+    Remove-IqtObjectPosition [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [< CommonParameters >]
+    
+### Parameters
+
+- Connection < Hashtable >
+
+	A connection object
+        
+- SiteId < String >
+
+    A site id. Required parameter. Can be retrieved from Get-IqtSites
+        
+- Filter < Hashtable >
+
+    A filter with search criteria (default: no filter)
+
+- < CommonParameters >
+
+    This commandlet supports common parameters: Verbose, Debug,
+    ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+    OutBuffer, PipelineVariable и OutVariable. View more in article 
+    about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+### Access security 
+
+To execute this cmdlet needed site admin or higher roles.
+
+### Example
+    
+   C:\PS>Remove-IqtObjectPositions -SiteId 1 -Filter @{ object_id="123" }
