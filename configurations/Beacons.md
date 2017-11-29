@@ -153,7 +153,7 @@ Creates a new beacon
     
 ### Syntax
 
-    New-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] <Object> [< CommonParameters >]
+    New-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -165,7 +165,7 @@ Creates a new beacon
 
     A site id
         
-- Beacon <Object>
+- Beacon < Object >
 
     A beacon with the following structure:
 
@@ -201,7 +201,7 @@ Updates a new beacon
     
 ### Syntax
 
-    Update-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] <Object> [< CommonParameters >]
+    Update-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -213,7 +213,7 @@ Updates a new beacon
 
     A site id
         
-- Beacon <Object>
+- Beacon < Object >
 
     A beacon with the following structure:
     

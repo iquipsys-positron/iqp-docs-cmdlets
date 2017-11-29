@@ -1,22 +1,22 @@
 Page navigation
 
-* [Get worksite control objects](#ControlObjects)
-* [Get control object info](#ControlObject)
-* [Create control object](#new-ControlObject)
-* [Update control object](#edit-ControlObject)
-* [Delete control object](#delete-ControlObject)
+* [Get worksite zones](#zones)
+* [Get zone info](#zone)
+* [Create zone](#new-zone)
+* [Update zone](#edit-zone)
+* [Delete zone](#delete-zone)
 
 ---
 
-# <a name="ControlObjects">Get-IqtControlObjects</a>
+# <a name="zones">Get-IqtZones</a>
    
 ### Description
 
-Gets a page with objects that satisfy specified criteria
+Gets a page with zones that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtControlObjects [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqtZones [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -57,19 +57,19 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtControlObjects -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqtZones -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type="object" } -Take 10
 
 ---
 
-# <a name="ControlObject">Get-IqtControlObject</a>
+# <a name="zone">Get-IqtZone</a>
 
 ### Description
 
-Gets object by its unique id
+Gets zone by its unique id
     
 ### Syntax
 
-    Get-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqtZone [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -83,7 +83,7 @@ Gets object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A zone id. Required parameter. Can be retrieved from Get-IqtZones
 
 - < CommonParameters >
 
@@ -93,23 +93,24 @@ Gets object by its unique id
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site user or higher roles.    
 
 ### Example
     
-    C:\PS>Get-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqtZone -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-ControlObject">New-IqtControlObject</a>
+# <a name="new-zone">New-IqtZone</a>
 
 ### Description
 
-Creates a new object.
+Creates new zone
     
 ### Syntax
 
-    New-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    New-IqtZone [-Connection < Hashtable >] [-SiteId] < String > [-Zone] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -121,21 +122,21 @@ Creates a new object.
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- Object < Object >
+- Zone < Object >
 
-    Required parameter. A object with the following structure:
-
+    Required parameter. A zone with the following structure:
+    
         - id: string
         - site_id: string
-        - category: string
         - type: string
-        - deleted: boolean
         - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
+        - center: any
+        - distance: number
+        - geometry: any
+        - include_object_ids: string[]
+        - include_group_ids: string[]
+        - exclude_object_ids: string[]
+        - exclude_group_ids: string[]
 
 - < CommonParameters >
 
@@ -150,19 +151,19 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>New-IqtZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
 
 ---
 
-# <a name="edit-ControlObject">Update-IqtControlObject</a>
+# <a name="edit-zone">Update-IqtZone</a>
  
 ### Description
 
-Updates existing control object
+Updates existing zone
     
 ### Syntax
 
-    Update-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    Update-IqtZone [-Connection < Hashtable >] [-SiteId] < String > [-Zone] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -174,22 +175,21 @@ Updates existing control object
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- ControlObject < Object >
+- Zone < Object >
 
-    Required parameter. A object with the following structure:
-
+    Required parameter. A zone with the following structure:
+    
         - id: string
         - site_id: string
-        - category: string
         - type: string
-        - deleted: boolean
         - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
-
+        - center: any
+        - distance: number
+        - geometry: any
+        - include_object_ids: string[]
+        - include_group_ids: string[]
+        - exclude_object_ids: string[]
+        - exclude_group_ids: string[]
 
 - < CommonParameters >
 
@@ -199,23 +199,24 @@ Updates existing control object
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>New-IqtZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
 
 ---
 
-# <a name="delete-ControlObject">Remove-IqtControlObject</a>
+# <a name="delete-zone">Remove-IqtZone</a>
     
 ### Description
 
-Removes object by its unique id
+Removes zone by its unique id
     
 ### Syntax
 
-    Remove-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqtZone [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -229,7 +230,7 @@ Removes object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A zone id. Required parameter. Can be retrieved from Get-IqtZones
 
 - < CommonParameters >
 
@@ -239,8 +240,9 @@ Removes object by its unique id
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqtZone -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

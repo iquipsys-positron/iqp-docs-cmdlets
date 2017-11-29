@@ -93,6 +93,7 @@ Gets device by id
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site user or higher roles.    
 
 ### Example
@@ -109,7 +110,7 @@ Creates new device
     
 ### Syntax
 
-    New-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] <Object> [< CommonParameters >]
+    New-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -144,6 +145,7 @@ Creates new device
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site admin or higher roles.
 
 ### Example
@@ -160,7 +162,7 @@ Updates existing device
     
 ### Syntax
 
-    Update-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] <Object> [< CommonParameters >]
+    Update-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -187,7 +189,6 @@ Updates existing device
         - deleted: < Boolean >
         - object_id: string
 
-
 - < CommonParameters >
 
     This commandlet supports common parameters: Verbose, Debug,
@@ -196,6 +197,7 @@ Updates existing device
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site manager or higher roles.
 
 ### Example
@@ -236,6 +238,7 @@ Deletes existing device
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site admin or higher roles.
 
 ### Example

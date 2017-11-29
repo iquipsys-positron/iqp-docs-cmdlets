@@ -1,22 +1,22 @@
 Page navigation
 
-* [Get worksite control objects](#ControlObjects)
-* [Get control object info](#ControlObject)
-* [Create control object](#new-ControlObject)
-* [Update control object](#edit-ControlObject)
-* [Delete control object](#delete-ControlObject)
+* [Get worksite resolutions](#resolutions)
+* [Get resolution info](#resolution)
+* [Create resolution](#new-resolution)
+* [Update resolution](#edit-resolution)
+* [Delete resolution](#delete-resolution)
 
 ---
 
-# <a name="ControlObjects">Get-IqtControlObjects</a>
+# <a name="resolutions">Get-IqtResolutions</a>
    
 ### Description
 
-Gets a page with objects that satisfy specified criteria
+Gets a page with resolutions that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtControlObjects [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqtResolutions [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -57,19 +57,19 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtControlObjects -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqtResolutions -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ resolution="Call supervisor" } -Take 10
 
 ---
 
-# <a name="ControlObject">Get-IqtControlObject</a>
+# <a name="resolution">Get-IqtResolution</a>
 
 ### Description
 
-Gets object by its unique id
+Gets resolution by its unique id
     
 ### Syntax
 
-    Get-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -83,7 +83,7 @@ Gets object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A resolution id. Required parameter. Can be retrieved from Get-IqtResolutions
 
 - < CommonParameters >
 
@@ -93,23 +93,24 @@ Gets object by its unique id
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site user or higher roles.    
 
 ### Example
     
-    C:\PS>Get-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqtResolution -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-ControlObject">New-IqtControlObject</a>
+# <a name="new-resolution">New-IqtResolution</a>
 
 ### Description
 
-Creates a new object.
+Creates new resolution
     
 ### Syntax
 
-    New-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    New-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Resolution] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -121,21 +122,14 @@ Creates a new object.
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- Object < Object >
+- Resolution < Object >
 
-    Required parameter. A object with the following structure:
-
+    Required parameter. A resolution with the following structure:
+    
         - id: string
         - site_id: string
-        - category: string
-        - type: string
-        - deleted: boolean
-        - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
+        - rule_id: string
+        - resolution: string
 
 - < CommonParameters >
 
@@ -150,19 +144,19 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>New-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
 
 ---
 
-# <a name="edit-ControlObject">Update-IqtControlObject</a>
+# <a name="edit-resolution">Update-IqtResolution</a>
  
 ### Description
 
-Updates existing control object
+Updates existing resolution
     
 ### Syntax
 
-    Update-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    Update-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Resolution] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -174,22 +168,14 @@ Updates existing control object
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- ControlObject < Object >
+- Resolution < Object >
 
-    Required parameter. A object with the following structure:
-
+    Required parameter. A resolution with the following structure:
+    
         - id: string
         - site_id: string
-        - category: string
-        - type: string
-        - deleted: boolean
-        - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
-
+        - rule_id: string
+        - resolution: string
 
 - < CommonParameters >
 
@@ -199,23 +185,24 @@ Updates existing control object
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>Update-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
 
 ---
 
-# <a name="delete-ControlObject">Remove-IqtControlObject</a>
+# <a name="delete-resolution">Remove-IqtResolution</a>
     
 ### Description
 
-Removes object by its unique id
+Deletes existing resolution.
     
 ### Syntax
 
-    Remove-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -229,7 +216,7 @@ Removes object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A resolution id. Required parameter. Can be retrieved from Get-IqtResolutions
 
 - < CommonParameters >
 
@@ -239,8 +226,9 @@ Removes object by its unique id
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqtResolution -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

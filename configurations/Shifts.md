@@ -1,22 +1,22 @@
 Page navigation
 
-* [Get worksite control objects](#ControlObjects)
-* [Get control object info](#ControlObject)
-* [Create control object](#new-ControlObject)
-* [Update control object](#edit-ControlObject)
-* [Delete control object](#delete-ControlObject)
+* [Get worksite shifts](#shifts)
+* [Get shift info](#shift)
+* [Create shift](#new-shift)
+* [Update shift](#edit-shift)
+* [Delete shift](#delete-shift)
 
 ---
 
-# <a name="ControlObjects">Get-IqtControlObjects</a>
+# <a name="shifts">Get-IqtShifts</a>
    
 ### Description
 
-Gets a page with objects that satisfy specified criteria
+Gets a page with shifts that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtControlObjects [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqtShifts [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -57,19 +57,19 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtControlObjects -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqtShifts -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-# <a name="ControlObject">Get-IqtControlObject</a>
+# <a name="shift">Get-IqtShift</a>
 
 ### Description
 
-Gets object by its unique id
+Gets shift by its unique id
     
 ### Syntax
 
-    Get-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqtShift [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -83,7 +83,7 @@ Gets object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A shift id. Required parameter. Can be retrieved from Get-IqtShifts
 
 - < CommonParameters >
 
@@ -93,23 +93,24 @@ Gets object by its unique id
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site user or higher roles.    
 
 ### Example
     
-    C:\PS>Get-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqtShift -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-ControlObject">New-IqtControlObject</a>
+# <a name="new-shift">New-IqtShift</a>
 
 ### Description
 
-Creates a new object.
+Creates new shift
     
 ### Syntax
 
-    New-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    New-IqtShift [-Connection < Hashtable >] [-SiteId] < String > [-shift] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -121,21 +122,15 @@ Creates a new object.
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- Object < Object >
+- shift < Object >
 
-    Required parameter. A object with the following structure:
-
+    Required parameter. A shift with the following structure:
+    
         - id: string
         - site_id: string
-        - category: string
-        - type: string
-        - deleted: boolean
         - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
+        - start: number
+        - duration: number
 
 - < CommonParameters >
 
@@ -150,19 +145,19 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>New-IqtShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
 
 ---
 
-# <a name="edit-ControlObject">Update-IqtControlObject</a>
+# <a name="edit-shift">Update-IqtShift</a>
  
 ### Description
 
-Updates existing control object
+Updates existing shift
     
 ### Syntax
 
-    Update-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    Update-IqtShift [-Connection < Hashtable >] [-SiteId] < String > [-shift] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -174,22 +169,15 @@ Updates existing control object
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- ControlObject < Object >
+- shift < Object >
 
-    Required parameter. A object with the following structure:
-
+    Required parameter. A shift with the following structure:
+    
         - id: string
         - site_id: string
-        - category: string
-        - type: string
-        - deleted: boolean
         - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
-
+        - start: number
+        - duration: number
 
 - < CommonParameters >
 
@@ -199,23 +187,24 @@ Updates existing control object
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>Update-IqtShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
 
 ---
 
-# <a name="delete-ControlObject">Remove-IqtControlObject</a>
+# <a name="delete-shift">Remove-IqtShift</a>
     
 ### Description
 
-Removes object by its unique id
+Deletes existing shift
     
 ### Syntax
 
-    Remove-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqtShift [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -229,7 +218,7 @@ Removes object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A shift id. Required parameter. Can be retrieved from Get-IqtShifts
 
 - < CommonParameters >
 
@@ -239,8 +228,9 @@ Removes object by its unique id
     about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
     
 ### Access security 
+
 To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqtShift -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

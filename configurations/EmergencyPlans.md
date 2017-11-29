@@ -110,7 +110,7 @@ Creates a new emergency plan.
     
 ### Syntax
 
-    New-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] <Object> [< CommonParameters >]
+    New-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -161,7 +161,7 @@ Updates an existing emergency plan
     
 ### Syntax
 
-    Update-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] <Object> [< CommonParameters >]
+    Update-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] < Object > [< CommonParameters >]
     
 ### Parameters
 
