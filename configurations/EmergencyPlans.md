@@ -1,23 +1,23 @@
 Page navigation
 
-* [Get worksite control objects](#ControlObjects)
-* [Get control object info](#ControlObject)
-* [Create control object](#new-ControlObject)
-* [Update control object](#edit-ControlObject)
-* [Delete control object](#delete-ControlObject)
+* [Get worksite emergency plans](#EmergencyPlans)
+* [Get emergency plan info](#EmergencyPlan)
+* [Create emergency plan](#new-EmergencyPlan)
+* [Update emergency plan](#edit-EmergencyPlan)
+* [Delete emergency plan](#delete-EmergencyPlan)
 
 ---
 
-# <a name="ControlObjects">Get-IqtControlObjects</a>
+# <a name="EmergencyPlans">Get-IqtEmergencyPlans</a>
    
 ### Description
 
-Gets a page with objects that satisfy specified criteria
+Gets a page with emergency plans that satisfy specified criteria
     
 ### Syntax
 
 
-    Get-IqtControlObjects [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqtEmergencyPlans [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -58,19 +58,19 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtControlObjects -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqtEmergencyPlans -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Take 10
 
 ---
 
-# <a name="ControlObject">Get-IqtControlObject</a>
+# <a name="EmergencyPlan">Get-IqtEmergencyPlan</a>
 
 ### Description
 
-Gets object by its unique id
+Gets emergency plan by its unique id
     
 ### Syntax
 
-    Get-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -84,7 +84,7 @@ Gets object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    An emergency plan id. Required parameter. Can be retrieved from Get-IqtEmergencyPlans
 
 - < CommonParameters >
 
@@ -98,19 +98,19 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqtEmergencyPlan -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-ControlObject">New-IqtControlObject</a>
+# <a name="new-EmergencyPlan">New-IqtEmergencyPlan</a>
 
 ### Description
 
-Creates a new object.
+Creates a new emergency plan.
     
 ### Syntax
 
-    New-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] <Object> [< CommonParameters >]
+    New-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] <Object> [< CommonParameters >]
     
 ### Parameters
 
@@ -122,21 +122,19 @@ Creates a new object.
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- Object < Object >
+- Plan < Object >
 
     Required parameter. A object with the following structure:
 
         - id: string
         - site_id: string
-        - category: string
-        - type: string
-        - deleted: boolean
         - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
+        - steps: EmergencyStepV1[]
+          - index: number
+          - name: string
+          - actions: EmergencyActionV1[]
+            type: string
+            params: any
 
 - < CommonParameters >
 
@@ -151,19 +149,19 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>New-IqtEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
 
 ---
 
-# <a name="edit-ControlObject">Update-IqtControlObject</a>
+# <a name="edit-EmergencyPlan">Update-IqtEmergencyPlan</a>
  
 ### Description
 
-Updates existing control object
+Updates an existing emergency plan
     
 ### Syntax
 
-    Update-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] <Object> [< CommonParameters >]
+    Update-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] <Object> [< CommonParameters >]
     
 ### Parameters
 
@@ -175,21 +173,19 @@ Updates existing control object
 
     A site id. Required parameter. Can be retrieved from Get-IqtSites
         
-- ControlObject < Object >
+- Plan < Object >
 
     Required parameter. A object with the following structure:
 
         - id: string
         - site_id: string
-        - category: string
-        - type: string
-        - deleted: boolean
         - name: string
-        - description: string
-        - phone: string
-        - pin: string
-        - device_id: string
-        - group_ids: string[]
+        - steps: EmergencyStepV1[]
+          - index: number
+          - name: string
+          - actions: EmergencyActionV1[]
+            type: string
+            params: any
 
 
 - < CommonParameters >
@@ -204,19 +200,18 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
-
+    C:\PS>Update-IqtEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
 ---
 
-# <a name="delete-ControlObject">Remove-IqtControlObject</a>
+# <a name="delete-EmergencyPlan">Remove-IqtEmergencyPlan</a>
     
 ### Description
 
-Removes object by its unique id
+Removes emergency plan by id
     
 ### Syntax
 
-    Remove-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqtEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -230,7 +225,7 @@ Removes object by its unique id
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    An emergency plan id. Required parameter. Can be retrieved from Get-IqtEmergencyPlans
 
 - < CommonParameters >
 
@@ -244,4 +239,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqtEmergencyPlan -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
