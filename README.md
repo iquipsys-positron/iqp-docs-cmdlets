@@ -1,5 +1,23 @@
 # Welcome to the iQuipsys Positron Tracker cmdlets documentation.
 
+Using this documentation you can view and use examples of interaction with system by powershell cmdlets.
+
+## Instalation
+
+- Install **tracker-ps** Powershell module and add it to **PSModulePath**. **tracker-ps** is a part of **tracker-ps-ws**, how to install it you can see on [this](https://gitlab.com/tracker-services/tracker-ps-ws) page.
+
+## Usage
+
+To execute almost all request you have to sign in to system. Sign in to system can be performed by cmdlet *Connect-IqtFacade*, this cmdlet is described at [Connections](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Connections.md).
+
+After connecting to facade, if you have proper role, you can execute any cmdlet described on links below. After working with system recomended to use *Disconnect-IqtFacade* to close session.
+
+Example of usage
+
+<img src="https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/images/example.jpg?raw=true" alt="example"> 
+
+## Navigation
+
 * [Beacons](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Beacons.md)
 * [ControlObects](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/ControlObects.md)
 * [Devices](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Devices.md)
