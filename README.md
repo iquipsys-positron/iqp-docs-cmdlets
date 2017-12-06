@@ -4,7 +4,11 @@ Using this documentation you can view and use examples of interaction with syste
 
 ## Instalation
 
-- Install **tracker-ps** Powershell module and add it to **PSModulePath**. **tracker-ps** is a part of **tracker-ps-ws**, how to install it you can see on [this](https://gitlab.com/tracker-services/tracker-ps-ws) page.
+- Download **tracker-ps** from this [this](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/tracker-ps) page.
+
+- Add path to ***tracker-ps*** folder to **PSModulePath** in system variables.
+
+- Import module in powershell using command ```Import-Module tracker-ps```
 
 ## Usage
 
@@ -14,7 +18,15 @@ After connecting to facade, if you have proper role, you can execute any cmdlet 
 
 Example of usage
 
-<img src="https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/images/example.jpg?raw=true" alt="example"> 
+```
+$conn = Connect-IqtFacade -Host tracker.pipservices.net -Port 8080 -Login "user@gmail.com" -Password "password"
+
+$sites = Get-IqtSites
+
+Disconnect-IqtFacade
+```
+
+The script above connects to system and saving all user sites to *$sites* variable. Don't forget to set correct *Login* and *Password* parameners
 
 ## Navigation
 
