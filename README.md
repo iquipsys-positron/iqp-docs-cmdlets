@@ -4,10 +4,10 @@ Using this documentation you can view and use examples of interaction with syste
 
 ## Instalation
 
-- Download **tracker-ps** from this [this](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/tracker-ps) page.
+- Clone or download **iqp-docs-cmdlets** repository and find **iqp-docs-cmdlets/tracker-ps** folder or just  download **tracker-ps** from this [this](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/iquipsys-positron/iqp-docs-cmdlets/tree/master/tracker-ps) link.
 
 
-- Add path to ***tracker-ps*** folder to **PSModulePath** in system variables.
+- Add path to **tracker-ps** folder to **PSModulePath** in system variables.
 
 
 - Import module in powershell using command ```Import-Module tracker-ps```
