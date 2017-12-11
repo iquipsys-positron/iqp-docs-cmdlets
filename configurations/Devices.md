@@ -5,6 +5,7 @@ Page navigation
 * [Create device](#new-device)
 * [Update device](#edit-device)
 * [Delete device](#delete-device)
+* [Ping device](#ping-device)
 
 ---
 
@@ -244,3 +245,44 @@ To execute this cmdlet needed site admin or higher roles.
 ### Example
     
     C:\PS>Remove-IqtDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+
+---
+
+# <a name="ping-device">Ping-IqtDevice</a>
+
+### Description
+
+Pings an existing device
+    
+### Syntax
+
+    Ping-IqtDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    
+### Parameters
+
+- Connection < Hashtable >
+
+	A connection object
+        
+- SiteId < String >
+
+    A site id. Required parameter. Can be retrieved from Get-IqtSites
+        
+- Id < String >
+
+    A device id. Required parameter. Can be retrieved from Get-IqtDevices
+
+- < CommonParameters >
+
+    This commandlet supports common parameters: Verbose, Debug,
+    ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+    OutBuffer, PipelineVariable и OutVariable. View more in article 
+    about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+### Access security 
+
+To execute this cmdlet needed site admin or higher roles.
+
+### Example
+    
+    C:\PS>Ping-IqtDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id e0a31d48021e492c8c7d45b17ac36175
