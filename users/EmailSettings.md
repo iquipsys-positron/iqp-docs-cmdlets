@@ -133,7 +133,7 @@ Verifies user email address using reset code sent by email
     
 ### Syntax
 
-    Request-IqtEmailVerification [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [< CommonParameters >]
+    Submit-IqtEmailVerification [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -162,4 +162,4 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Request-IqtEmailVerification -Login test@somewhere.com -Code 1245
+    C:\PS>Submit-IqtEmailVerification -Login test@somewhere.com -Code 1245
