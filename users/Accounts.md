@@ -103,7 +103,7 @@ Gets the current user account
     
 ### Syntax
 
-    Get-IqtAccounts [-Connection < Hashtable >] [< CommonParameters >]
+    Get-IqtCurrentAccount [-Connection < Hashtable >] [< CommonParameters >]
     
 ### Parameters
 
