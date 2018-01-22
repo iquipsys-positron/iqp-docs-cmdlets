@@ -7,7 +7,7 @@ Page navigation
 
 ---
 
-# <a name="stat-groups">Get-IqtStatGroups</a>
+# <a name="stat-groups">Get-IqpStatGroups</a>
    
 ### Description
 
@@ -15,7 +15,7 @@ Get groups from statistics
     
 ### Syntax
 
-    Get-IqtStatGroups [-Connection < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [< CommonParameters >]
+    Get-IqpStatGroups [-Connection < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [< CommonParameters >]
     
 ### Parameters
 
@@ -44,11 +44,11 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Get-IqtStatGroups
+    C:\PS>Get-IqpStatGroups
 
 ---
 
-# <a name="stat-counters">Get-IqtStatCounters</a>
+# <a name="stat-counters">Get-IqpStatCounters</a>
    
 ### Description
 
@@ -56,7 +56,7 @@ Gets a page of counters from statistics that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtStatCounters [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [< CommonParameters >]
+    Get-IqpStatCounters [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [< CommonParameters >]
     
 ### Parameters
 
@@ -89,11 +89,11 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Get-IqtStatCounters
+    C:\PS>Get-IqpStatCounters
 
 ---
 
-# <a name="read-statistics">Read-IqtStatCounter</a>
+# <a name="read-statistics">Read-IqpStatCounter</a>
    
 ### Description
 
@@ -101,7 +101,7 @@ Gets value set for a counter or group of counterts at specified time horizon fro
     
 ### Syntax
 
-    Read-IqtStatCounter [-Connection < Hashtable >] [-Group] < String > [[-Counter] < String >] [[-Type] < Int32 >] [[-From] < Object >] [[-To] < Object >] [< CommonParameters >]
+    Read-IqpStatCounter [-Connection < Hashtable >] [-Group] < String > [[-Counter] < String >] [[-Type] < Int32 >] [[-From] < Object >] [[-To] < Object >] [< CommonParameters >]
     
 ### Parameters
 
@@ -142,11 +142,11 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Read-IqtStatCounter -Group 9cfaf79bc95b4a9e912314eb3db7a4ba -Counter params.all.distance -Type "Hour" -From ([DateTime]::UtcNow.AddDays(-7)) -To ([DateTime]::UtcNow)
+    C:\PS>Read-IqpStatCounter -Group 9cfaf79bc95b4a9e912314eb3db7a4ba -Counter params.all.distance -Type "Hour" -From ([DateTime]::UtcNow.AddDays(-7)) -To ([DateTime]::UtcNow)
 
 ---
 
-# <a name="add-statistics">Add-IqtStatCounter</a>
+# <a name="add-statistics">Add-IqpStatCounter</a>
    
 ### Description
 
@@ -154,7 +154,7 @@ Increments statistics counter by value, updates totals at all different time hor
     
 ### Syntax
 
-    Read-IqtStatCounter [-Connection < Hashtable >] [-Group] < String > [[-Counter] < String >] [[-Time] < DateTime >] [[-Timezone] < String >] [[-Value] < Int64 >] [< CommonParameters >]
+    Read-IqpStatCounter [-Connection < Hashtable >] [-Group] < String > [[-Counter] < String >] [[-Time] < DateTime >] [[-Timezone] < String >] [[-Value] < Int64 >] [< CommonParameters >]
     
 ### Parameters
 
@@ -195,4 +195,4 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Add-IqtStatCounter -Group 9cfaf79bc95b4a9e912314eb3db7a4ba -Counter params.all.distance -Value 123
+    C:\PS>Add-IqpStatCounter -Group 9cfaf79bc95b4a9e912314eb3db7a4ba -Counter params.all.distance -Value 123

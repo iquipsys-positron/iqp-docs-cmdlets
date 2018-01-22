@@ -5,15 +5,15 @@ Page navigation
 
 ---
 
-# <a name="connect-facade">Connect-IqtFacade</a>
+# <a name="connect-facade">Connect-IqpFacade</a>
    
 ### Description
 
-Open-IqtConnection opens a new connection with client facade
+Open-IqpConnection opens a new connection with client facade
     
 ### Syntax
 
-    Connect-IqtFacade [[-Name] < String >] [[-Protocol] < String >] [-Host] < String > [[-Port] <Int32>] [-Login] < String > [-Password] < String > [< CommonParameters >]
+    Connect-IqpFacade [[-Name] < String >] [[-Protocol] < String >] [-Host] < String > [[-Port] <Int32>] [-Login] < String > [-Password] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -54,19 +54,19 @@ Anybody can execute this cmdlet
 
 ### Example
     
-    C:\PS>$test = Connect-IqtFacade -Host "172.16.141.175" -Post 28800 -Login "test1@somewhere.com" -Password "password123"
+    C:\PS>$test = Connect-IqpFacade -Host "172.16.141.175" -Post 28800 -Login "test1@somewhere.com" -Password "password123"
 
 ---
 
-# <a name="disconnect-facade">Disconnect-IqtFacade</a>
+# <a name="disconnect-facade">Disconnect-IqpFacade</a>
    
 ### Description
 
-Disconnect-IqtFacade closes previously opened user session and disconnects client facade
+Disconnect-IqpFacade closes previously opened user session and disconnects client facade
     
 ### Syntax
 
-    Disconnect-IqtFacade [[-Connection] < Hashtable >] [[-Name] < String >] [< CommonParameters >]
+    Disconnect-IqpFacade [[-Connection] < Hashtable >] [[-Name] < String >] [< CommonParameters >]
     
 ### Parameters
 
@@ -91,4 +91,4 @@ Any signed user can execute this cmdlet
 
 ### Example
     
-    C:\PS>Disconnect-IqtFacade
+    C:\PS>Disconnect-IqpFacade

@@ -7,7 +7,7 @@ Page navigation
 
 ---
 
-# <a name="smsSettings">Get-IqtSmsSettings</a>
+# <a name="smsSettings">Get-IqpSmsSettings</a>
    
 ### Description
 
@@ -15,7 +15,7 @@ Gets all users sms settings by its id
     
 ### Syntax
 
-    Get-IqtSmsSettings [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Get-IqpSmsSettings [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -25,7 +25,7 @@ Gets all users sms settings by its id
 
 - Id < String >
 
-    A unique user id. Can be retrieved from Get-IqtAccounts
+    A unique user id. Can be retrieved from Get-IqpAccounts
         
 - < CommonParameters >
 
@@ -40,11 +40,11 @@ To execute this cmdlet needed system administrator role or use own user id.
 
 ### Example
     
-    C:\PS>Get-IqtSmsSettings -Id 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqpSmsSettings -Id 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-# <a name="set-smsSettings">Set-IqtSmsSettings</a>
+# <a name="set-smsSettings">Set-IqpSmsSettings</a>
    
 ### Description
 
@@ -52,7 +52,7 @@ Sets all users sms settings defined by its id
     
 ### Syntax
 
-    Set-IqtSmsSettings [-Connection < Hashtable >] [-Settings] < Object > [< CommonParameters >]
+    Set-IqpSmsSettings [-Connection < Hashtable >] [-Settings] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -84,11 +84,11 @@ To execute this cmdlet needed system administrator role or use own user id.
 
 ### Example
     
-    C:\PS>Set-IqtSmsSettings -Settings @{ id="123"; name="Test user"; phone="+79102340238"; language="en" }
+    C:\PS>Set-IqpSmsSettings -Settings @{ id="123"; name="Test user"; phone="+79102340238"; language="en" }
 
 ---
 
-# <a name="request-verification">Request-IqtSmsVerification</a>
+# <a name="request-verification">Request-IqpSmsVerification</a>
    
 ### Description
 
@@ -96,7 +96,7 @@ Requests a sms verification message by user login
     
 ### Syntax
 
-    Request-IqtSmsVerification [-Connection < Hashtable >] [-Login] < String > [< CommonParameters >]
+    Request-IqpSmsVerification [-Connection < Hashtable >] [-Login] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -121,11 +121,11 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Request-IqtSmsVerification -Login test@somewhere.com
+    C:\PS>Request-IqpSmsVerification -Login test@somewhere.com
 
 ---
 
-# <a name="submit-verification">Submit-IqtPhoneVerification</a>
+# <a name="submit-verification">Submit-IqpPhoneVerification</a>
    
 ### Description
 
@@ -133,7 +133,7 @@ Verifies user phone number using reset code sent via sms
     
 ### Syntax
 
-    Request-IqtPhoneVerification [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [< CommonParameters >]
+    Request-IqpPhoneVerification [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -162,4 +162,4 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Request-IqtPhoneVerification -Login test@somewhere.com -Code 1245
+    C:\PS>Request-IqpPhoneVerification -Login test@somewhere.com -Code 1245

@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Send-IqtSms
+function Send-IqpSms
 {
 <#
 .SYNOPSIS
@@ -34,7 +34,7 @@ Optional recipient identified who is a system user
 
 .EXAMPLE
 
-Send-IqtSms -Message @{ to="+79102342938"; text="This is a test sms" }
+Send-IqpSms -Message @{ to="+79102342938"; text="This is a test sms" }
 
 #>
     [CmdletBinding()]

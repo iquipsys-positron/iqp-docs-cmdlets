@@ -1,12 +1,12 @@
 Page navigation
 
-* [Set user password](#get-roles)
-* [Request changing password](#request-password)
-* [Change user password](#reset-password)
+* [Set account roles](#get-roles)
+* [Grant roles to account](#grant-roles)
+* [Revoke roles from account](#revoke-roles)
 
 ---
 
-# <a name="get-roles">Get-IqtRoles</a>
+# <a name="get-roles">Get-IqpRoles</a>
    
 ### Description
 
@@ -14,7 +14,7 @@ Gets all assigned roles to a user by its id
     
 ### Syntax
 
-    Get-IqtRoles [-Connection < Hashtable >]  [-Id] < String > [< CommonParameters >]
+    Get-IqpRoles [-Connection < Hashtable >]  [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -24,7 +24,7 @@ Gets all assigned roles to a user by its id
 
 - Id < String >
     
-    A user account id. Can be retrieved from Get-IqtAccounts.
+    A user account id. Can be retrieved from Get-IqpAccounts.
         
 - < CommonParameters >
 
@@ -39,11 +39,11 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Set-IqtPassword -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Set-IqpPassword -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="grant-roles">Grant-IqtRoles</a>
+# <a name="grant-roles">Grant-IqpRoles</a>
    
 ### Description
 
@@ -51,7 +51,7 @@ Grants roles to a user
     
 ### Syntax
 
-    Get-IqtRoles [-Connection < Hashtable >]  [-Id] < String > [-Roles] < String[] > [< CommonParameters >]
+    Get-IqpRoles [-Connection < Hashtable >]  [-Id] < String > [-Roles] < String[] > [< CommonParameters >]
     
 ### Parameters
 
@@ -61,7 +61,7 @@ Grants roles to a user
 
 - Id < String >
     
-    A user account id. Can be retrieved from Get-IqtAccounts.
+    A user account id. Can be retrieved from Get-IqpAccounts.
 
 - Roles <String[]>
 
@@ -80,11 +80,11 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Grant-IqtRoles -Id 123 -Roles admin
+    C:\PS>Grant-IqpRoles -Id 123 -Roles admin
 
 ---
 
-# <a name="revoke-roles">Revoke-IqtRoles</a>
+# <a name="revoke-roles">Revoke-IqpRoles</a>
    
 ### Description
 
@@ -92,7 +92,7 @@ Revokes roles from a user
     
 ### Syntax
 
-    Revoke-IqtRoles [-Connection < Hashtable >]  [-Id] < String > [-Roles] < String[] > [< CommonParameters >]
+    Revoke-IqpRoles [-Connection < Hashtable >]  [-Id] < String > [-Roles] < String[] > [< CommonParameters >]
     
 ### Parameters
 
@@ -102,7 +102,7 @@ Revokes roles from a user
 
 - Id < String >
     
-    A user account id. Can be retrieved from Get-IqtAccounts.
+    A user account id. Can be retrieved from Get-IqpAccounts.
 
 - Roles <String[]>
 
@@ -121,4 +121,4 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Revoke-IqtRoles -Id 123 -Roles admin
+    C:\PS>Revoke-IqpRoles -Id 123 -Roles admin

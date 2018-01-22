@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Set-IqtPassword
+function Set-IqpPassword
 {
 <#
 .SYNOPSIS
@@ -31,7 +31,7 @@ A new password
 
 .EXAMPLE
 
-Set-IqtPassword -Id 123
+Set-IqpPassword -Id 123
 
 #>
     [CmdletBinding()]
@@ -53,7 +53,7 @@ Set-IqtPassword -Id 123
 }
 
 
-function Request-IqtPassword
+function Request-IqpPassword
 {
 <#
 .SYNOPSIS
@@ -74,7 +74,7 @@ User login
 
 .EXAMPLE
 
-Request-IqtPassword -Login test@somewhere.com
+Request-IqpPassword -Login test@somewhere.com
 
 #>
     [CmdletBinding()]
@@ -94,7 +94,7 @@ Request-IqtPassword -Login test@somewhere.com
 }
 
 
-function Reset-IqtPassword
+function Reset-IqpPassword
 {
 <#
 .SYNOPSIS
@@ -123,7 +123,7 @@ A new password
 
 .EXAMPLE
 
-Reset-IqtPassword -Login test@somewhere.com -Code 1245 -Password pass123
+Reset-IqpPassword -Login test@somewhere.com -Code 1245 -Password pass123
 
 #>
     [CmdletBinding()]

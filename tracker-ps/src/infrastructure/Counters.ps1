@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Read-IqtCounters
+function Read-IqpCounters
 {
 <#
 .SYNOPSIS
@@ -43,7 +43,7 @@ Switch to read performance counters as text
 
 .EXAMPLE
 
-Read-IqtCounters -Filter @{ search="Invoice" } -Take 10 -AsText
+Read-IqpCounters -Filter @{ search="Invoice" } -Take 10 -AsText
 
 #>
     [CmdletBinding()]
@@ -75,7 +75,7 @@ Read-IqtCounters -Filter @{ search="Invoice" } -Take 10 -AsText
 }
 
 
-function Write-IqtCounter
+function Write-IqpCounter
 {
 <#
 .SYNOPSIS
@@ -104,7 +104,7 @@ A counter object with the following structure
 
 .EXAMPLE
 
-Write-IqtCount -Counter @{ name="test.total_calls"; type=4; count=1 }
+Write-IqpCount -Counter @{ name="test.total_calls"; type=4; count=1 }
 
 #>
     [CmdletBinding()]
@@ -124,7 +124,7 @@ Write-IqtCount -Counter @{ name="test.total_calls"; type=4; count=1 }
 }
 
 
-function Clear-IqtCounters
+function Clear-IqpCounters
 {
 <#
 .SYNOPSIS
@@ -141,7 +141,7 @@ A connection object
 
 .EXAMPLE
 
-Clear-IqtCounters
+Clear-IqpCounters
 
 #>
     [CmdletBinding()]

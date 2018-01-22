@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtZones
+function Get-IqpZones
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtZones -SiteId 1 -Filter @{ type="object" } -Take 10
+Get-IqpZones -SiteId 1 -Filter @{ type="object" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtZones -SiteId 1 -Filter @{ type="object" } -Take 10
 }
 
 
-function Get-IqtZone
+function Get-IqpZone
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A zone id
 
 .EXAMPLE
 
-Get-IqtZone -SiteId 1 -Id 123
+Get-IqpZone -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtZone -SiteId 1 -Id 123
 }
 
 
-function New-IqtZone
+function New-IqpZone
 {
 <#
 .SYNOPSIS
@@ -170,7 +170,7 @@ A zone with the following structure:
 
 .EXAMPLE
 
-New-IqtZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
+New-IqpZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
 
 #>
     [CmdletBinding()]
@@ -196,7 +196,7 @@ New-IqtZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; cente
 }
 
 
-function Update-IqtZone
+function Update-IqpZone
 {
 <#
 .SYNOPSIS
@@ -232,7 +232,7 @@ A zone with the following structure:
 
 .EXAMPLE
 
-Update-IqtZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
+Update-IqpZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
 
 #>
     [CmdletBinding()]
@@ -258,7 +258,7 @@ Update-IqtZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; ce
 }
 
 
-function Remove-IqtZone
+function Remove-IqpZone
 {
 <#
 .SYNOPSIS
@@ -283,7 +283,7 @@ A zone id
 
 .EXAMPLE
 
-Remove-IqtZone -SiteId 1 -Id 123
+Remove-IqpZone -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="rules">Get-IqtRules</a>
+# <a name="rules">Get-IqpRules</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with rules that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtRules [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpRules [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with rules that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtRules -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type="object" } -Take 10
+    C:\PS>Get-IqpRules -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type="object" } -Take 10
 
 ---
 
-# <a name="rule">Get-IqtRule</a>
+# <a name="rule">Get-IqpRule</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets rule by its unique id
     
 ### Syntax
 
-    Get-IqtRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqpRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets rule by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A rule id. Required parameter. Can be retrieved from Get-IqtRules
+    A rule id. Required parameter. Can be retrieved from Get-IqpRules
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqpRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-rule">New-IqtRule</a>
+# <a name="new-rule">New-IqpRule</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new rule
     
 ### Syntax
 
-    New-IqtRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
+    New-IqpRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new rule
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Rule < Object >
 
@@ -158,11 +158,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
+    C:\PS>New-IqpRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
 
 ---
 
-# <a name="edit-rule">Update-IqtRule</a>
+# <a name="edit-rule">Update-IqpRule</a>
  
 ### Description
 
@@ -170,7 +170,7 @@ Updates existing rule
     
 ### Syntax
 
-    Update-IqtRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
+    Update-IqpRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -180,7 +180,7 @@ Updates existing rule
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Rule < Object >
 
@@ -218,11 +218,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
+    C:\PS>Update-IqpRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
 
 ---
 
-# <a name="delete-rule">Remove-IqtRule</a>
+# <a name="delete-rule">Remove-IqpRule</a>
     
 ### Description
 
@@ -230,7 +230,7 @@ Deletes existing rule
     
 ### Syntax
 
-    Remove-IqtRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqpRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -240,11 +240,11 @@ Deletes existing rule
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A rule id. Required parameter. Can be retrieved from Get-IqtRules
+    A rule id. Required parameter. Can be retrieved from Get-IqpRules
 
 - < CommonParameters >
 
@@ -259,4 +259,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqpRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

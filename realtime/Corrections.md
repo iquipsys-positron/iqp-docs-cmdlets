@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="corrections">Get-IqtCorrections</a>
+# <a name="corrections">Get-IqpCorrections</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with corrections that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtCorrections [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpCorrections [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with corrections that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtCorrections -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="85e52f3abf2e4091b489dc4f01df2df2" } -Take 10
+    C:\PS>Get-IqpCorrections -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="85e52f3abf2e4091b489dc4f01df2df2" } -Take 10
 
 ---
 
-# <a name="correction">Get-IqtCorrection</a>
+# <a name="correction">Get-IqpCorrection</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets correction by its unique id
     
 ### Syntax
 
-    Get-IqtCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqpCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets correction by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A correction id. Required parameter. Can be retrieved from Get-IqtCorrections
+    A correction id. Required parameter. Can be retrieved from Get-IqpCorrections
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtCorrection -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqpCorrection -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-correction">New-IqtCorrection</a>
+# <a name="new-correction">New-IqpCorrection</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new correction
     
 ### Syntax
 
-    New-IqtCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Correction] < Object > [< CommonParameters >]
+    New-IqpCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Correction] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new correction
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Correction < Object >
 
@@ -151,11 +151,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
+    C:\PS>New-IqpCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
 
 ---
 
-# <a name="edit-correction">Update-IqtCorrection</a>
+# <a name="edit-correction">Update-IqpCorrection</a>
  
 ### Description
 
@@ -163,7 +163,7 @@ Updates existing correction
     
 ### Syntax
 
-    Update-IqtCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Correction] < Object > [< CommonParameters >]
+    Update-IqpCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Correction] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -173,7 +173,7 @@ Updates existing correction
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Correction < Object >
 
@@ -204,11 +204,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
+    C:\PS>Update-IqpCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
 
 ---
 
-# <a name="delete-correction">Remove-IqtCorrection</a>
+# <a name="delete-correction">Remove-IqpCorrection</a>
     
 ### Description
 
@@ -216,7 +216,7 @@ Deletes existing correction
     
 ### Syntax
 
-    Remove-IqtCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqpCorrection [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -226,11 +226,11 @@ Deletes existing correction
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A correction id. Required parameter. Can be retrieved from Get-IqtCorrections
+    A correction id. Required parameter. Can be retrieved from Get-IqpCorrections
 
 - < CommonParameters >
 
@@ -245,4 +245,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtCorrection -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqpCorrection -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

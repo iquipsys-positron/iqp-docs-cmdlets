@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Read-IqtActivities
+function Read-IqpActivities
 {
 <#
 .SYNOPSIS
@@ -39,7 +39,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtActivities -Filter @{ type="signin" }
+Get-IqpActivities -Filter @{ type="signin" }
 
 #>
     [CmdletBinding()]
@@ -63,7 +63,7 @@ Get-IqtActivities -Filter @{ type="signin" }
 }
 
 
-function Write-IqtActivity
+function Write-IqpActivity
 {
 <#
 .SYNOPSIS
@@ -104,7 +104,7 @@ An event to be written:
 
 .EXAMPLE
 
-Write-IqtActivity -Activity @{ type="signin"; time=@(Get-Date); party=@{ id="1"; name="Test user" } }
+Write-IqpActivity -Activity @{ type="signin"; time=@(Get-Date); party=@{ id="1"; name="Test user" } }
 
 #>
     [CmdletBinding()]

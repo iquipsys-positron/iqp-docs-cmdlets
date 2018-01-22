@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtTips
+function Get-IqpTips
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtTips -Filter @{ tags="goals,success" } -Take 10
+Get-IqpTips -Filter @{ tags="goals,success" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -66,7 +66,7 @@ Get-IqtTips -Filter @{ tags="goals,success" } -Take 10
 }
 
 
-function Get-IqtTip
+function Get-IqpTip
 {
 <#
 .SYNOPSIS
@@ -87,7 +87,7 @@ A tip id
 
 .EXAMPLE
 
-Get-IqtTip -Id 123
+Get-IqpTip -Id 123
 
 #>
     [CmdletBinding()]
@@ -107,7 +107,7 @@ Get-IqtTip -Id 123
 }
 
 
-function Get-IqtRandomTip
+function Get-IqpRandomTip
 {
 <#
 .SYNOPSIS
@@ -136,7 +136,7 @@ A filter with search criteria (default: no filter)
 
 .EXAMPLE
 
-Get-IqtRandomTip
+Get-IqpRandomTip
 
 #>
     [CmdletBinding()]
@@ -156,7 +156,7 @@ Get-IqtRandomTip
 }
 
 
-function New-IqtTip
+function New-IqpTip
 {
 <#
 .SYNOPSIS
@@ -193,7 +193,7 @@ A tip with the following structure:
 
 .EXAMPLE
 
-New-IqtTip -Tip @{ topics=@("myapp", "useful"); title=@{ en="Do you know how to?" }; content=@{ en="Just press the button..." }; status="completed" }
+New-IqpTip -Tip @{ topics=@("myapp", "useful"); title=@{ en="Do you know how to?" }; content=@{ en="Just press the button..." }; status="completed" }
 
 #>
     [CmdletBinding()]
@@ -213,7 +213,7 @@ New-IqtTip -Tip @{ topics=@("myapp", "useful"); title=@{ en="Do you know how to?
 }
 
 
-function Update-IqtTip
+function Update-IqpTip
 {
 <#
 .SYNOPSIS
@@ -250,7 +250,7 @@ A tip with the following structure:
 
 .EXAMPLE
 
-Update-IqtTip -Tip @{ id="123"; topics=@("myapp", "useful"); title=@{ en="Do you know how to?" }; content=@{ en="Just press the button..." }; status="completed" }
+Update-IqpTip -Tip @{ id="123"; topics=@("myapp", "useful"); title=@{ en="Do you know how to?" }; content=@{ en="Just press the button..." }; status="completed" }
 
 #>
     [CmdletBinding()]
@@ -270,7 +270,7 @@ Update-IqtTip -Tip @{ id="123"; topics=@("myapp", "useful"); title=@{ en="Do you
 }
 
 
-function Remove-IqtTip
+function Remove-IqpTip
 {
 <#
 .SYNOPSIS
@@ -299,7 +299,7 @@ A tip id
 
 .EXAMPLE
 
-Remove-IqtTip -Id 123
+Remove-IqpTip -Id 123
 
 #>
     [CmdletBinding()]

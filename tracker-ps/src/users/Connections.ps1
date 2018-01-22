@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Connect-IqtFacade
+function Connect-IqpFacade
 {
 <#
 .SYNOPSIS
@@ -16,7 +16,7 @@ Opens a new connection with client facade
 
 .DESCRIPTION
 
-Open-IqtConnection opens a new connection with client facade
+Open-IqpConnection opens a new connection with client facade
 
 .PARAMETER Name
 
@@ -44,7 +44,7 @@ User password
 
 .EXAMPLE
 
-$test = Connect-IqtFacade -Host "172.16.141.175" -Post 28800 -Login "test1@somewhere.com" -Password "password123"
+$test = Connect-IqpFacade -Host "172.16.141.175" -Post 28800 -Login "test1@somewhere.com" -Password "password123"
 
 #>
     [CmdletBinding()]
@@ -67,7 +67,7 @@ $test = Connect-IqtFacade -Host "172.16.141.175" -Post 28800 -Login "test1@somew
     process 
     {
         $connection = Open-PipConnection -Protocol $Protocol -Host $Host -Port $Port
-        $session = Open-IqtSession -Connection $connection -Login $Login -Password $Password
+        $session = Open-IqpSession -Connection $connection -Login $Login -Password $Password
         $connection.Session = $session
         Write-Output $connection
     }
@@ -75,7 +75,7 @@ $test = Connect-IqtFacade -Host "172.16.141.175" -Post 28800 -Login "test1@somew
 }
 
 
-function Disconnect-IqtFacade
+function Disconnect-IqpFacade
 {
 <#
 .SYNOPSIS
@@ -84,7 +84,7 @@ Closes previously opened user session and disconnects from client facade
 
 .DESCRIPTION
 
-Disconnect-IqtFacade closes previously opened user session and disconnects client facade
+Disconnect-IqpFacade closes previously opened user session and disconnects client facade
 
 .PARAMETER Connection
 
@@ -96,7 +96,7 @@ A name to refer to the client facade
 
 .EXAMPLE
 
-Disconnect-IqtFacade
+Disconnect-IqpFacade
 
 #>
     [CmdletBinding()]
@@ -110,7 +110,7 @@ Disconnect-IqtFacade
     begin {}
     process 
     {
-        $null = Close-IqtSession -Connection $Connection
+        $null = Close-IqpSession -Connection $Connection
         $null = Close-PipConnection -Connection $Connection
     }
     end {}

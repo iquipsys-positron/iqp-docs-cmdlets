@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtShifts
+function Get-IqpShifts
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtShifts -SiteId 1 -Take 10
+Get-IqpShifts -SiteId 1 -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtShifts -SiteId 1 -Take 10
 }
 
 
-function Get-IqtShift
+function Get-IqpShift
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A shift id
 
 .EXAMPLE
 
-Get-IqtShift -SiteId 1 -Id 123
+Get-IqpShift -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtShift -SiteId 1 -Id 123
 }
 
 
-function New-IqtShift
+function New-IqpShift
 {
 <#
 .SYNOPSIS
@@ -164,7 +164,7 @@ A shift with the following structure:
 
 .EXAMPLE
 
-New-IqtShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
+New-IqpShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
 
 #>
     [CmdletBinding()]
@@ -190,7 +190,7 @@ New-IqtShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; durat
 }
 
 
-function Update-IqtShift
+function Update-IqpShift
 {
 <#
 .SYNOPSIS
@@ -220,7 +220,7 @@ A shift with the following structure:
 
 .EXAMPLE
 
-Update-IqtShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
+Update-IqpShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
 
 #>
     [CmdletBinding()]
@@ -246,7 +246,7 @@ Update-IqtShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; du
 }
 
 
-function Remove-IqtShift
+function Remove-IqpShift
 {
 <#
 .SYNOPSIS
@@ -271,7 +271,7 @@ A shift id
 
 .EXAMPLE
 
-Remove-IqtShift -SiteId 1 -Id 123
+Remove-IqpShift -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

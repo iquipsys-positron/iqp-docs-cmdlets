@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="signup">Register-IqtUser</a>
+# <a name="signup">Register-IqpUser</a>
 
 ### Description
 
@@ -16,7 +16,7 @@ Performs signup and opens a new session
     
 ### Syntax
 
-     Register-IqtUser [-Connection < Hashtable >] [-User] < Object > [< CommonParameters >]
+     Register-IqpUser [-Connection < Hashtable >] [-User] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -51,19 +51,19 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Register-IqtUser -User @{ name="Test User"; login="test"; email="test@somewhere.com"; password="test123" }
+    C:\PS>Register-IqpUser -User @{ name="Test User"; login="test"; email="test@somewhere.com"; password="test123" }
 
 ---
 
-# <a name="signin">Open-IqtSession</a>
+# <a name="signin">Open-IqpSession</a>
 
 ### Description
 
-Open-IqtSession opens connection and starts a new user session with client facade
+Open-IqpSession opens connection and starts a new user session with client facade
     
 ### Syntax
 
-     Open-IqtSession [-Connection < Hashtable >] [-Login] < String > [-Password] < String > [< CommonParameters >]
+     Open-IqpSession [-Connection < Hashtable >] [-Login] < String > [-Password] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -92,11 +92,11 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>$conn = Open-IqtSession -Login "test1@somewhere.com" -Password "mypassword"
+    C:\PS>$conn = Open-IqpSession -Login "test1@somewhere.com" -Password "mypassword"
 
 ---
 
-# <a name="signout">Close-IqtSession</a>
+# <a name="signout">Close-IqpSession</a>
 
 ### Description
 
@@ -104,7 +104,7 @@ Closes previously opened user session with client facade
     
 ### Syntax
 
-     Close-IqtSession [-Connection < Hashtable >] [< CommonParameters >]
+     Close-IqpSession [-Connection < Hashtable >] [< CommonParameters >]
     
 ### Parameters
 
@@ -125,11 +125,11 @@ Any signed user can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Close-IqtSession
+    C:\PS>Close-IqpSession
 
 ---
 
-# <a name="sessions">Get-IqtSessions</a>
+# <a name="sessions">Get-IqpSessions</a>
    
 ### Description
 
@@ -137,7 +137,7 @@ Gets a page with sessions that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtSessions [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpSessions [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -174,11 +174,11 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Get-IqtSessions -Take 10
+    C:\PS>Get-IqpSessions -Take 10
 
 ---
 
-# <a name="current-session">Get-IqtCurrentSession</a>
+# <a name="current-session">Get-IqpCurrentSession</a>
    
 ### Description
 
@@ -186,7 +186,7 @@ Gets the current session
     
 ### Syntax
 
-    Get-IqtCurrentSession [-Connection < Hashtable >] [< CommonParameters >]
+    Get-IqpCurrentSession [-Connection < Hashtable >] [< CommonParameters >]
     
 ### Parameters
 
@@ -207,4 +207,4 @@ Any signed user can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Get-IqtCurrentSession
+    C:\PS>Get-IqpCurrentSession

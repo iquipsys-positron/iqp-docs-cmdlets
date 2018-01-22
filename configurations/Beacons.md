@@ -9,7 +9,7 @@ Page navigation
 
 ---
 
-# <a name="beacons">Get-IqtBeacons</a>
+# <a name="beacons">Get-IqpBeacons</a>
     
 ### Description
 
@@ -17,7 +17,7 @@ Gets page with beacons by specified criteria
     
 ### Syntax
 
-    Get-IqtBeacons [-Connection< Hashtable >] [-SiteId] < String > [[-Filter]< Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpBeacons [-Connection< Hashtable >] [-SiteId] < String > [[-Filter]< Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
        
 ### Parameters
 
@@ -58,11 +58,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtBeacons -SiteId 1 -Take 10
+    C:\PS>Get-IqpBeacons -SiteId 1 -Take 10
     
 ---
 
-# <a name="beacon">Get-IqtBeacon</a>
+# <a name="beacon">Get-IqpBeacon</a>
     
 ### Description
 
@@ -70,7 +70,7 @@ Gets beacon by id
     
 ### Syntax
 
-    Get-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqpBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -99,11 +99,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtBeacon -SiteId 1 -Id 123
+    C:\PS>Get-IqpBeacon -SiteId 1 -Id 123
 
 ---
 
-# <a name="find-position">Find-IqtPositionByBeacon</a>
+# <a name="find-position">Find-IqpPositionByBeacon</a>
     
 ### Description
 
@@ -112,7 +112,7 @@ Calculate position by beacon udis
     
 ### Syntax
 
-    Find-IqtPositionByBeacon [-Connection< Hashtable >] [-SiteId] < String > [-BeaconUdi] <String[]> [< CommonParameters >]
+    Find-IqpPositionByBeacon [-Connection< Hashtable >] [-SiteId] < String > [-BeaconUdi] <String[]> [< CommonParameters >]
     
 ### Parameters
 
@@ -141,11 +141,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Find-IqtPositionByBeacon -SiteId 1 -BeaconUdi 00000123, 00000124
+    C:\PS>Find-IqpPositionByBeacon -SiteId 1 -BeaconUdi 00000123, 00000124
 
 ---
 
-# <a name="new-beacon">New-IqtBeacon</a>
+# <a name="new-beacon">New-IqpBeacon</a>
     
 ### Description
 
@@ -153,7 +153,7 @@ Creates a new beacon
     
 ### Syntax
 
-    New-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] < Object > [< CommonParameters >]
+    New-IqpBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -189,11 +189,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
+    C:\PS>New-IqpBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
     
 ---
 
-# <a name="edit-beacon">Update-IqtBeacon</a>
+# <a name="edit-beacon">Update-IqpBeacon</a>
     
 ### Description
 
@@ -201,7 +201,7 @@ Updates a new beacon
     
 ### Syntax
 
-    Update-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] < Object > [< CommonParameters >]
+    Update-IqpBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Beacon] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -237,11 +237,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
+    C:\PS>Update-IqpBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
     
 ---
 
-# <a name="delete-beacon">Remove-IqtBeacon</a>
+# <a name="delete-beacon">Remove-IqpBeacon</a>
     
 ### Description
 
@@ -249,7 +249,7 @@ Removes beacon by id
     
     
 ### Syntax
-    Remove-IqtBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqpBeacon [-Connection< Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
 
 ### Parameters
 
@@ -278,4 +278,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtBeacon -SiteId 1 -Id 123
+    C:\PS>Remove-IqpBeacon -SiteId 1 -Id 123

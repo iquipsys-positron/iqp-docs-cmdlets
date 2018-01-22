@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtObjectGroups
+function Get-IqpObjectGroups
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtObjectGroups -SiteId 1 -Filter @{ name="truck" } -Take 10
+Get-IqpObjectGroups -SiteId 1 -Filter @{ name="truck" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtObjectGroups -SiteId 1 -Filter @{ name="truck" } -Take 10
 }
 
 
-function Get-IqtObjectGroup
+function Get-IqpObjectGroup
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A group id
 
 .EXAMPLE
 
-Get-IqtObjectGroup -SiteId 1 -Id 123
+Get-IqpObjectGroup -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtObjectGroup -SiteId 1 -Id 123
 }
 
 
-function New-IqtObjectGroup
+function New-IqpObjectGroup
 {
 <#
 .SYNOPSIS
@@ -163,7 +163,7 @@ A group with the following structure:
 
 .EXAMPLE
 
-New-IqtObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
+New-IqpObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
 
 #>
     [CmdletBinding()]
@@ -189,7 +189,7 @@ New-IqtObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@
 }
 
 
-function Update-IqtObjectGroup
+function Update-IqpObjectGroup
 {
 <#
 .SYNOPSIS
@@ -218,7 +218,7 @@ A group with the following structure:
 
 .EXAMPLE
 
-Update-IqtObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
+Update-IqpObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
 
 #>
     [CmdletBinding()]
@@ -244,7 +244,7 @@ Update-IqtObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_id
 }
 
 
-function Remove-IqtObjectGroup
+function Remove-IqpObjectGroup
 {
 <#
 .SYNOPSIS
@@ -269,7 +269,7 @@ A group id
 
 .EXAMPLE
 
-Remove-IqtObjectGroup -SiteId 1 -Id 123
+Remove-IqpObjectGroup -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

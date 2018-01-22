@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtRosters
+function Get-IqpRosters
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtRosters -SiteId 1 -Take 10
+Get-IqpRosters -SiteId 1 -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtRosters -SiteId 1 -Take 10
 }
 
 
-function Get-IqtRoster
+function Get-IqpRoster
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A roster id
 
 .EXAMPLE
 
-Get-IqtRoster -SiteId 1 -Id 123
+Get-IqpRoster -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtRoster -SiteId 1 -Id 123
 }
 
 
-function New-IqtRoster
+function New-IqpRoster
 {
 <#
 .SYNOPSIS
@@ -173,7 +173,7 @@ A roster with the following structure:
 
 .EXAMPLE
 
-New-IqtRoster -SiteId 1 -Roster @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
+New-IqpRoster -SiteId 1 -Roster @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
 
 #>
     [CmdletBinding()]
@@ -199,7 +199,7 @@ New-IqtRoster -SiteId 1 -Roster @{ site_id="1"; name="Entire day"; start_date=@(
 }
 
 
-function Update-IqtRoster
+function Update-IqpRoster
 {
 <#
 .SYNOPSIS
@@ -238,7 +238,7 @@ A roster with the following structure:
 
 .EXAMPLE
 
-Update-IqtRoster -SiteId 1 -Roster  @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
+Update-IqpRoster -SiteId 1 -Roster  @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
 
 #>
     [CmdletBinding()]
@@ -264,7 +264,7 @@ Update-IqtRoster -SiteId 1 -Roster  @{ site_id="1"; name="Entire day"; start_dat
 }
 
 
-function Remove-IqtRoster
+function Remove-IqpRoster
 {
 <#
 .SYNOPSIS
@@ -289,7 +289,7 @@ A roster id
 
 .EXAMPLE
 
-Remove-IqtRoster -SiteId 1 -Id 123
+Remove-IqpRoster -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

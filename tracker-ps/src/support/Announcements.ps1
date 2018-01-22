@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtAnnouncements
+function Get-IqpAnnouncements
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtAnnouncements -Filter @{ tags="goals,success" } -Take 10
+Get-IqpAnnouncements -Filter @{ tags="goals,success" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -66,7 +66,7 @@ Get-IqtAnnouncements -Filter @{ tags="goals,success" } -Take 10
 }
 
 
-function Get-IqtAnnouncement
+function Get-IqpAnnouncement
 {
 <#
 .SYNOPSIS
@@ -87,7 +87,7 @@ A announcement id
 
 .EXAMPLE
 
-Get-IqtAnnouncement -Id 123
+Get-IqpAnnouncement -Id 123
 
 #>
     [CmdletBinding()]
@@ -107,7 +107,7 @@ Get-IqtAnnouncement -Id 123
 }
 
 
-function Get-IqtRandomAnnouncement
+function Get-IqpRandomAnnouncement
 {
 <#
 .SYNOPSIS
@@ -136,7 +136,7 @@ A filter with search criteria (default: no filter)
 
 .EXAMPLE
 
-Get-IqtRandomAnnouncement
+Get-IqpRandomAnnouncement
 
 #>
     [CmdletBinding()]
@@ -156,7 +156,7 @@ Get-IqtRandomAnnouncement
 }
 
 
-function New-IqtAnnouncement
+function New-IqpAnnouncement
 {
 <#
 .SYNOPSIS
@@ -199,7 +199,7 @@ A announcement with the following structure:
 
 .EXAMPLE
 
-New-IqtAnnouncement -Announcement @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
+New-IqpAnnouncement -Announcement @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
 
 #>
     [CmdletBinding()]
@@ -219,7 +219,7 @@ New-IqtAnnouncement -Announcement @{ text=@{ en="Hurry slowly" }; author=@{ en="
 }
 
 
-function Update-IqtAnnouncement
+function Update-IqpAnnouncement
 {
 <#
 .SYNOPSIS
@@ -262,7 +262,7 @@ A announcement with the following structure:
 
 .EXAMPLE
 
-Update-IqtAnnouncement -Announcement @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
+Update-IqpAnnouncement -Announcement @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
 
 #>
     [CmdletBinding()]
@@ -282,7 +282,7 @@ Update-IqtAnnouncement -Announcement @{ text=@{ en="Hurry slowly" }; author=@{ e
 }
 
 
-function Remove-IqtAnnouncement
+function Remove-IqpAnnouncement
 {
 <#
 .SYNOPSIS
@@ -311,7 +311,7 @@ A announcement id
 
 .EXAMPLE
 
-Remove-IqtAnnouncement -Id 123
+Remove-IqpAnnouncement -Id 123
 
 #>
     [CmdletBinding()]

@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtResolutions
+function Get-IqpResolutions
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtResolutions -SiteId 1 -Filter @{ search="gate" } -Take 10
+Get-IqpResolutions -SiteId 1 -Filter @{ search="gate" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtResolutions -SiteId 1 -Filter @{ search="gate" } -Take 10
 }
 
 
-function Get-IqtResolution
+function Get-IqpResolution
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A resolution id
 
 .EXAMPLE
 
-Get-IqtResolution -SiteId 1 -Id 123
+Get-IqpResolution -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtResolution -SiteId 1 -Id 123
 }
 
 
-function New-IqtResolution
+function New-IqpResolution
 {
 <#
 .SYNOPSIS
@@ -163,7 +163,7 @@ A resolution with the following structure:
 
 .EXAMPLE
 
-New-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
+New-IqpResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
 
 #>
     [CmdletBinding()]
@@ -189,7 +189,7 @@ New-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution=
 }
 
 
-function Update-IqtResolution
+function Update-IqpResolution
 {
 <#
 .SYNOPSIS
@@ -218,7 +218,7 @@ A resolution with the following structure:
 
 .EXAMPLE
 
-Update-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
+Update-IqpResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
 
 #>
     [CmdletBinding()]
@@ -244,7 +244,7 @@ Update-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resoluti
 }
 
 
-function Remove-IqtResolution
+function Remove-IqpResolution
 {
 <#
 .SYNOPSIS
@@ -269,7 +269,7 @@ A resolution id
 
 .EXAMPLE
 
-Remove-IqtResolution -SiteId 1 -Id 123
+Remove-IqpResolution -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

@@ -5,7 +5,7 @@ Page navigation
 
 ---
 
-# <a name="read-acitivities">Read-IqtActivities</a>
+# <a name="read-acitivities">Read-IqpActivities</a>
    
 ### Description
 
@@ -13,7 +13,7 @@ Gets a page of user activities that satisfy specified criteria
     
 ### Syntax
 
-    Read-IqtActivities [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [< CommonParameters >]
+    Read-IqpActivities [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [< CommonParameters >]
     
 ### Parameters
 
@@ -46,11 +46,11 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Get-IqtActivities -Filter @{ type="signin" }
+    C:\PS>Get-IqpActivities -Filter @{ type="signin" }
 
 ---
 
-# <a name="write-acitivit">Write-IqtActivity</a>
+# <a name="write-acitivit">Write-IqpActivity</a>
    
 ### Description
 
@@ -58,7 +58,7 @@ To execute this cmdlet needed system administrator role.
     
 ### Syntax
 
-    Write-IqtActivity [-Connection < Hashtable >] [[-Activity] < Object > [< CommonParameters >]
+    Write-IqpActivity [-Connection < Hashtable >] [[-Activity] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -102,4 +102,4 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Write-IqtActivity -Activity @{ type="signin"; time=@(Get-Date); party=@{ id="1"; name="Test user" } }
+    C:\PS>Write-IqpActivity -Activity @{ type="signin"; time=@(Get-Date); party=@{ id="1"; name="Test user" } }

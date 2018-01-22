@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Send-IqtStatusUpdate
+function Send-IqpStatusUpdate
 {
 <#
 .SYNOPSIS
@@ -27,7 +27,7 @@ A status update message
 
 .EXAMPLE
 
-Send-IqtStatusUpdate -Message @{ device_udi="+15202250000"; lat=32.01; long=-110.22; alt=720; angle=45; speed=30; quality=2; pressed=false }
+Send-IqpStatusUpdate -Message @{ device_udi="+15202250000"; lat=32.01; long=-110.22; alt=720; angle=45; speed=30; quality=2; pressed=false }
 
 #>
     [CmdletBinding()]

@@ -7,7 +7,7 @@ Page navigation
 
 ---
 
-# <a name="ObjectPositions">Get-IqtObjectPositions</a>
+# <a name="ObjectPositions">Get-IqpObjectPositions</a>
    
 ### Description
 
@@ -15,7 +15,7 @@ Gets a page with positions that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtObjectPositions [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpObjectPositions [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -25,7 +25,7 @@ Gets a page with positions that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -56,11 +56,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtObjectPositions -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="123" } -Take 10
+    C:\PS>Get-IqpObjectPositions -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="123" } -Take 10
 
 ---
 
-# <a name="new-ObjectPosition">Add-IqtObjectPosition</a>
+# <a name="new-ObjectPosition">Add-IqpObjectPosition</a>
 
 ### Description
 
@@ -68,7 +68,7 @@ Adds position to object positions
     
 ### Syntax
 
-    Add-IqtObjectPosition [-Connection < Hashtable >] [-SiteId] < String > [-Position] < Object > [< CommonParameters >]
+    Add-IqpObjectPosition [-Connection < Hashtable >] [-SiteId] < String > [-Position] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -78,7 +78,7 @@ Adds position to object positions
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Position < Object >
 
@@ -103,11 +103,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Add-IqtObjectPosition -SiteId 1 -Position @{ site_id="1"; object_id="123"; lat=1; long=1 }
+    C:\PS>Add-IqpObjectPosition -SiteId 1 -Position @{ site_id="1"; object_id="123"; lat=1; long=1 }
 
 ---
 
-# <a name="new-ObjectPositions">Add-IqtObjectPositions</a>
+# <a name="new-ObjectPositions">Add-IqpObjectPositions</a>
 
 ### Description
 
@@ -115,7 +115,7 @@ Adds multiple object positions
     
 ### Syntax
 
-    Add-IqtObjectPositions [-Connection < Hashtable >] [-SiteId] < String > [-Position] < Object[] > [< CommonParameters >]
+    Add-IqpObjectPositions [-Connection < Hashtable >] [-SiteId] < String > [-Position] < Object[] > [< CommonParameters >]
     
 ### Parameters
 
@@ -125,7 +125,7 @@ Adds multiple object positions
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Position < Object[] >
 
@@ -150,11 +150,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Add-IqtObjectPositions -SiteId 1 -Positions @( @{ site_id="1"; object_id="123"; lat=1; long=1 }, ... )
+    C:\PS>Add-IqpObjectPositions -SiteId 1 -Positions @( @{ site_id="1"; object_id="123"; lat=1; long=1 }, ... )
 
 ---
 
-# <a name="delete-ObjectPositions">Remove-IqtObjectPositions</a>
+# <a name="delete-ObjectPositions">Remove-IqpObjectPositions</a>
     
 ### Description
 
@@ -162,7 +162,7 @@ Removes positions that match specified filter
     
 ### Syntax
 
-    Remove-IqtObjectPosition [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [< CommonParameters >]
+    Remove-IqpObjectPosition [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [< CommonParameters >]
     
 ### Parameters
 
@@ -172,7 +172,7 @@ Removes positions that match specified filter
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -191,4 +191,4 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-   C:\PS>Remove-IqtObjectPositions -SiteId 1 -Filter @{ object_id="123" }
+   C:\PS>Remove-IqpObjectPositions -SiteId 1 -Filter @{ object_id="123" }

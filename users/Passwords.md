@@ -6,7 +6,7 @@ Page navigation
 
 ---
 
-# <a name="set-password">Set-IqtPassword</a>
+# <a name="set-password">Set-IqpPassword</a>
    
 ### Description
 
@@ -14,7 +14,7 @@ Changes user password
     
 ### Syntax
 
-    Set-IqtPassword [-Connection < Hashtable >] [-OldPassword] < String > [-NewPassword] < String > [< CommonParameters >]
+    Set-IqpPassword [-Connection < Hashtable >] [-OldPassword] < String > [-NewPassword] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -43,11 +43,11 @@ To execute this cmdlet needed system administrator role or use own user id.
 
 ### Example
     
-    C:\PS>Set-IqtPassword -OldPassword "oldpwd" -NewPassword "newpwd"
+    C:\PS>Set-IqpPassword -OldPassword "oldpwd" -NewPassword "newpwd"
 
 ---
 
-# <a name="request-password">Request-IqtPassword</a>
+# <a name="request-password">Request-IqpPassword</a>
    
 ### Description
 
@@ -55,7 +55,7 @@ Requests a password recovery email. The email is set to the account primary emai
     
 ### Syntax
 
-    Request-IqtPassword [-Connection < Hashtable >] [-Login] < String > [< CommonParameters >]
+    Request-IqpPassword [-Connection < Hashtable >] [-Login] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -80,11 +80,11 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Request-IqtPassword -Login test@somewhere.com
+    C:\PS>Request-IqpPassword -Login test@somewhere.com
 
 ---
 
-# <a name="reset-password">Reset-IqtPassword</a>
+# <a name="reset-password">Reset-IqpPassword</a>
    
 ### Description
 
@@ -92,7 +92,7 @@ Resets user password using reset code sent by email
     
 ### Syntax
 
-    Reset-IqtPassword [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [-Password] < String > [< CommonParameters >]
+    Reset-IqpPassword [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [-Password] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -125,4 +125,4 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Reset-IqtPassword -Login test@somewhere.com -Code 1245 -Password pass123
+    C:\PS>Reset-IqpPassword -Login test@somewhere.com -Code 1245 -Password pass123

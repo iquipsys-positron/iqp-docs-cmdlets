@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="resolutions">Get-IqtResolutions</a>
+# <a name="resolutions">Get-IqpResolutions</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with resolutions that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtResolutions [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpResolutions [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with resolutions that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtResolutions -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ resolution="Call supervisor" } -Take 10
+    C:\PS>Get-IqpResolutions -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ resolution="Call supervisor" } -Take 10
 
 ---
 
-# <a name="resolution">Get-IqtResolution</a>
+# <a name="resolution">Get-IqpResolution</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets resolution by its unique id
     
 ### Syntax
 
-    Get-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqpResolution [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets resolution by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A resolution id. Required parameter. Can be retrieved from Get-IqtResolutions
+    A resolution id. Required parameter. Can be retrieved from Get-IqpResolutions
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtResolution -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqpResolution -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-resolution">New-IqtResolution</a>
+# <a name="new-resolution">New-IqpResolution</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new resolution
     
 ### Syntax
 
-    New-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Resolution] < Object > [< CommonParameters >]
+    New-IqpResolution [-Connection < Hashtable >] [-SiteId] < String > [-Resolution] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new resolution
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Resolution < Object >
 
@@ -144,11 +144,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
+    C:\PS>New-IqpResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
 
 ---
 
-# <a name="edit-resolution">Update-IqtResolution</a>
+# <a name="edit-resolution">Update-IqpResolution</a>
  
 ### Description
 
@@ -156,7 +156,7 @@ Updates existing resolution
     
 ### Syntax
 
-    Update-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Resolution] < Object > [< CommonParameters >]
+    Update-IqpResolution [-Connection < Hashtable >] [-SiteId] < String > [-Resolution] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -166,7 +166,7 @@ Updates existing resolution
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Resolution < Object >
 
@@ -190,11 +190,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
+    C:\PS>Update-IqpResolution -SiteId 1 -Resolution @{ site_id="1"; rule_id="1"; resolution="Escalated to management" }
 
 ---
 
-# <a name="delete-resolution">Remove-IqtResolution</a>
+# <a name="delete-resolution">Remove-IqpResolution</a>
     
 ### Description
 
@@ -202,7 +202,7 @@ Deletes existing resolution.
     
 ### Syntax
 
-    Remove-IqtResolution [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqpResolution [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -212,11 +212,11 @@ Deletes existing resolution.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A resolution id. Required parameter. Can be retrieved from Get-IqtResolutions
+    A resolution id. Required parameter. Can be retrieved from Get-IqpResolutions
 
 - < CommonParameters >
 
@@ -231,4 +231,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtResolution -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqpResolution -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

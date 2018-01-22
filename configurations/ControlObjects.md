@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="ControlObjects">Get-IqtControlObjects</a>
+# <a name="ControlObjects">Get-IqpControlObjects</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with objects that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtControlObjects [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpControlObjects [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with objects that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtControlObjects -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqpControlObjects -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-# <a name="ControlObject">Get-IqtControlObject</a>
+# <a name="ControlObject">Get-IqpControlObject</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets object by its unique id
     
 ### Syntax
 
-    Get-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqpControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets object by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A object id. Required parameter. Can be retrieved from Get-IqpControlObjects
 
 - < CommonParameters >
 
@@ -97,11 +97,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqpControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-ControlObject">New-IqtControlObject</a>
+# <a name="new-ControlObject">New-IqpControlObject</a>
 
 ### Description
 
@@ -109,7 +109,7 @@ Creates a new object.
     
 ### Syntax
 
-    New-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    New-IqpControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -119,7 +119,7 @@ Creates a new object.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Object < Object >
 
@@ -150,11 +150,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>New-IqpControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
 
 ---
 
-# <a name="edit-ControlObject">Update-IqtControlObject</a>
+# <a name="edit-ControlObject">Update-IqpControlObject</a>
  
 ### Description
 
@@ -162,7 +162,7 @@ Updates existing control object
     
 ### Syntax
 
-    Update-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
+    Update-IqpControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Object] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -172,7 +172,7 @@ Updates existing control object
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - ControlObject < Object >
 
@@ -203,11 +203,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+    C:\PS>Update-IqpControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
 
 ---
 
-# <a name="delete-ControlObject">Remove-IqtControlObject</a>
+# <a name="delete-ControlObject">Remove-IqpControlObject</a>
     
 ### Description
 
@@ -215,7 +215,7 @@ Removes object by its unique id
     
 ### Syntax
 
-    Remove-IqtControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqpControlObject [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -225,11 +225,11 @@ Removes object by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqtControlObjects
+    A object id. Required parameter. Can be retrieved from Get-IqpControlObjects
 
 - < CommonParameters >
 
@@ -243,4 +243,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqpControlObject -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

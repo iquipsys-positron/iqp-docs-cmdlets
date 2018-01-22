@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Register-IqtUser
+function Register-IqpUser
 {
 <#
 .SYNOPSIS
@@ -36,7 +36,7 @@ A user info with the following structure
 
 .EXAMPLE
 
-Register-IqtUser -User @{ name="Test User"; login="test"; email="test@somewhere.com"; password="test123" }
+Register-IqpUser -User @{ name="Test User"; login="test"; email="test@somewhere.com"; password="test123" }
 
 #>
     [CmdletBinding()]
@@ -63,7 +63,7 @@ Register-IqtUser -User @{ name="Test User"; login="test"; email="test@somewhere.
 }
 
 
-function Open-IqtSession
+function Open-IqpSession
 {
 <#
 .SYNOPSIS
@@ -72,7 +72,7 @@ Opens a new user session with client facade
 
 .DESCRIPTION
 
-Open-IqtSession opens connection and starts a new user session with client facade
+Open-IqpSession opens connection and starts a new user session with client facade
 
 .PARAMETER Connection
 
@@ -88,7 +88,7 @@ User password
 
 .EXAMPLE
 
-$test = Open-IqtSession -Login "test1@somewhere.com" -Password "mypassword"
+$test = Open-IqpSession -Login "test1@somewhere.com" -Password "mypassword"
 
 #>
     [CmdletBinding()]
@@ -123,7 +123,7 @@ $test = Open-IqtSession -Login "test1@somewhere.com" -Password "mypassword"
 }
 
 
-function Close-IqtSession
+function Close-IqpSession
 {
 <#
 .SYNOPSIS
@@ -132,7 +132,7 @@ Closes previously opened user session with client facade
 
 .DESCRIPTION
 
-Open-IqtSession closes previously opened user session with client facade
+Open-IqpSession closes previously opened user session with client facade
 
 .PARAMETER Connection
 
@@ -140,7 +140,7 @@ A connection object
 
 .EXAMPLE
 
-Close-IqtSession
+Close-IqpSession
 
 #>
     [CmdletBinding()]
@@ -166,7 +166,7 @@ Close-IqtSession
 }
 
 
-function Get-IqtSessions
+function Get-IqpSessions
 {
 <#
 .SYNOPSIS
@@ -199,7 +199,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtSessions -Take 10
+Get-IqpSessions -Take 10
 
 #>
     [CmdletBinding()]
@@ -225,7 +225,7 @@ Get-IqtSessions -Take 10
 }
 
 
-function Get-IqtCurrentSession
+function Get-IqpCurrentSession
 {
 <#
 .SYNOPSIS
@@ -242,7 +242,7 @@ A connection object
 
 .EXAMPLE
 
-Get-IqtCurrentSession
+Get-IqpCurrentSession
 
 #>
     [CmdletBinding()]

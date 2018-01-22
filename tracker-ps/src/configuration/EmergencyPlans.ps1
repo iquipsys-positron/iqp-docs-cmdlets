@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtEmergencyPlans
+function Get-IqpEmergencyPlans
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtEmergencyPlans -SiteId 1 -Filter @{ search="fire" } -Take 10
+Get-IqpEmergencyPlans -SiteId 1 -Filter @{ search="fire" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtEmergencyPlans -SiteId 1 -Filter @{ search="fire" } -Take 10
 }
 
 
-function Get-IqtEmergencyPlan
+function Get-IqpEmergencyPlan
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A object id
 
 .EXAMPLE
 
-Get-IqtEmergencyPlan -SiteId 1 -Id 123
+Get-IqpEmergencyPlan -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtEmergencyPlan -SiteId 1 -Id 123
 }
 
 
-function New-IqtEmergencyPlan
+function New-IqpEmergencyPlan
 {
 <#
 .SYNOPSIS
@@ -168,7 +168,7 @@ A object with the following structure:
 
 .EXAMPLE
 
-New-IqtEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
+New-IqpEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
 
 #>
     [CmdletBinding()]
@@ -194,7 +194,7 @@ New-IqtEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; ste
 }
 
 
-function Update-IqtEmergencyPlan
+function Update-IqpEmergencyPlan
 {
 <#
 .SYNOPSIS
@@ -228,7 +228,7 @@ A object with the following structure:
 
 .EXAMPLE
 
-Update-IqtEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
+Update-IqpEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
 
 #>
     [CmdletBinding()]
@@ -254,7 +254,7 @@ Update-IqtEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; 
 }
 
 
-function Remove-IqtEmergencyPlan
+function Remove-IqpEmergencyPlan
 {
 <#
 .SYNOPSIS
@@ -279,7 +279,7 @@ A emergency plan id
 
 .EXAMPLE
 
-Remove-IqtEmergencyPlan -SiteId 1 -Id 123
+Remove-IqpEmergencyPlan -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

@@ -7,7 +7,7 @@ Page navigation
 
 ---
 
-# <a name="emailSettings">Get-IqtEmailSettings</a>
+# <a name="emailSettings">Get-IqpEmailSettings</a>
    
 ### Description
 
@@ -15,7 +15,7 @@ Gets all users email settings by its id
     
 ### Syntax
 
-    Get-IqtEmailSettings [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Get-IqpEmailSettings [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -25,7 +25,7 @@ Gets all users email settings by its id
 
 - Id < String >
 
-    A unique user id. Can be retrieved from Get-IqtAccounts
+    A unique user id. Can be retrieved from Get-IqpAccounts
         
 - < CommonParameters >
 
@@ -40,11 +40,11 @@ To execute this cmdlet needed system administrator role or use own user id.
 
 ### Example
     
-    C:\PS>Get-IqtEmailSettings -Id 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqpEmailSettings -Id 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-# <a name="set-emailSettings">Set-IqtEmailSettings</a>
+# <a name="set-emailSettings">Set-IqpEmailSettings</a>
    
 ### Description
 
@@ -52,7 +52,7 @@ Sets all users email settings defined by its id
     
 ### Syntax
 
-    Set-IqtEmailSettings [-Connection < Hashtable >] [-Settings] < Object > [< CommonParameters >]
+    Set-IqpEmailSettings [-Connection < Hashtable >] [-Settings] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -84,11 +84,11 @@ To execute this cmdlet needed system administrator role or use own user id.
 
 ### Example
     
-    C:\PS>Set-IqtEmailSettings -Settings @{ id="9cfaf79bc95b4a9e912314eb3db7a4ba"; name="Test user"; email="test@somewhere.com"; language="en" }
+    C:\PS>Set-IqpEmailSettings -Settings @{ id="9cfaf79bc95b4a9e912314eb3db7a4ba"; name="Test user"; email="test@somewhere.com"; language="en" }
 
 ---
 
-# <a name="request-verification">Request-IqtEmailVerification</a>
+# <a name="request-verification">Request-IqpEmailVerification</a>
    
 ### Description
 
@@ -96,7 +96,7 @@ Requests a email verification message by user login
     
 ### Syntax
 
-    Request-IqtEmailVerification [-Connection < Hashtable >] [-Login] < String > [< CommonParameters >]
+    Request-IqpEmailVerification [-Connection < Hashtable >] [-Login] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -121,11 +121,11 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Request-IqtEmailVerification -Login test@somewhere.com
+    C:\PS>Request-IqpEmailVerification -Login test@somewhere.com
 
 ---
 
-# <a name="submit-verification">Submit-IqtEmailVerification</a>
+# <a name="submit-verification">Submit-IqpEmailVerification</a>
    
 ### Description
 
@@ -133,7 +133,7 @@ Verifies user email address using reset code sent by email
     
 ### Syntax
 
-    Submit-IqtEmailVerification [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [< CommonParameters >]
+    Submit-IqpEmailVerification [-Connection < Hashtable >] [-Login] < String > [-Code] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -162,4 +162,4 @@ Anybody can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Submit-IqtEmailVerification -Login test@somewhere.com -Code 1245
+    C:\PS>Submit-IqpEmailVerification -Login test@somewhere.com -Code 1245

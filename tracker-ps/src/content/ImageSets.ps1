@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtImageSets
+function Get-IqpImageSets
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtImageSets -Filter @{ tags="goals,success" } -Take 10
+Get-IqpImageSets -Filter @{ tags="goals,success" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -66,7 +66,7 @@ Get-IqtImageSets -Filter @{ tags="goals,success" } -Take 10
 }
 
 
-function Get-IqtImageSet
+function Get-IqpImageSet
 {
 <#
 .SYNOPSIS
@@ -87,7 +87,7 @@ A imageset id
 
 .EXAMPLE
 
-Get-IqtImageSet -Id 123
+Get-IqpImageSet -Id 123
 
 #>
     [CmdletBinding()]
@@ -107,7 +107,7 @@ Get-IqtImageSet -Id 123
 }
 
 
-function New-IqtImageSet
+function New-IqpImageSet
 {
 <#
 .SYNOPSIS
@@ -134,7 +134,7 @@ A imageset with the following structure:
 
 .EXAMPLE
 
-New-IqtImageSet -ImageSet @{ title="Cats"; tags=@("cats"); pics=@(@{ id=123 }, @{ id=345 }) }
+New-IqpImageSet -ImageSet @{ title="Cats"; tags=@("cats"); pics=@(@{ id=123 }, @{ id=345 }) }
 
 #>
     [CmdletBinding()]
@@ -154,7 +154,7 @@ New-IqtImageSet -ImageSet @{ title="Cats"; tags=@("cats"); pics=@(@{ id=123 }, @
 }
 
 
-function Update-IqtImageSet
+function Update-IqpImageSet
 {
 <#
 .SYNOPSIS
@@ -189,7 +189,7 @@ A imageset with the following structure:
 
 .EXAMPLE
 
-Update-IqtImageSet -ImageSet @{ title="Cats"; tags=@("cats"); pics=@(@{ id=123 }, @{ id=345 }) }
+Update-IqpImageSet -ImageSet @{ title="Cats"; tags=@("cats"); pics=@(@{ id=123 }, @{ id=345 }) }
 
 #>
     [CmdletBinding()]
@@ -209,7 +209,7 @@ Update-IqtImageSet -ImageSet @{ title="Cats"; tags=@("cats"); pics=@(@{ id=123 }
 }
 
 
-function Remove-IqtImageSet
+function Remove-IqpImageSet
 {
 <#
 .SYNOPSIS
@@ -230,7 +230,7 @@ A imageset id
 
 .EXAMPLE
 
-Remove-IqtImageSet -Id 123
+Remove-IqpImageSet -Id 123
 
 #>
     [CmdletBinding()]

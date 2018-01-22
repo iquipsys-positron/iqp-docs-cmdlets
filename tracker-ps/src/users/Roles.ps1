@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Get-IqtRoles
+function Get-IqpRoles
 {
 <#
 .SYNOPSIS
@@ -23,7 +23,7 @@ A connection object
 
 .EXAMPLE
 
-Get-IqtRoles -Id 123
+Get-IqpRoles -Id 123
 
 #>
     [CmdletBinding()]
@@ -43,7 +43,7 @@ Get-IqtRoles -Id 123
 }
 
 
-function Grant-IqtRoles
+function Grant-IqpRoles
 {
 <#
 .SYNOPSIS
@@ -60,7 +60,7 @@ A connection object
 
 .EXAMPLE
 
-Grant-IqtRoles -Id 123 -Roles admin
+Grant-IqpRoles -Id 123 -Roles admin
 
 #>
     [CmdletBinding()]
@@ -82,7 +82,7 @@ Grant-IqtRoles -Id 123 -Roles admin
 }
 
 
-function Revoke-IqtRoles
+function Revoke-IqpRoles
 {
 <#
 .SYNOPSIS
@@ -99,7 +99,7 @@ A connection object
 
 .EXAMPLE
 
-Revoke-IqtRoles -Id 123 -Roles admin
+Revoke-IqpRoles -Id 123 -Roles admin
 
 #>
     [CmdletBinding()]
@@ -120,7 +120,7 @@ Revoke-IqtRoles -Id 123 -Roles admin
     end {}
 }
 
-function Grant-IqtSiteRole
+function Grant-IqpSiteRole
 {
 <#
 .SYNOPSIS
@@ -149,7 +149,7 @@ A site role: 'admin', 'manager' or 'user'
 
 .EXAMPLE
 
-Grant-IqtSiteRole -SiteId 1 -UserId 123 -Role admin
+Grant-IqpSiteRole -SiteId 1 -UserId 123 -Role admin
 
 #>
     [CmdletBinding()]
@@ -183,7 +183,7 @@ Grant-IqtSiteRole -SiteId 1 -UserId 123 -Role admin
 }
 
 
-function Revoke-IqtSiteRole
+function Revoke-IqpSiteRole
 {
 <#
 .SYNOPSIS
@@ -212,7 +212,7 @@ A site role: 'admin', 'manager' or 'user'
 
 .EXAMPLE
 
-Revoke-IqtSiteRole -SiteId 1 -UserId 123 -Role admin
+Revoke-IqpSiteRole -SiteId 1 -UserId 123 -Role admin
 
 #>
     [CmdletBinding()]

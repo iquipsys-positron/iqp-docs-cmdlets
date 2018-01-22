@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtBeacons
+function Get-IqpBeacons
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtBeacons -SiteId 1 -Take 10
+Get-IqpBeacons -SiteId 1 -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtBeacons -SiteId 1 -Take 10
 }
 
 
-function Get-IqtBeacon
+function Get-IqpBeacon
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A beacon id
 
 .EXAMPLE
 
-Get-IqtBeacon -SiteId 1 -Id 123
+Get-IqpBeacon -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtBeacon -SiteId 1 -Id 123
 }
 
 
-function Find-IqtPositionByBeacon
+function Find-IqpPositionByBeacon
 {
 <#
 .SYNOPSIS
@@ -157,7 +157,7 @@ A site id
 
 .EXAMPLE
 
-Find-IqtPositionByBeacon -SiteId 1 -BeaconUdi 00000123, 00000124
+Find-IqpPositionByBeacon -SiteId 1 -BeaconUdi 00000123, 00000124
 
 #>
     [CmdletBinding()]
@@ -187,7 +187,7 @@ Find-IqtPositionByBeacon -SiteId 1 -BeaconUdi 00000123, 00000124
 }
 
 
-function New-IqtBeacon
+function New-IqpBeacon
 {
 <#
 .SYNOPSIS
@@ -218,7 +218,7 @@ A beacon with the following structure:
 
 .EXAMPLE
 
-New-IqtBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
+New-IqpBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
 
 #>
     [CmdletBinding()]
@@ -244,7 +244,7 @@ New-IqtBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; 
 }
 
 
-function Update-IqtBeacon
+function Update-IqpBeacon
 {
 <#
 .SYNOPSIS
@@ -275,7 +275,7 @@ A beacon with the following structure:
 
 .EXAMPLE
 
-Update-IqtBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
+Update-IqpBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; radius=50 }
 
 #>
     [CmdletBinding()]
@@ -301,7 +301,7 @@ Update-IqtBeacon -SiteId 1 -Beacon @{ site_id="1"; udi="0000123"; label="Parking
 }
 
 
-function Remove-IqtBeacon
+function Remove-IqpBeacon
 {
 <#
 .SYNOPSIS
@@ -326,7 +326,7 @@ A beacon id
 
 .EXAMPLE
 
-Remove-IqtBeacon -SiteId 1 -Id 123
+Remove-IqpBeacon -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

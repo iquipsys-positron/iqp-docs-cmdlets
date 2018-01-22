@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtLocations
+function Get-IqpLocations
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtLocations -SiteId 1 -Filter @{ search="gate" } -Take 10
+Get-IqpLocations -SiteId 1 -Filter @{ search="gate" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtLocations -SiteId 1 -Filter @{ search="gate" } -Take 10
 }
 
 
-function Get-IqtLocation
+function Get-IqpLocation
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A location id
 
 .EXAMPLE
 
-Get-IqtLocation -SiteId 1 -Id 123
+Get-IqpLocation -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqtLocation -SiteId 1 -Id 123
 }
 
 
-function New-IqtLocation
+function New-IqpLocation
 {
 <#
 .SYNOPSIS
@@ -163,7 +163,7 @@ A location with the following structure:
 
 .EXAMPLE
 
-New-IqtLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
+New-IqpLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
 
 #>
     [CmdletBinding()]
@@ -189,7 +189,7 @@ New-IqtLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ typ
 }
 
 
-function Update-IqtLocation
+function Update-IqpLocation
 {
 <#
 .SYNOPSIS
@@ -218,7 +218,7 @@ A location with the following structure:
 
 .EXAMPLE
 
-Update-IqtLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
+Update-IqpLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
 
 #>
     [CmdletBinding()]
@@ -244,7 +244,7 @@ Update-IqtLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ 
 }
 
 
-function Remove-IqtLocation
+function Remove-IqpLocation
 {
 <#
 .SYNOPSIS
@@ -269,7 +269,7 @@ A location id
 
 .EXAMPLE
 
-Remove-IqtLocation -SiteId 1 -Id 123
+Remove-IqpLocation -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

@@ -10,7 +10,7 @@ Page navigation
 
 ---
 
-# <a name="CurrentObjectStates">Get-IqtCurrentObjectStates</a>
+# <a name="CurrentObjectStates">Get-IqpCurrentObjectStates</a>
    
 ### Description
 
@@ -18,7 +18,7 @@ Reads current states for control objects service
     
 ### Syntax
 
-    Get-IqtCurrentObjectStates [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpCurrentObjectStates [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -28,7 +28,7 @@ Reads current states for control objects service
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -59,11 +59,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtCurrentObjectStates -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Take 10
+    C:\PS>Get-IqpCurrentObjectStates -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Take 10
 
 ---
 
-# <a name="CurrentObjectState">Get-IqtCurrentObjectState</a>
+# <a name="CurrentObjectState">Get-IqpCurrentObjectState</a>
 
 ### Description
 
@@ -71,7 +71,7 @@ Gets current state by state/device id
     
 ### Syntax
 
-    Get-IqtCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqpCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -81,7 +81,7 @@ Gets current state by state/device id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
@@ -100,11 +100,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtCurrentObjectState -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqpCurrentObjectState -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-CurrentObjectState">Set-IqtCurrentObjectState</a>
+# <a name="new-CurrentObjectState">Set-IqpCurrentObjectState</a>
 
 ### Description
 
@@ -112,7 +112,7 @@ Sets current state for control object object
     
 ### Syntax
 
-    New-IqtCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
+    New-IqpCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -122,7 +122,7 @@ Sets current state for control object object
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - CurrentObjectState < Object >
 
@@ -154,11 +154,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Set-IqtCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=0; emergency=0  }
+    C:\PS>Set-IqpCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=0; emergency=0  }
 
 ---
 
-# <a name="edit-CurrentObjectState">Update-IqtCurrentObjectState</a>
+# <a name="edit-CurrentObjectState">Update-IqpCurrentObjectState</a>
  
 ### Description
 
@@ -166,7 +166,7 @@ Changes current state, calculates all rules, generates events and logs historica
     
 ### Syntax
 
-    Update-IqtCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
+    Update-IqpCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -176,7 +176,7 @@ Changes current state, calculates all rules, generates events and logs historica
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - State < Object >
 
@@ -205,11 +205,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqtCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }
+    C:\PS>Update-IqpCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }
 
 ---
 
-# <a name="delete-CurrentObjectState">Remove-IqtCurrentObjectState</a>
+# <a name="delete-CurrentObjectState">Remove-IqpCurrentObjectState</a>
     
 ### Description
 
@@ -217,7 +217,7 @@ Removes current state by state/device id
     
 ### Syntax
 
-    Remove-IqtCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqpCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -227,7 +227,7 @@ Removes current state by state/device id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
@@ -246,11 +246,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtCurrentObjectState -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqpCurrentObjectState -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="delete-CurrentObjectStates">Remove-IqtCurrentObjectStates</a>
+# <a name="delete-CurrentObjectStates">Remove-IqpCurrentObjectStates</a>
     
 ### Description
 
@@ -258,7 +258,7 @@ Removes states from currobjectstates service that satisfy specified criteria
     
 ### Syntax
 
-    Remove-IqtCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [[-Filter] < Hashtable >] [< CommonParameters >]
+    Remove-IqpCurrentObjectState [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [[-Filter] < Hashtable >] [< CommonParameters >]
     
 ### Parameters
 
@@ -268,7 +268,7 @@ Removes states from currobjectstates service that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
@@ -291,11 +291,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtCurrentObjectStates -SiteId 1 -Filter @{ immobile=$true }
+    C:\PS>Remove-IqpCurrentObjectStates -SiteId 1 -Filter @{ immobile=$true }
 
 ---
 
-# <a name="send-stateUpdate">Send-IqtObjectStateUpdate</a>
+# <a name="send-stateUpdate">Send-IqpObjectStateUpdate</a>
  
 ### Description
 
@@ -303,7 +303,7 @@ Initiate update of the current state, calculates all rules, generates events and
     
 ### Syntax
 
-    Send-IqtObjectStateUpdate [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
+    Send-IqpObjectStateUpdate [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -313,7 +313,7 @@ Initiate update of the current state, calculates all rules, generates events and
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - State < Object >
 
@@ -342,4 +342,4 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Send-IqtObjectStateUpdate -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }
+    C:\PS>Send-IqpObjectStateUpdate -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }

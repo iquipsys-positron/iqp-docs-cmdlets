@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtSignals
+function Get-IqpSignals
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtSignals -SiteId 1 -Filter @{ site_id="123" } -Take 10
+Get-IqpSignals -SiteId 1 -Filter @{ site_id="123" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqtSignals -SiteId 1 -Filter @{ site_id="123" } -Take 10
 }
 
 
-function Send-IqtSignal
+function Send-IqpSignal
 {
 <#
 .SYNOPSIS
@@ -112,7 +112,7 @@ A signal with the following structure:
 
 .EXAMPLE
 
-Send-IqtSignal -SiteId 1 -Signal @{ site_id="1"; device_id="123"; type=3 }
+Send-IqpSignal -SiteId 1 -Signal @{ site_id="1"; device_id="123"; type=3 }
 
 #>
     [CmdletBinding()]
@@ -138,7 +138,7 @@ Send-IqtSignal -SiteId 1 -Signal @{ site_id="1"; device_id="123"; type=3 }
 }
 
 
-function Lock-IqtSignal
+function Lock-IqpSignal
 {
 <#
 .SYNOPSIS
@@ -163,7 +163,7 @@ A signal id
 
 .EXAMPLE
 
-Lock-IqtSignal -SiteId 1 -Id 123
+Lock-IqpSignal -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -189,7 +189,7 @@ Lock-IqtSignal -SiteId 1 -Id 123
 }
 
 
-function Complete-IqtSignal
+function Complete-IqpSignal
 {
 <#
 .SYNOPSIS
@@ -214,7 +214,7 @@ A signal id
 
 .EXAMPLE
 
-Complete-IqtSignal -SiteId 1 -Id 123
+Complete-IqpSignal -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -239,7 +239,7 @@ Complete-IqtSignal -SiteId 1 -Id 123
     end {}
 }
 
-function Remove-IqtSignal
+function Remove-IqpSignal
 {
 <#
 .SYNOPSIS
@@ -264,7 +264,7 @@ A signal id
 
 .EXAMPLE
 
-Remove-IqtSignal -SiteId 1 -Id 123
+Remove-IqpSignal -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

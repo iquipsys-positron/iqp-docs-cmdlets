@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="incidents">Get-IqtIncidents</a>
+# <a name="incidents">Get-IqpIncidents</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with incidents that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtIncidents [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqpIncidents [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with incidents that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtIncidents -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="85e52f3abf2e4091b489dc4f01df2df2" } -Take 10
+    C:\PS>Get-IqpIncidents -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="85e52f3abf2e4091b489dc4f01df2df2" } -Take 10
 
 ---
 
-# <a name="incident">Get-IqtIncident</a>
+# <a name="incident">Get-IqpIncident</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets incident by its unique id
     
 ### Syntax
 
-    Get-IqtIncident [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqpIncident [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets incident by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A incident id. Required parameter. Can be retrieved from Get-IqtIncidents
+    A incident id. Required parameter. Can be retrieved from Get-IqpIncidents
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtIncident -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqpIncident -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-incident">New-IqtIncident</a>
+# <a name="new-incident">New-IqpIncident</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new incident
     
 ### Syntax
 
-    New-IqtIncident [-Connection < Hashtable >] [-SiteId] < String > [-Incident] < Object > [< CommonParameters >]
+    New-IqpIncident [-Connection < Hashtable >] [-SiteId] < String > [-Incident] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new incident
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Incident < Object >
 
@@ -157,11 +157,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>New-IqtIncident -SiteId 1 -Incident @{ site_id="1"; rule_id="123"; event_id="234"; description="Test incident"; severity=50 }
+    C:\PS>New-IqpIncident -SiteId 1 -Incident @{ site_id="1"; rule_id="123"; event_id="234"; description="Test incident"; severity=50 }
 
 ---
 
-# <a name="close-incident">Close-IqtIncident</a>
+# <a name="close-incident">Close-IqpIncident</a>
  
 ### Description
 
@@ -169,7 +169,7 @@ Closes existing incident
     
 ### Syntax
 
-    Close-IqtIncident [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [-ResolutionId] < String > [-Resolution] < String > [< CommonParameters >]
+    Close-IqpIncident [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [-ResolutionId] < String > [-Resolution] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -179,7 +179,7 @@ Closes existing incident
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
 
 -Id <String>
     
@@ -206,11 +206,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Close-IqtIncident -SiteId 1 -Id 123 -Resolution "Test completed" -ResolutionId "1"
+    C:\PS>Close-IqpIncident -SiteId 1 -Id 123 -Resolution "Test completed" -ResolutionId "1"
 
 ---
 
-# <a name="delete-incident">Remove-IqtIncident</a>
+# <a name="delete-incident">Remove-IqpIncident</a>
     
 ### Description
 
@@ -218,7 +218,7 @@ Removes incident by its unique id
     
 ### Syntax
 
-    Remove-IqtIncident [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqpIncident [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -228,11 +228,11 @@ Removes incident by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Id < String >
 
-    A incident id. Required parameter. Can be retrieved from Get-IqtIncidents
+    A incident id. Required parameter. Can be retrieved from Get-IqpIncidents
 
 - < CommonParameters >
 
@@ -247,4 +247,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqtIncident -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqpIncident -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

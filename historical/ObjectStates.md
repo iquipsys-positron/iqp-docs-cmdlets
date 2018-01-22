@@ -7,7 +7,7 @@ Page navigation
 
 ---
 
-# <a name="ObjectStates">Get-IqtObjectStates</a>
+# <a name="ObjectStates">Get-IqpObjectStates</a>
    
 ### Description
 
@@ -15,7 +15,7 @@ Gets a page with states that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqtObjectStates [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [[-Time] < DateTime >] [< CommonParameters >]
+    Get-IqpObjectStates [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [[-Time] < DateTime >] [< CommonParameters >]
     
 ### Parameters
 
@@ -25,7 +25,7 @@ Gets a page with states that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -60,11 +60,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqtObjectStates -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="123" } -Take 10
+    C:\PS>Get-IqpObjectStates -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ object_id="123" } -Take 10
 
 ---
 
-# <a name="new-ObjectState">Add-IqtObjectState</a>
+# <a name="new-ObjectState">Add-IqpObjectState</a>
 
 ### Description
 
@@ -72,7 +72,7 @@ Adds state to object states
     
 ### Syntax
 
-    Add-IqtObjectState [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
+    Add-IqpObjectState [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -82,7 +82,7 @@ Adds state to object states
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - State < Object >
 
@@ -115,11 +115,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Add-IqtObjectState -SiteId 1 -State @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }
+    C:\PS>Add-IqpObjectState -SiteId 1 -State @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }
 
 ---
 
-# <a name="new-ObjectStates">Add-IqtObjectStates</a>
+# <a name="new-ObjectStates">Add-IqpObjectStates</a>
 
 ### Description
 
@@ -127,7 +127,7 @@ Adds multiple states to object state
     
 ### Syntax
 
-    Add-IqtObjectStates [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object[] > [< CommonParameters >]
+    Add-IqpObjectStates [-Connection < Hashtable >] [-SiteId] < String > [-State] < Object[] > [< CommonParameters >]
     
 ### Parameters
 
@@ -137,7 +137,7 @@ Adds multiple states to object state
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - State < Object[] >
 
@@ -170,11 +170,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Add-IqtObjectStates -SiteId 1 -States @( @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }, ... )
+    C:\PS>Add-IqpObjectStates -SiteId 1 -States @( @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }, ... )
 
 ---
 
-# <a name="delete-ObjectStates">Remove-IqtObjectStates</a>
+# <a name="delete-ObjectStates">Remove-IqpObjectStates</a>
     
 ### Description
 
@@ -182,7 +182,7 @@ Removes states that match specified filter
     
 ### Syntax
 
-    Remove-IqtObjectState [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [< CommonParameters >]
+    Remove-IqpObjectState [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [< CommonParameters >]
     
 ### Parameters
 
@@ -192,7 +192,7 @@ Removes states that match specified filter
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqtSites
+    A site id. Required parameter. Can be retrieved from Get-IqpSites
         
 - Filter < Hashtable >
 
@@ -211,4 +211,4 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-   C:\PS>Remove-IqtObjectStates -SiteId 1 -Filter @{ object_id="123" }
+   C:\PS>Remove-IqpObjectStates -SiteId 1 -Filter @{ object_id="123" }

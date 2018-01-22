@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqtDashboards
+function Get-IqpDashboards
 {
 <#
 .SYNOPSIS
@@ -48,7 +48,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtDashboards -Filter @{ user_id="123"; app="testapp" } -Take 10
+Get-IqpDashboards -Filter @{ user_id="123"; app="testapp" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -74,7 +74,7 @@ Get-IqtDashboards -Filter @{ user_id="123"; app="testapp" } -Take 10
 }
 
 
-function Get-IqtDashboard
+function Get-IqpDashboard
 {
 <#
 .SYNOPSIS
@@ -111,7 +111,7 @@ A dashboard kind. It allows to have more then one dashboard per application (def
 
 .EXAMPLE
 
-Get-IqtDashboard -UserId 123 -App testapp
+Get-IqpDashboard -UserId 123 -App testapp
 
 #>
     [CmdletBinding()]
@@ -135,7 +135,7 @@ Get-IqtDashboard -UserId 123 -App testapp
 }
 
 
-function Set-IqtDashboard
+function Set-IqpDashboard
 {
 <#
 .SYNOPSIS
@@ -177,7 +177,7 @@ A dashboard with the following structure:
 
 .EXAMPLE
 
-Set-IqtDashboard -Dashboard @{ user_id="123"; app="MyApp"; kind="Default"; groups=@() }
+Set-IqpDashboard -Dashboard @{ user_id="123"; app="MyApp"; kind="Default"; groups=@() }
 
 #>
     [CmdletBinding()]
@@ -197,7 +197,7 @@ Set-IqtDashboard -Dashboard @{ user_id="123"; app="MyApp"; kind="Default"; group
 }
 
 
-function Remove-IqtDashboards
+function Remove-IqpDashboards
 {
 <#
 .SYNOPSIS
@@ -226,7 +226,7 @@ A filter with search criteria (default: no filter)
 
 .EXAMPLE
 
-Remove-IqtDashboards -Filter @{ user_id="123" }
+Remove-IqpDashboards -Filter @{ user_id="123" }
 
 #>
     [CmdletBinding()]

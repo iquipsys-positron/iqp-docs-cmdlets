@@ -14,18 +14,18 @@ Using this documentation you can view and use examples of interaction with syste
 
 ## Usage
 
-To execute almost all request you have to sign in to system. Sign in to system can be performed by cmdlet *Connect-IqtFacade*, this cmdlet is described at [Connections](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Connections.md).
+To execute almost all request you have to sign in to system. Sign in to system can be performed by cmdlet *Connect-IqpFacade*, this cmdlet is described at [Connections](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Connections.md).
 
-After connecting to facade, if you have proper role, you can execute any cmdlet described on links below. After working with system recomended to use *Disconnect-IqtFacade* to close session.
+After connecting to facade, if you have proper role, you can execute any cmdlet described on links below. After working with system recomended to use *Disconnect-IqpFacade* to close session.
 
 Example of usage
 
 ```
-$conn = Connect-IqtFacade -Host tracker.pipservices.net -Port 8080 -Login "user@gmail.com" -Password "password"
+$conn = Connect-IqpFacade -Host tracker.pipservices.net -Port 8080 -Login "user@gmail.com" -Password "password"
 
-$sites = Get-IqtSites
+$sites = Get-IqpSites
 
-Disconnect-IqtFacade
+Disconnect-IqpFacade
 ```
 
 The script above connects to system and saving all user sites to *$sites* variable. Don't forget to set correct *Login* and *Password* parameners

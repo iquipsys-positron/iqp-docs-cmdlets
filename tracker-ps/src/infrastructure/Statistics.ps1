@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Get-IqtStatGroups
+function Get-IqpStatGroups
 {
 <#
 .SYNOPSIS
@@ -35,7 +35,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqtStatGroups
+Get-IqpStatGroups
 
 #>
     [CmdletBinding()]
@@ -57,7 +57,7 @@ Get-IqtStatGroups
 }
 
 
-function Get-IqtStatCounters
+function Get-IqpStatCounters
 {
 <#
 .SYNOPSIS
@@ -86,7 +86,7 @@ A number of records to return (default: 100)
 
 .EXAMPLE
 
-Get-IqtStatCounters
+Get-IqpStatCounters
 
 #>
     [CmdletBinding()]
@@ -110,7 +110,7 @@ Get-IqtStatCounters
 }
 
 
-function Read-IqtStatCounter
+function Read-IqpStatCounter
 {
 <#
 .SYNOPSIS
@@ -147,7 +147,7 @@ An end of the time range
 
 .EXAMPLE
 
-Read-IqtStatCounter -Group test -Counter calls -Type "Hour" -From ([DateTime]::UtcNow.AddDays(-7)) -To ([DateTime]::UtcNow)
+Read-IqpStatCounter -Group test -Counter calls -Type "Hour" -From ([DateTime]::UtcNow.AddDays(-7)) -To ([DateTime]::UtcNow)
 
 #>
     [CmdletBinding()]
@@ -176,7 +176,7 @@ Read-IqtStatCounter -Group test -Counter calls -Type "Hour" -From ([DateTime]::U
 }
 
 
-function Add-IqtStatCounter
+function Add-IqpStatCounter
 {
 <#
 .SYNOPSIS
@@ -213,7 +213,7 @@ An increment value (Default: 1)
 
 .EXAMPLE
 
-Add-IqtStatCounter -Group test -Counter calls -Value 1
+Add-IqpStatCounter -Group test -Counter calls -Value 1
 
 #>
     [CmdletBinding()]

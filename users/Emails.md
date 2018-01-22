@@ -1,4 +1,4 @@
-# <a name="send-email">Send-IqtEmail</a>
+# <a name="send-email">Send-IqpEmail</a>
 
 ### Description
 
@@ -6,7 +6,7 @@ Requests email message to arbitrary address
     
 ### Syntax
 
-    Send-IqtEmail [-Connection < Hashtable >] [-Message] < Object > [[-Recipient] < Object >]  [< CommonParameters >]
+    Send-IqpEmail [-Connection < Hashtable >] [-Message] < Object > [[-Recipient] < Object >]  [< CommonParameters >]
     
 ### Parameters
 
@@ -42,4 +42,4 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Send-IqtEmail -Message @{ to="somebody@somewhere.com"; subject="Test"; text="This is a test email" }
+    C:\PS>Send-IqpEmail -Message @{ to="somebody@somewhere.com"; subject="Test"; text="This is a test email" }
