@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpAccounts
+function Get-IqsAccounts
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpAccounts -Take 10
+Get-IqsAccounts -Take 10
 
 #>
     [CmdletBinding()]
@@ -66,7 +66,7 @@ Get-IqpAccounts -Take 10
 }
 
 
-function Get-IqpAccount
+function Get-IqsAccount
 {
 <#
 .SYNOPSIS
@@ -87,7 +87,7 @@ A user account id
 
 .EXAMPLE
 
-Get-IqpAccount -Id 123
+Get-IqsAccount -Id 123
 
 #>
     [CmdletBinding()]
@@ -107,7 +107,7 @@ Get-IqpAccount -Id 123
 }
 
 
-function Get-IqpCurrentAccount
+function Get-IqsCurrentAccount
 {
 <#
 .SYNOPSIS
@@ -124,7 +124,7 @@ A connection object
 
 .EXAMPLE
 
-Get-IqpCurrentAccount
+Get-IqsCurrentAccount
 
 #>
     [CmdletBinding()]
@@ -142,7 +142,7 @@ Get-IqpCurrentAccount
 }
 
 
-function New-IqpAccount
+function New-IqsAccount
 {
 <#
 .SYNOPSIS
@@ -172,7 +172,7 @@ An account with the following structure
 
 .EXAMPLE
 
-New-IqpAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com" }
+New-IqsAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com" }
 
 #>
     [CmdletBinding()]
@@ -192,7 +192,7 @@ New-IqpAccount -Account @{ name="Test User"; login="test"; email="test@somewhere
 }
 
 
-function Update-IqpAccount
+function Update-IqsAccount
 {
 <#
 .SYNOPSIS
@@ -221,7 +221,7 @@ An account with the following structure
 
 .EXAMPLE
 
-Update-IqpAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com"; }
+Update-IqsAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com"; }
 
 #>
     [CmdletBinding()]
@@ -241,7 +241,7 @@ Update-IqpAccount -Account @{ name="Test User"; login="test"; email="test@somewh
 }
 
 
-function Remove-IqpAccount
+function Remove-IqsAccount
 {
 <#
 .SYNOPSIS
@@ -262,7 +262,7 @@ A user account id
 
 .EXAMPLE
 
-Remove-IqpAccount -Id 123
+Remove-IqsAccount -Id 123
 
 #>
     [CmdletBinding()]

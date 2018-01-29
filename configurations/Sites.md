@@ -9,7 +9,7 @@ Page navigation
 
 ---
 
-# <a name="sites">Get-IqpSites</a>
+# <a name="sites">Get-IqsSites</a>
    
 ### Description
 
@@ -17,7 +17,7 @@ Gets a page with sites that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpSites [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsSites [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -54,11 +54,11 @@ Any signed user can execute this cmdlet.
 
 ### Example
     
-    C:\PS>Get-IqpSites -Take 10
+    C:\PS>Get-IqsSites -Take 10
 
 ---
 
-# <a name="site">Get-IqpSite</a>
+# <a name="site">Get-IqsSite</a>
 
 ### Description
 
@@ -66,7 +66,7 @@ Gets site by its unique id
     
 ### Syntax
 
-    Get-IqpSite [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Get-IqsSite [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -76,7 +76,7 @@ Gets site by its unique id
         
 - Id < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
 
 - < CommonParameters >
 
@@ -91,11 +91,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpSite -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsSite -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-site">New-IqpSite</a>
+# <a name="new-site">New-IqsSite</a>
 
 ### Description
 
@@ -103,7 +103,7 @@ Creates new site
     
 ### Syntax
 
-    New-IqpSite [-Connection < Hashtable >] [-Site] < Object > [< CommonParameters >]
+    New-IqsSite [-Connection < Hashtable >] [-Site] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -143,11 +143,11 @@ Any signed user can execute this cmdlet.
 
 ### Example
     
-    C:\PS>New-IqpSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
+    C:\PS>New-IqsSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
 
 ---
 
-# <a name="edit-site">Update-IqpSite</a>
+# <a name="edit-site">Update-IqsSite</a>
  
 ### Description
 
@@ -155,7 +155,7 @@ Updates existing site
     
 ### Syntax
 
-    Update-IqpSite [-Connection < Hashtable >] [-Site] < Object > [< CommonParameters >]
+    Update-IqsSite [-Connection < Hashtable >] [-Site] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -195,11 +195,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
+    C:\PS>Update-IqsSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
 
 ---
 
-# <a name="delete-site">Remove-IqpSite</a>
+# <a name="delete-site">Remove-IqsSite</a>
     
 ### Description
 
@@ -207,7 +207,7 @@ Deletes existing site
     
 ### Syntax
 
-    Remove-IqpSite [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Remove-IqsSite [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -217,7 +217,7 @@ Deletes existing site
         
 - Id < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
 
 - < CommonParameters >
 
@@ -232,11 +232,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpSite -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsSite -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="site-users">Get-IqpSiteUsers</a>
+# <a name="site-users">Get-IqsSiteUsers</a>
 
 ### Description
 
@@ -244,7 +244,7 @@ Gets a page with site users by site id
     
 ### Syntax
 
-    Get-IqpSiteUsers [-Connection < Hashtable >] [-Id] < String > [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsSiteUsers [-Connection < Hashtable >] [-Id] < String > [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -254,7 +254,7 @@ Gets a page with site users by site id
         
 - Id < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
 
 - Skip < Int32 >
 
@@ -281,4 +281,4 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpSiteUsers -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsSiteUsers -Id 85e52f3abf2e4091b489dc4f01df2df2

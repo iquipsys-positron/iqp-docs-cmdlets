@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpGuides
+function Get-IqsGuides
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpGuides -Filter @{ tags="goals,success" } -Take 10
+Get-IqsGuides -Filter @{ tags="goals,success" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -66,7 +66,7 @@ Get-IqpGuides -Filter @{ tags="goals,success" } -Take 10
 }
 
 
-function Get-IqpGuide
+function Get-IqsGuide
 {
 <#
 .SYNOPSIS
@@ -87,7 +87,7 @@ A guide id
 
 .EXAMPLE
 
-Get-IqpGuide -Id 123
+Get-IqsGuide -Id 123
 
 #>
     [CmdletBinding()]
@@ -107,7 +107,7 @@ Get-IqpGuide -Id 123
 }
 
 
-function Get-IqpRandomGuide
+function Get-IqsRandomGuide
 {
 <#
 .SYNOPSIS
@@ -128,7 +128,7 @@ A filter with search criteria (default: no filter)
 
 .EXAMPLE
 
-Get-IqpRandomGuide
+Get-IqsRandomGuide
 
 #>
     [CmdletBinding()]
@@ -150,7 +150,7 @@ Get-IqpRandomGuide
 }
 
 
-function New-IqpGuide
+function New-IqsGuide
 {
 <#
 .SYNOPSIS
@@ -186,7 +186,7 @@ A guide with the following structure:
 
 .EXAMPLE
 
-New-IqpGuide -Guide @{ type="introduction"; app="MyApp"; pages=@(@{ title=@{ en="Welcome to MyApp" } }); status="completed" }
+New-IqsGuide -Guide @{ type="introduction"; app="MyApp"; pages=@(@{ title=@{ en="Welcome to MyApp" } }); status="completed" }
 
 #>
     [CmdletBinding()]
@@ -206,7 +206,7 @@ New-IqpGuide -Guide @{ type="introduction"; app="MyApp"; pages=@(@{ title=@{ en=
 }
 
 
-function Update-IqpGuide
+function Update-IqsGuide
 {
 <#
 .SYNOPSIS
@@ -242,7 +242,7 @@ A guide with the following structure:
 
 .EXAMPLE
 
-Update-IqpGuide -Guide @{ type="introduction"; app="MyApp"; pages=@(@{ title=@{ en="Welcome to MyApp" } }); status="completed" }
+Update-IqsGuide -Guide @{ type="introduction"; app="MyApp"; pages=@(@{ title=@{ en="Welcome to MyApp" } }); status="completed" }
 
 #>
     [CmdletBinding()]
@@ -262,7 +262,7 @@ Update-IqpGuide -Guide @{ type="introduction"; app="MyApp"; pages=@(@{ title=@{ 
 }
 
 
-function Remove-IqpGuide
+function Remove-IqsGuide
 {
 <#
 .SYNOPSIS
@@ -283,7 +283,7 @@ A guide id
 
 .EXAMPLE
 
-Remove-IqpGuide -Id 123
+Remove-IqsGuide -Id 123
 
 #>
     [CmdletBinding()]

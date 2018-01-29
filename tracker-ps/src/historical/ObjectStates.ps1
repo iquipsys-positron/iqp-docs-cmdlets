@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpObjectStates
+function Get-IqsObjectStates
 {
 <#
 .SYNOPSIS
@@ -48,7 +48,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpObjectStates -SiteId 1 -Filter @{ object_id="123" } -Take 10
+Get-IqsObjectStates -SiteId 1 -Filter @{ object_id="123" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -102,7 +102,7 @@ Get-IqpObjectStates -SiteId 1 -Filter @{ object_id="123" } -Take 10
 }
 
 
-function Add-IqpObjectState
+function Add-IqsObjectState
 {
 <#
 .SYNOPSIS
@@ -140,7 +140,7 @@ A state with the following structure:
 
 .EXAMPLE
 
-Add-IqpObjectState -SiteId 1 -State @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }
+Add-IqsObjectState -SiteId 1 -State @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }
 
 #>
     [CmdletBinding()]
@@ -165,7 +165,7 @@ Add-IqpObjectState -SiteId 1 -State @{ site_id="1"; device_id="1"; object_id="12
     end {}
 }
 
-function Add-IqpObjectStates
+function Add-IqsObjectStates
 {
 <#
 .SYNOPSIS
@@ -203,7 +203,7 @@ A states with the following structure:
 
 .EXAMPLE
 
-Add-IqpObjectStates -SiteId 1 -States @( @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }, ... )
+Add-IqsObjectStates -SiteId 1 -States @( @{ site_id="1"; device_id="1"; object_id="123"; time=$(Get-Date) lat=1; long=1; online=10; immobile=0; emergency=0 }, ... )
 
 #>
     [CmdletBinding()]
@@ -228,7 +228,7 @@ Add-IqpObjectStates -SiteId 1 -States @( @{ site_id="1"; device_id="1"; object_i
     end {}
 }
 
-function Remove-IqpObjectStates
+function Remove-IqsObjectStates
 {
 <#
 .SYNOPSIS
@@ -253,7 +253,7 @@ A filter with search criteria (default: no filter)
 
 .EXAMPLE
 
-Remove-IqpObjectStates -SiteId 1 -Filter @{ object_id="123" }
+Remove-IqsObjectStates -SiteId 1 -Filter @{ object_id="123" }
 
 #>
     [CmdletBinding()]

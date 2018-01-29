@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpEventTemplates
+function Get-IqsEventTemplates
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpEventTemplates -SiteId 1 -Filter @{ name="truck" } -Take 10
+Get-IqsEventTemplates -SiteId 1 -Filter @{ name="truck" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpEventTemplates -SiteId 1 -Filter @{ name="truck" } -Take 10
 }
 
 
-function Get-IqpEventTemplate
+function Get-IqsEventTemplate
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A template id
 
 .EXAMPLE
 
-Get-IqpEventTemplate -SiteId 1 -Id 123
+Get-IqsEventTemplate -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpEventTemplate -SiteId 1 -Id 123
 }
 
 
-function New-IqpEventTemplate
+function New-IqsEventTemplate
 {
 <#
 .SYNOPSIS
@@ -167,7 +167,7 @@ A template with the following structure:
 .EXAMPLE
 
 # Creates a new template
-New-IqpEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
+New-IqsEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
 
 #>
     [CmdletBinding()]
@@ -193,7 +193,7 @@ New-IqpEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; descripti
 }
 
 
-function Update-IqpEventTemplate
+function Update-IqsEventTemplate
 {
 <#
 .SYNOPSIS
@@ -226,7 +226,7 @@ A template with the following structure:
 .EXAMPLE
 
 # Update existing template
-Update-IqpEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
+Update-IqsEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
 
 #>
     [CmdletBinding()]
@@ -252,7 +252,7 @@ Update-IqpEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; descri
 }
 
 
-function Remove-IqpEventTemplate
+function Remove-IqsEventTemplate
 {
 <#
 .SYNOPSIS
@@ -277,7 +277,7 @@ A template id
 
 .EXAMPLE
 
-Remove-IqpEventTemplate -SiteId 1 -Id 123
+Remove-IqsEventTemplate -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

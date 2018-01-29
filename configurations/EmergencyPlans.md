@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="EmergencyPlans">Get-IqpEmergencyPlans</a>
+# <a name="EmergencyPlans">Get-IqsEmergencyPlans</a>
    
 ### Description
 
@@ -17,7 +17,7 @@ Gets a page with emergency plans that satisfy specified criteria
 ### Syntax
 
 
-    Get-IqpEmergencyPlans [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsEmergencyPlans [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -27,7 +27,7 @@ Gets a page with emergency plans that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -58,11 +58,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpEmergencyPlans -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Take 10
+    C:\PS>Get-IqsEmergencyPlans -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Take 10
 
 ---
 
-# <a name="EmergencyPlan">Get-IqpEmergencyPlan</a>
+# <a name="EmergencyPlan">Get-IqsEmergencyPlan</a>
 
 ### Description
 
@@ -70,7 +70,7 @@ Gets emergency plan by its unique id
     
 ### Syntax
 
-    Get-IqpEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -80,11 +80,11 @@ Gets emergency plan by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    An emergency plan id. Required parameter. Can be retrieved from Get-IqpEmergencyPlans
+    An emergency plan id. Required parameter. Can be retrieved from Get-IqsEmergencyPlans
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpEmergencyPlan -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsEmergencyPlan -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-EmergencyPlan">New-IqpEmergencyPlan</a>
+# <a name="new-EmergencyPlan">New-IqsEmergencyPlan</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates a new emergency plan.
     
 ### Syntax
 
-    New-IqpEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] < Object > [< CommonParameters >]
+    New-IqsEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates a new emergency plan.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Plan < Object >
 
@@ -149,11 +149,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
+    C:\PS>New-IqsEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
 
 ---
 
-# <a name="edit-EmergencyPlan">Update-IqpEmergencyPlan</a>
+# <a name="edit-EmergencyPlan">Update-IqsEmergencyPlan</a>
  
 ### Description
 
@@ -161,7 +161,7 @@ Updates an existing emergency plan
     
 ### Syntax
 
-    Update-IqpEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] < Object > [< CommonParameters >]
+    Update-IqsEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Plan] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -171,7 +171,7 @@ Updates an existing emergency plan
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Plan < Object >
 
@@ -200,10 +200,10 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
+    C:\PS>Update-IqsEmergencyPlan -SiteId 1 -Plan @{ site_id="1"; name="Aliens invasion"; steps=@( @{ index=0; name="Start praying alien god" } ) }
 ---
 
-# <a name="delete-EmergencyPlan">Remove-IqpEmergencyPlan</a>
+# <a name="delete-EmergencyPlan">Remove-IqsEmergencyPlan</a>
     
 ### Description
 
@@ -211,7 +211,7 @@ Removes emergency plan by id
     
 ### Syntax
 
-    Remove-IqpEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsEmergencyPlan [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -221,11 +221,11 @@ Removes emergency plan by id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    An emergency plan id. Required parameter. Can be retrieved from Get-IqpEmergencyPlans
+    An emergency plan id. Required parameter. Can be retrieved from Get-IqsEmergencyPlans
 
 - < CommonParameters >
 
@@ -239,4 +239,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpEmergencyPlan -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsEmergencyPlan -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

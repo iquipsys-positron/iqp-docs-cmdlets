@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpControlObjects
+function Get-IqsControlObjects
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpControlObjects -SiteId 1 -Filter @{ search="Peter" } -Take 10
+Get-IqsControlObjects -SiteId 1 -Filter @{ search="Peter" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpControlObjects -SiteId 1 -Filter @{ search="Peter" } -Take 10
 }
 
 
-function Get-IqpControlObject
+function Get-IqsControlObject
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A object id
 
 .EXAMPLE
 
-Get-IqpControlObject -SiteId 1 -Id 123
+Get-IqsControlObject -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpControlObject -SiteId 1 -Id 123
 }
 
 
-function New-IqpControlObject
+function New-IqsControlObject
 {
 <#
 .SYNOPSIS
@@ -170,7 +170,7 @@ A object with the following structure:
 
 .EXAMPLE
 
-New-IqpControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+New-IqsControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
 
 #>
     [CmdletBinding()]
@@ -196,7 +196,7 @@ New-IqpControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; typ
 }
 
 
-function Update-IqpControlObject
+function Update-IqsControlObject
 {
 <#
 .SYNOPSIS
@@ -232,7 +232,7 @@ A object with the following structure:
 
 .EXAMPLE
 
-Update-IqpControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
+Update-IqsControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; type="haul"; name="T101"; group_ids=@("1", "2") }
 
 #>
     [CmdletBinding()]
@@ -258,7 +258,7 @@ Update-IqpControlObject -SiteId 1 -Object @{ site_id="1"; category="equipment"; 
 }
 
 
-function Remove-IqpControlObject
+function Remove-IqsControlObject
 {
 <#
 .SYNOPSIS
@@ -283,7 +283,7 @@ A object id
 
 .EXAMPLE
 
-Remove-IqpControlObject -SiteId 1 -Id 123
+Remove-IqsControlObject -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

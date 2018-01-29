@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpMessageTemplates
+function Get-IqsMessageTemplates
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpMessageTemplates -Filter @{ name="Welcome Message" } -Take 10
+Get-IqsMessageTemplates -Filter @{ name="Welcome Message" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -66,7 +66,7 @@ Get-IqpMessageTemplates -Filter @{ name="Welcome Message" } -Take 10
 }
 
 
-function Get-IqpMessageTemplate
+function Get-IqsMessageTemplate
 {
 <#
 .SYNOPSIS
@@ -87,7 +87,7 @@ A message template id
 
 .EXAMPLE
 
-Get-IqpMessageTemplate -Id 123
+Get-IqsMessageTemplate -Id 123
 
 #>
     [CmdletBinding()]
@@ -107,7 +107,7 @@ Get-IqpMessageTemplate -Id 123
 }
 
 
-function New-IqpMessageTemplate
+function New-IqsMessageTemplate
 {
 <#
 .SYNOPSIS
@@ -136,7 +136,7 @@ A message template with the following structure:
 
 .EXAMPLE
 
-New-IqpMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
+New-IqsMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
 
 #>
     [CmdletBinding()]
@@ -156,7 +156,7 @@ New-IqpMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@
 }
 
 
-function Update-IqpMessageTemplate
+function Update-IqsMessageTemplate
 {
 <#
 .SYNOPSIS
@@ -185,7 +185,7 @@ A message template with the following structure:
 
 .EXAMPLE
 
-Update-IqpMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
+Update-IqsMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
 
 #>
     [CmdletBinding()]
@@ -205,7 +205,7 @@ Update-IqpMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; autho
 }
 
 
-function Remove-IqpMessageTemplate
+function Remove-IqsMessageTemplate
 {
 <#
 .SYNOPSIS
@@ -226,7 +226,7 @@ A message template id
 
 .EXAMPLE
 
-Remove-IqpMessageTemplate -Id 123
+Remove-IqsMessageTemplate -Id 123
 
 #>
     [CmdletBinding()]

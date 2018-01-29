@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Send-IqpEmail
+function Send-IqsEmail
 {
 <#
 .SYNOPSIS
@@ -37,7 +37,7 @@ Optional recipient identified who is a system user
 
 .EXAMPLE
 
-Send-IqpEmail -Message @{ to="somebody@somewhere.com"; subject="Test"; text="This is a test email" }
+Send-IqsEmail -Message @{ to="somebody@somewhere.com"; subject="Test"; text="This is a test email" }
 
 #>
     [CmdletBinding()]

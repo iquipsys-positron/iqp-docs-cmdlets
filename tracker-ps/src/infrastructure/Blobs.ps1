@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Get-IqpBlobs 
+function Get-IqsBlobs 
 {
 <#
 .SYNOPSIS
@@ -39,7 +39,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpBlobs
+Get-IqsBlobs
 
 #>
     [CmdletBinding()]
@@ -63,7 +63,7 @@ Get-IqpBlobs
 }
 
 
-function Get-IqpBlob
+function Get-IqsBlob
 {
 <#
 .SYNOPSIS
@@ -84,7 +84,7 @@ A blob id
 
 .EXAMPLE
 
-Get-IqpBlob -Id 123
+Get-IqsBlob -Id 123
 
 #>
     [CmdletBinding()]
@@ -104,7 +104,7 @@ Get-IqpBlob -Id 123
 }
 
 
-function Update-IqpBlob
+function Update-IqsBlob
 {
 <#
 .SYNOPSIS
@@ -141,7 +141,7 @@ A blob expiration time (default: no expiration)
 
 .EXAMPLE
 
-Update-IqpBlob -Id 234 -Group test -Completed $false
+Update-IqsBlob -Id 234 -Group test -Completed $false
 
 #>
     [CmdletBinding()]
@@ -169,7 +169,7 @@ Update-IqpBlob -Id 234 -Group test -Completed $false
 }
 
 
-function Read-IqpBlob
+function Read-IqsBlob
 {
 <#
 .SYNOPSIS
@@ -194,7 +194,7 @@ Optional file name to write the blob to
 
 .EXAMPLE
 
-Read-IqpBlob -Id "123" -OutFile temp123.dat
+Read-IqsBlob -Id "123" -OutFile temp123.dat
 
 #>
     [CmdletBinding()]
@@ -216,7 +216,7 @@ Read-IqpBlob -Id "123" -OutFile temp123.dat
 }
 
 
-function Write-IqpBlob
+function Write-IqsBlob
 {
 <#
 .SYNOPSIS
@@ -249,7 +249,7 @@ A name of the file to read from
 
 .EXAMPLE
 
-Write-IqpBlob -Group test -InFile photo.jpg
+Write-IqsBlob -Group test -InFile photo.jpg
 
 #>
     [CmdletBinding()]
@@ -275,7 +275,7 @@ Write-IqpBlob -Group test -InFile photo.jpg
 }
 
 
-function Remove-IqpBlob
+function Remove-IqsBlob
 {
 <#
 .SYNOPSIS
@@ -296,7 +296,7 @@ A blob id
 
 .EXAMPLE
 
-Remove-IqpBlob -Id "123"
+Remove-IqsBlob -Id "123"
 
 #>
     [CmdletBinding()]

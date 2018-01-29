@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="shifts">Get-IqpShifts</a>
+# <a name="shifts">Get-IqsShifts</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with shifts that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpShifts [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsShifts [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with shifts that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpShifts -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqsShifts -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-# <a name="shift">Get-IqpShift</a>
+# <a name="shift">Get-IqsShift</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets shift by its unique id
     
 ### Syntax
 
-    Get-IqpShift [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsShift [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets shift by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A shift id. Required parameter. Can be retrieved from Get-IqpShifts
+    A shift id. Required parameter. Can be retrieved from Get-IqsShifts
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpShift -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsShift -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-shift">New-IqpShift</a>
+# <a name="new-shift">New-IqsShift</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new shift
     
 ### Syntax
 
-    New-IqpShift [-Connection < Hashtable >] [-SiteId] < String > [-shift] < Object > [< CommonParameters >]
+    New-IqsShift [-Connection < Hashtable >] [-SiteId] < String > [-shift] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new shift
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - shift < Object >
 
@@ -145,11 +145,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
+    C:\PS>New-IqsShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
 
 ---
 
-# <a name="edit-shift">Update-IqpShift</a>
+# <a name="edit-shift">Update-IqsShift</a>
  
 ### Description
 
@@ -157,7 +157,7 @@ Updates existing shift
     
 ### Syntax
 
-    Update-IqpShift [-Connection < Hashtable >] [-SiteId] < String > [-shift] < Object > [< CommonParameters >]
+    Update-IqsShift [-Connection < Hashtable >] [-SiteId] < String > [-shift] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -167,7 +167,7 @@ Updates existing shift
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - shift < Object >
 
@@ -192,11 +192,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
+    C:\PS>Update-IqsShift -SiteId 1 -Shift @{ site_id="1"; name="Night shift"; start=0; duration=480 }
 
 ---
 
-# <a name="delete-shift">Remove-IqpShift</a>
+# <a name="delete-shift">Remove-IqsShift</a>
     
 ### Description
 
@@ -204,7 +204,7 @@ Deletes existing shift
     
 ### Syntax
 
-    Remove-IqpShift [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsShift [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -214,11 +214,11 @@ Deletes existing shift
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A shift id. Required parameter. Can be retrieved from Get-IqpShifts
+    A shift id. Required parameter. Can be retrieved from Get-IqsShifts
 
 - < CommonParameters >
 
@@ -233,4 +233,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpShift -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsShift -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

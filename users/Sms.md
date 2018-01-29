@@ -1,4 +1,4 @@
-# <a name="send-sms">Send-IqpSms</a>
+# <a name="send-sms">Send-IqsSms</a>
 
 ### Description
 
@@ -6,7 +6,7 @@ Requests sms message to arbitrary address
     
 ### Syntax
 
-    Send-IqpSms [-Connection < Hashtable >] [-Message] < Object > [[-Recipient] < Object >]  [< CommonParameters >]
+    Send-IqsSms [-Connection < Hashtable >] [-Message] < Object > [[-Recipient] < Object >]  [< CommonParameters >]
     
 ### Parameters
 
@@ -39,4 +39,4 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Send-IqpSms -Message @{ to="+79102342938"; text="This is a test sms" }
+    C:\PS>Send-IqsSms -Message @{ to="+79102342938"; text="This is a test sms" }

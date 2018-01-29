@@ -9,7 +9,7 @@ Page navigation
 
 ---
 
-# <a name="accounts">Get-IqpAccounts</a>
+# <a name="accounts">Get-IqsAccounts</a>
    
 ### Description
 
@@ -17,7 +17,7 @@ Gets a page with accounts that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpAccounts [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsAccounts [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -54,11 +54,11 @@ Any signed user car execute this cmdlet.
 
 ### Example
     
-    C:\PS>Get-IqpAccounts -Take 10
+    C:\PS>Get-IqsAccounts -Take 10
 
 ---
 
-# <a name="account">Get-IqpAccount</a>
+# <a name="account">Get-IqsAccount</a>
 
 ### Description
 
@@ -66,7 +66,7 @@ Gets user account by its unique id
     
 ### Syntax
 
-    Get-IqpAccount [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Get-IqsAccount [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -76,7 +76,7 @@ Gets user account by its unique id
         
 - Id < String >
 
-    A user account id. Required parameter. Can be retrieved from Get-IqpAccounts
+    A user account id. Required parameter. Can be retrieved from Get-IqsAccounts
 
 - < CommonParameters >
 
@@ -91,11 +91,11 @@ To execute this cmdlet needed system administrator role or use own id.
 
 ### Example
     
-    C:\PS>Get-IqpAccount -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsAccount -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="current-account">Get-IqpCurrentAccount</a>
+# <a name="current-account">Get-IqsCurrentAccount</a>
    
 ### Description
 
@@ -103,7 +103,7 @@ Gets the current user account
     
 ### Syntax
 
-    Get-IqpCurrentAccount [-Connection < Hashtable >] [< CommonParameters >]
+    Get-IqsCurrentAccount [-Connection < Hashtable >] [< CommonParameters >]
     
 ### Parameters
 
@@ -124,11 +124,11 @@ Any signed user car execute this cmdlet.
 
 ### Example
     
-    C:\PS>Get-IqpCurrentAccount
+    C:\PS>Get-IqsCurrentAccount
 
 ---
 
-# <a name="new-account">New-IqpAccount</a>
+# <a name="new-account">New-IqsAccount</a>
 
 ### Description
 
@@ -136,7 +136,7 @@ Creates a new user account, sets email address and temporary password. Check the
     
 ### Syntax
 
-    New-IqpAccount [-Connection < Hashtable >] [-Account] < Object > [< CommonParameters >]
+    New-IqsAccount [-Connection < Hashtable >] [-Account] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -170,11 +170,11 @@ To execute this cmdlet needed system admistrator role.
 
 ### Example
     
-    C:\PS>New-IqpAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com" }
+    C:\PS>New-IqsAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com" }
 
 ---
 
-# <a name="edit-account">Update-IqpAccount</a>
+# <a name="edit-account">Update-IqsAccount</a>
  
 ### Description
 
@@ -182,7 +182,7 @@ Updates existing account
     
 ### Syntax
 
-    Update-IqpAccount [-Connection < Hashtable >] [-Account] < Object > [< CommonParameters >]
+    Update-IqsAccount [-Connection < Hashtable >] [-Account] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -216,11 +216,11 @@ To execute this cmdlet needed site manager or higher roles or use own Id.
 
 ### Example
     
-    C:\PS>Update-IqpAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com"; }
+    C:\PS>Update-IqsAccount -Account @{ name="Test User"; login="test"; email="test@somewhere.com"; }
 
 ---
 
-# <a name="delete-account">Remove-IqpAccount</a>
+# <a name="delete-account">Remove-IqsAccount</a>
     
 ### Description
 
@@ -228,7 +228,7 @@ Removes user account by its unique id
     
 ### Syntax
 
-    Remove-IqpAccount [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Remove-IqsAccount [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -238,7 +238,7 @@ Removes user account by its unique id
         
 - Id < String >
 
-    A account id. Required parameter. Can be retrieved from Get-IqpAccounts
+    A account id. Required parameter. Can be retrieved from Get-IqsAccounts
 
 - < CommonParameters >
 
@@ -253,4 +253,4 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Remove-IqpAccount -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsAccount -Id 85e52f3abf2e4091b489dc4f01df2df2

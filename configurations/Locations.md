@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="locations">Get-IqpLocations</a>
+# <a name="locations">Get-IqsLocations</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with locations that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpLocations [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsLocations [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with locations that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpLocations -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ name="gate" } -Take 10
+    C:\PS>Get-IqsLocations -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ name="gate" } -Take 10
 
 ---
 
-# <a name="location">Get-IqpLocation</a>
+# <a name="location">Get-IqsLocation</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets location by its unique id
     
 ### Syntax
 
-    Get-IqpLocation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsLocation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets location by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A location id. Required parameter. Can be retrieved from Get-IqpLocations
+    A location id. Required parameter. Can be retrieved from Get-IqsLocations
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpLocation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsLocation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-location">New-IqpLocation</a>
+# <a name="new-location">New-IqsLocation</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new location
     
 ### Syntax
 
-    New-IqpLocation [-Connection < Hashtable >] [-SiteId] < String > [-Location] < Object > [< CommonParameters >]
+    New-IqsLocation [-Connection < Hashtable >] [-SiteId] < String > [-Location] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new location
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Location < Object >
 
@@ -144,11 +144,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
+    C:\PS>New-IqsLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
 
 ---
 
-# <a name="edit-location">Update-IqpLocation</a>
+# <a name="edit-location">Update-IqsLocation</a>
  
 ### Description
 
@@ -156,7 +156,7 @@ Updates existing location
     
 ### Syntax
 
-    Update-IqpLocation [-Connection < Hashtable >] [-SiteId] < String > [-location] < Object > [< CommonParameters >]
+    Update-IqsLocation [-Connection < Hashtable >] [-SiteId] < String > [-location] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -166,7 +166,7 @@ Updates existing location
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - location < Object >
 
@@ -190,11 +190,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
+    C:\PS>Update-IqsLocation -SiteId 1 -Location @{ site_id="1"; name="Main gate"; pos=${ type="Point"; coordinates=@(32.11, -100.45) } }
 
 ---
 
-# <a name="delete-location">Remove-IqpLocation</a>
+# <a name="delete-location">Remove-IqsLocation</a>
     
 ### Description
 
@@ -202,7 +202,7 @@ Deletes existing location
     
 ### Syntax
 
-    Remove-IqpLocation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsLocation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -212,11 +212,11 @@ Deletes existing location
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A location id. Required parameter. Can be retrieved from Get-IqpLocations
+    A location id. Required parameter. Can be retrieved from Get-IqsLocations
 
 - < CommonParameters >
 
@@ -231,4 +231,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpLocation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsLocation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpOperationalEvents
+function Get-IqsOperationalEvents
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpOperationalEvents -SiteId 1 -Filter @{ name="truck" } -Take 10
+Get-IqsOperationalEvents -SiteId 1 -Filter @{ name="truck" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpOperationalEvents -SiteId 1 -Filter @{ name="truck" } -Take 10
 }
 
 
-function New-IqpOperationalEvent
+function New-IqsOperationalEvent
 {
 <#
 .SYNOPSIS
@@ -126,7 +126,7 @@ A event with the following structure:
 
 .EXAMPLE
 
-New-IqpOperationalEvent -SiteId 1 -Event @{ site_id="1"; type="manual"; severity=500; description="Test event" }
+New-IqsOperationalEvent -SiteId 1 -Event @{ site_id="1"; type="manual"; severity=500; description="Test event" }
 
 #>
     [CmdletBinding()]
@@ -152,7 +152,7 @@ New-IqpOperationalEvent -SiteId 1 -Event @{ site_id="1"; type="manual"; severity
 }
 
 
-function Remove-IqpOperationalEvent
+function Remove-IqsOperationalEvent
 {
 <#
 .SYNOPSIS
@@ -177,7 +177,7 @@ A event id
 
 .EXAMPLE
 
-Remove-IqpOperationalEvent -SiteId 1 -Id 123
+Remove-IqsOperationalEvent -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

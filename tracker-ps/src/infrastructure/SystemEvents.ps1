@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Read-IqpSystemEvents 
+function Read-IqsSystemEvents 
 {
 <#
 .SYNOPSIS
@@ -39,7 +39,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpEvents -Filter @{ type="Failure" }
+Get-IqsEvents -Filter @{ type="Failure" }
 
 #>
     [CmdletBinding()]
@@ -63,7 +63,7 @@ Get-IqpEvents -Filter @{ type="Failure" }
 }
 
 
-function Write-IqpSystemEvent
+function Write-IqsSystemEvent
 {
 <#
 .SYNOPSIS
@@ -92,7 +92,7 @@ An event to be written:
 
 .EXAMPLE
 
-Write-IqpEvent -Event @{ correlation_id="123"; type="Other"; message="Just a test event" }
+Write-IqsEvent -Event @{ correlation_id="123"; type="Other"; message="Just a test event" }
 
 #>
     [CmdletBinding()]

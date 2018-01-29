@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Get-IqpSmsSettings
+function Get-IqsSmsSettings
 {
 <#
 .SYNOPSIS
@@ -27,7 +27,7 @@ A unique user id
 
 .EXAMPLE
 
-Get-IqpSmsSettings -Id 123
+Get-IqsSmsSettings -Id 123
 
 #>
     [CmdletBinding()]
@@ -47,7 +47,7 @@ Get-IqpSmsSettings -Id 123
 }
 
 
-function Set-IqpSmsSettings
+function Set-IqsSmsSettings
 {
 <#
 .SYNOPSIS
@@ -75,7 +75,7 @@ An user sms settings with the following structure
 
 .EXAMPLE
 
-Set-IqpSmsSettings -Settings @{ id="123"; name="Test user"; phone="+79102340238"; language="en" }
+Set-IqsSmsSettings -Settings @{ id="123"; name="Test user"; phone="+79102340238"; language="en" }
 
 #>
     [CmdletBinding()]
@@ -95,7 +95,7 @@ Set-IqpSmsSettings -Settings @{ id="123"; name="Test user"; phone="+79102340238"
 }
 
 
-function Request-IqpSmsVerification
+function Request-IqsSmsVerification
 {
 <#
 .SYNOPSIS
@@ -116,7 +116,7 @@ User login
 
 .EXAMPLE
 
-Request-IqpSmsVerification -Login test@somewhere.com
+Request-IqsSmsVerification -Login test@somewhere.com
 
 #>
     [CmdletBinding()]
@@ -136,7 +136,7 @@ Request-IqpSmsVerification -Login test@somewhere.com
 }
 
 
-function Submit-IqpPhoneVerification
+function Submit-IqsPhoneVerification
 {
 <#
 .SYNOPSIS
@@ -161,7 +161,7 @@ Reset code
 
 .EXAMPLE
 
-Submit-IqpPhoneVerification -Login test@somewhere.com -Code 1245
+Submit-IqsPhoneVerification -Login test@somewhere.com -Code 1245
 
 #>
     [CmdletBinding()]

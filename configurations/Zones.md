@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="zones">Get-IqpZones</a>
+# <a name="zones">Get-IqsZones</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with zones that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpZones [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsZones [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with zones that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpZones -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type="object" } -Take 10
+    C:\PS>Get-IqsZones -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type="object" } -Take 10
 
 ---
 
-# <a name="zone">Get-IqpZone</a>
+# <a name="zone">Get-IqsZone</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets zone by its unique id
     
 ### Syntax
 
-    Get-IqpZone [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsZone [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets zone by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A zone id. Required parameter. Can be retrieved from Get-IqpZones
+    A zone id. Required parameter. Can be retrieved from Get-IqsZones
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpZone -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsZone -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-zone">New-IqpZone</a>
+# <a name="new-zone">New-IqsZone</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new zone
     
 ### Syntax
 
-    New-IqpZone [-Connection < Hashtable >] [-SiteId] < String > [-Zone] < Object > [< CommonParameters >]
+    New-IqsZone [-Connection < Hashtable >] [-SiteId] < String > [-Zone] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new zone
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Zone < Object >
 
@@ -151,11 +151,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
+    C:\PS>New-IqsZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
 
 ---
 
-# <a name="edit-zone">Update-IqpZone</a>
+# <a name="edit-zone">Update-IqsZone</a>
  
 ### Description
 
@@ -163,7 +163,7 @@ Updates existing zone
     
 ### Syntax
 
-    Update-IqpZone [-Connection < Hashtable >] [-SiteId] < String > [-Zone] < Object > [< CommonParameters >]
+    Update-IqsZone [-Connection < Hashtable >] [-SiteId] < String > [-Zone] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -173,7 +173,7 @@ Updates existing zone
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Zone < Object >
 
@@ -204,11 +204,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
+    C:\PS>New-IqsZone -SiteId 1 -Zone @{ site_id="1"; type="circle"; name="Parking"; center=@{ type="Point"; coordinates=@(32, -110) }; distance=300 }
 
 ---
 
-# <a name="delete-zone">Remove-IqpZone</a>
+# <a name="delete-zone">Remove-IqsZone</a>
     
 ### Description
 
@@ -216,7 +216,7 @@ Removes zone by its unique id
     
 ### Syntax
 
-    Remove-IqpZone [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsZone [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -226,11 +226,11 @@ Removes zone by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A zone id. Required parameter. Can be retrieved from Get-IqpZones
+    A zone id. Required parameter. Can be retrieved from Get-IqsZones
 
 - < CommonParameters >
 
@@ -245,4 +245,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpZone -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsZone -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

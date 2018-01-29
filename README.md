@@ -4,7 +4,7 @@ Using this documentation you can view and use examples of interaction with syste
 
 ## Instalation
 
-- Clone or download **iqp-docs-cmdlets** repository and find **iqp-docs-cmdlets/tracker-ps** folder or just  download **tracker-ps** from this [this](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/iquipsys-positron/iqp-docs-cmdlets/tree/master/tracker-ps) link.
+- Clone or download **Iqs-docs-cmdlets** repository and find **Iqs-docs-cmdlets/tracker-ps** folder or just  download **tracker-ps** from this [this](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/iquipsys-positron/Iqs-docs-cmdlets/tree/master/tracker-ps) link.
 
 
 - Add path to **tracker-ps** folder to **PSModulePath** in system variables.
@@ -14,61 +14,61 @@ Using this documentation you can view and use examples of interaction with syste
 
 ## Usage
 
-To execute almost all request you have to sign in to system. Sign in to system can be performed by cmdlet *Connect-IqpFacade*, this cmdlet is described at [Connections](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Connections.md).
+To execute almost all request you have to sign in to system. Sign in to system can be performed by cmdlet *Connect-IqsFacade*, this cmdlet is described at [Connections](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Connections.md).
 
-After connecting to facade, if you have proper role, you can execute any cmdlet described on links below. After working with system recomended to use *Disconnect-IqpFacade* to close session.
+After connecting to facade, if you have proper role, you can execute any cmdlet described on links below. After working with system recomended to use *Disconnect-IqsFacade* to close session.
 
 Example of usage
 
 ```
-$conn = Connect-IqpFacade -Host tracker.pipservices.net -Port 8080 -Login "user@gmail.com" -Password "password"
+$conn = Connect-IqsFacade -Host tracker.pipservices.net -Port 8080 -Login "user@gmail.com" -Password "password"
 
-$sites = Get-IqpSites
+$sites = Get-IqsSites
 
-Disconnect-IqpFacade
+Disconnect-IqsFacade
 ```
 
 The script above connects to system and saving all user sites to *$sites* variable. Don't forget to set correct *Login* and *Password* parameners
 
 ## Navigation
 
-* [Beacons](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Beacons.md)
-* [ControlObects](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/ControlObects.md)
-* [Devices](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Devices.md)
-* [EmergencyPlans](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/EmergencyPlans.md)
-* [EventTemplates](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/EventTemplates.md)
-* [Gateways](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Gateways.md)
-* [Invitations](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Invitations.md)
-* [Locations](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Locations.md)
-* [ObjectGroups](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/ObjectGroups.md)
-* [Resolutions](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Resolutions.md)
-* [Rules](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Rules.md)
-* [Shifts](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Shifts.md)
-* [Sites](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Sites.md)
-* [Zones](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/configurations/Zones.md)
+* [Beacons](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Beacons.md)
+* [ControlObects](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/ControlObects.md)
+* [Devices](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Devices.md)
+* [EmergencyPlans](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/EmergencyPlans.md)
+* [EventTemplates](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/EventTemplates.md)
+* [Gateways](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Gateways.md)
+* [Invitations](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Invitations.md)
+* [Locations](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Locations.md)
+* [ObjectGroups](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/ObjectGroups.md)
+* [Resolutions](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Resolutions.md)
+* [Rules](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Rules.md)
+* [Shifts](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Shifts.md)
+* [Sites](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Sites.md)
+* [Zones](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/configurations/Zones.md)
 
-* [MessageTemplates](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/content/MessageTemplates.md)
+* [MessageTemplates](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/content/MessageTemplates.md)
 
-* [ObjectPositions](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/historical/ObjectPositions.md)
-* [ObjectStates](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/historical/ObjectStates.md)
-* [OperationalEvents](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/historical/OperationalEvents.md)
+* [ObjectPositions](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/historical/ObjectPositions.md)
+* [ObjectStates](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/historical/ObjectStates.md)
+* [OperationalEvents](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/historical/OperationalEvents.md)
 
-* [Statistics](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/infrastructure/Statistics.md)
+* [Statistics](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/infrastructure/Statistics.md)
 
-* [Corrections](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/realtime/Corrections.md)
-* [CurrentObjectStates](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/realtime/CurrentObjectStates.md)
-* [Incidents](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/realtime/Incidents.md)
-* [RestGateway](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/realtime/RestGateway.md)
-* [Rosters](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/realtime/Rosters.md)
-* [Signals](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/realtime/Signals.md)
+* [Corrections](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/realtime/Corrections.md)
+* [CurrentObjectStates](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/realtime/CurrentObjectStates.md)
+* [Incidents](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/realtime/Incidents.md)
+* [RestGateway](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/realtime/RestGateway.md)
+* [Rosters](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/realtime/Rosters.md)
+* [Signals](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/realtime/Signals.md)
 
-* [Accounts](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Accounts.md)
-* [Activities](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Activities.md)
-* [Connections](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Connections.md)
-* [Emails](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Emails.md)
-* [EmailSettings](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/EmailSettings.md)
-* [Passwords](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Passwords.md)
-* [Roles](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Roles.md)
-* [Sessions](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Sessions.md)
-* [Sms](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/Sms.md)
-* [SmsSettings](https://github.com/iquipsys-positron/iqp-docs-cmdlets/blob/master/users/SmsSettings.md)
+* [Accounts](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Accounts.md)
+* [Activities](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Activities.md)
+* [Connections](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Connections.md)
+* [Emails](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Emails.md)
+* [EmailSettings](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/EmailSettings.md)
+* [Passwords](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Passwords.md)
+* [Roles](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Roles.md)
+* [Sessions](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Sessions.md)
+* [Sms](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/Sms.md)
+* [SmsSettings](https://github.com/iquipsys-positron/Iqs-docs-cmdlets/blob/master/users/SmsSettings.md)

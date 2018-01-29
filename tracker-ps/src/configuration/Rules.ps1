@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpRules
+function Get-IqsRules
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpRules -SiteId 1 -Filter @{ type="object" } -Take 10
+Get-IqsRules -SiteId 1 -Filter @{ type="object" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpRules -SiteId 1 -Filter @{ type="object" } -Take 10
 }
 
 
-function Get-IqpRule
+function Get-IqsRule
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A rule id
 
 .EXAMPLE
 
-Get-IqpRule -SiteId 1 -Id 123
+Get-IqsRule -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpRule -SiteId 1 -Id 123
 }
 
 
-function New-IqpRule
+function New-IqsRule
 {
 <#
 .SYNOPSIS
@@ -177,7 +177,7 @@ A rule with the following structure:
 
 .EXAMPLE
 
-New-IqpRule -SiteId 1 -Rule @{ site_id="1"; type="Presence"; name="Present in area"; event_type="auto" }
+New-IqsRule -SiteId 1 -Rule @{ site_id="1"; type="Presence"; name="Present in area"; event_type="auto" }
 
 #>
     [CmdletBinding()]
@@ -203,7 +203,7 @@ New-IqpRule -SiteId 1 -Rule @{ site_id="1"; type="Presence"; name="Present in ar
 }
 
 
-function Update-IqpRule
+function Update-IqsRule
 {
 <#
 .SYNOPSIS
@@ -246,7 +246,7 @@ A rule with the following structure:
 
 .EXAMPLE
 
-Update-IqpRule -SiteId 1 -Rule @{ site_id="1"; type="Presence"; name="Present in area"; event_type="auto" }
+Update-IqsRule -SiteId 1 -Rule @{ site_id="1"; type="Presence"; name="Present in area"; event_type="auto" }
 
 #>
     [CmdletBinding()]
@@ -272,7 +272,7 @@ Update-IqpRule -SiteId 1 -Rule @{ site_id="1"; type="Presence"; name="Present in
 }
 
 
-function Remove-IqpRule
+function Remove-IqsRule
 {
 <#
 .SYNOPSIS
@@ -297,7 +297,7 @@ A rule id
 
 .EXAMPLE
 
-Remove-IqpRule -SiteId 1 -Id 123
+Remove-IqsRule -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

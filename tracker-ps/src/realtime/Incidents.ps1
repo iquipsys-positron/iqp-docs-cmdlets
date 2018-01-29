@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpIncidents
+function Get-IqsIncidents
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpIncidents -SiteId 1 -Take 10
+Get-IqsIncidents -SiteId 1 -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpIncidents -SiteId 1 -Take 10
 }
 
 
-function Get-IqpIncident
+function Get-IqsIncident
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A incident id
 
 .EXAMPLE
 
-Get-IqpIncident -SiteId 1 -Id 123
+Get-IqsIncident -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpIncident -SiteId 1 -Id 123
 }
 
 
-function New-IqpIncident
+function New-IqsIncident
 {
 <#
 .SYNOPSIS
@@ -176,7 +176,7 @@ A incident with the following structure:
 
 .EXAMPLE
 
-New-IqpIncident -SiteId 1 -Incident @{ site_id="1"; rule_id="123"; event_id="234"; description="Test incident"; severity=50 }
+New-IqsIncident -SiteId 1 -Incident @{ site_id="1"; rule_id="123"; event_id="234"; description="Test incident"; severity=50 }
 
 #>
     [CmdletBinding()]
@@ -202,7 +202,7 @@ New-IqpIncident -SiteId 1 -Incident @{ site_id="1"; rule_id="123"; event_id="234
 }
 
 
-function Close-IqpIncident
+function Close-IqsIncident
 {
 <#
 .SYNOPSIS
@@ -235,7 +235,7 @@ A incident resolution
 
 .EXAMPLE
 
-Close-IqpIncident -SiteId 1 -Id 123 -Resolution "Test completed" -ResolutionId "1"
+Close-IqsIncident -SiteId 1 -Id 123 -Resolution "Test completed" -ResolutionId "1"
 
 #>
     [CmdletBinding()]
@@ -269,7 +269,7 @@ Close-IqpIncident -SiteId 1 -Id 123 -Resolution "Test completed" -ResolutionId "
 }
 
 
-function Remove-IqpIncident
+function Remove-IqsIncident
 {
 <#
 .SYNOPSIS
@@ -294,7 +294,7 @@ A incident id
 
 .EXAMPLE
 
-Remove-IqpIncident -SiteId 1 -Id 123
+Remove-IqsIncident -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="EventTemplates">Get-IqpEventTemplates</a>
+# <a name="EventTemplates">Get-IqsEventTemplates</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with templates that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpEventTemplates [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsEventTemplates [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with templates that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpEventTemplates -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ severity=50 } -Take 10
+    C:\PS>Get-IqsEventTemplates -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ severity=50 } -Take 10
 
 ---
 
-# <a name="EventTemplate">Get-IqpEventTemplate</a>
+# <a name="EventTemplate">Get-IqsEventTemplate</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets template by its unique id
     
 ### Syntax
 
-    Get-IqpEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets template by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A object id. Required parameter. Can be retrieved from Get-IqpEventTemplates
+    A object id. Required parameter. Can be retrieved from Get-IqsEventTemplates
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpEventTemplate -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsEventTemplate -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-EventTemplate">New-IqpEventTemplate</a>
+# <a name="new-EventTemplate">New-IqsEventTemplate</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates a new event template.
     
 ### Syntax
 
-    New-IqpEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Template] < Object > [< CommonParameters >]
+    New-IqsEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Template] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates a new event template.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Template < Object >
 
@@ -147,11 +147,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
+    C:\PS>New-IqsEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
 
 ---
 
-# <a name="edit-EventTemplate">Update-IqpEventTemplate</a>
+# <a name="edit-EventTemplate">Update-IqsEventTemplate</a>
  
 ### Description
 
@@ -159,7 +159,7 @@ Updates existing event template
     
 ### Syntax
 
-    Update-IqpEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Template] < Object > [< CommonParameters >]
+    Update-IqsEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Template] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -169,7 +169,7 @@ Updates existing event template
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Template < Object >
 
@@ -196,11 +196,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
+    C:\PS>Update-IqsEventTemplate -SiteId 1 -Template @{ site_id="1"; severity=500; description="Test event" }
 
 ---
 
-# <a name="delete-EventTemplate">Remove-IqpEventTemplate</a>
+# <a name="delete-EventTemplate">Remove-IqsEventTemplate</a>
     
 ### Description
 
@@ -208,7 +208,7 @@ Removes event template by its unique id
     
 ### Syntax
 
-    Remove-IqpEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsEventTemplate [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -218,11 +218,11 @@ Removes event template by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A template id. Required parameter. Can be retrieved from Get-IqpEventTemplates
+    A template id. Required parameter. Can be retrieved from Get-IqsEventTemplates
 
 - < CommonParameters >
 
@@ -237,4 +237,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpEventTemplate -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsEventTemplate -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpInvitations
+function Get-IqsInvitations
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpInvitations -SiteId 1 -Filter @{ search="gate" } -Take 10
+Get-IqsInvitations -SiteId 1 -Filter @{ search="gate" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpInvitations -SiteId 1 -Filter @{ search="gate" } -Take 10
 }
 
 
-function Get-IqpInvitation
+function Get-IqsInvitation
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A invitation id
 
 .EXAMPLE
 
-Get-IqpInvitation -SiteId 1 -Id 123
+Get-IqsInvitation -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpInvitation -SiteId 1 -Id 123
 }
 
 
-function Send-IqpInvitation
+function Send-IqsInvitation
 {
 <#
 .SYNOPSIS
@@ -165,7 +165,7 @@ A invitation with the following structure:
 
 .EXAMPLE
 
-Send-IqpInvitation -SiteId 1 -Invitation @{ site_id="1"; site_name="Test site"; invitee_email="test@somewhere.com" }
+Send-IqsInvitation -SiteId 1 -Invitation @{ site_id="1"; site_name="Test site"; invitee_email="test@somewhere.com" }
 
 #>
     [CmdletBinding()]
@@ -191,7 +191,7 @@ Send-IqpInvitation -SiteId 1 -Invitation @{ site_id="1"; site_name="Test site"; 
 }
 
 
-function Remove-IqpInvitation
+function Remove-IqsInvitation
 {
 <#
 .SYNOPSIS
@@ -216,7 +216,7 @@ A invitation id
 
 .EXAMPLE
 
-Remove-IqpInvitation -SiteId 1 -Id 123
+Remove-IqsInvitation -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

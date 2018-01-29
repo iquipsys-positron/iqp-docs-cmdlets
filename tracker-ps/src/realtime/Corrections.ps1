@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpCorrections
+function Get-IqsCorrections
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpCorrections -SiteId 1 -Filter @{ type="object" } -Take 10
+Get-IqsCorrections -SiteId 1 -Filter @{ type="object" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpCorrections -SiteId 1 -Filter @{ type="object" } -Take 10
 }
 
 
-function Get-IqpCorrection
+function Get-IqsCorrection
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A correction id
 
 .EXAMPLE
 
-Get-IqpCorrection -SiteId 1 -Id 123
+Get-IqsCorrection -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpCorrection -SiteId 1 -Id 123
 }
 
 
-function New-IqpCorrection
+function New-IqsCorrection
 {
 <#
 .SYNOPSIS
@@ -170,7 +170,7 @@ A correction with the following structure:
 
 .EXAMPLE
 
-New-IqpCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
+New-IqsCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
 
 #>
     [CmdletBinding()]
@@ -196,7 +196,7 @@ New-IqpCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="R
 }
 
 
-function Update-IqpCorrection
+function Update-IqsCorrection
 {
 <#
 .SYNOPSIS
@@ -232,7 +232,7 @@ A correction with the following structure:
 
 .EXAMPLE
 
-Update-IqpCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
+Update-IqsCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status="Requested"; reason="Test"; changes=@( @{ param_name="distance"; value=10 } ) }
 
 #>
     [CmdletBinding()]
@@ -258,7 +258,7 @@ Update-IqpCorrection -SiteId 1 -Correction @{ site_id="1"; object_id="1"; status
 }
 
 
-function Remove-IqpCorrection
+function Remove-IqsCorrection
 {
 <#
 .SYNOPSIS
@@ -283,7 +283,7 @@ A correction id
 
 .EXAMPLE
 
-Remove-IqpCorrection -SiteId 1 -Id 123
+Remove-IqsCorrection -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

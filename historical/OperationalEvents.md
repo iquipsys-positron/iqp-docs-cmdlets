@@ -6,7 +6,7 @@ Page navigation
 
 ---
 
-# <a name="OperationalEvents">Get-IqpOperationalEvents</a>
+# <a name="OperationalEvents">Get-IqsOperationalEvents</a>
    
 ### Description
 
@@ -14,7 +14,7 @@ Gets a page with Events that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpOperationalEvents [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsOperationalEvents [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -24,7 +24,7 @@ Gets a page with Events that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -55,11 +55,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpOperationalEvents -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ description="critical alarm" } -Take 10
+    C:\PS>Get-IqsOperationalEvents -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ description="critical alarm" } -Take 10
 
 ---
 
-# <a name="new-OperationalEvent">New-IqpOperationalEvent</a>
+# <a name="new-OperationalEvent">New-IqsOperationalEvent</a>
 
 ### Description
 
@@ -67,7 +67,7 @@ Creates a new event.
     
 ### Syntax
 
-    New-IqpOperationalEvent [-Connection < Hashtable >] [-SiteId] < String > [-Event] < Object > [< CommonParameters >]
+    New-IqsOperationalEvent [-Connection < Hashtable >] [-SiteId] < String > [-Event] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -77,7 +77,7 @@ Creates a new event.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Event < Object >
 
@@ -115,11 +115,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpOperationalEvent -SiteId 1 -Event @{ site_id="1"; type="manual"; severity=500; description="Test event" }
+    C:\PS>New-IqsOperationalEvent -SiteId 1 -Event @{ site_id="1"; type="manual"; severity=500; description="Test event" }
 
 ---
 
-# <a name="delete-OperationalEvent">Remove-IqpOperationalEvent</a>
+# <a name="delete-OperationalEvent">Remove-IqsOperationalEvent</a>
     
 ### Description
 
@@ -127,7 +127,7 @@ Removes Events that match specified filter
     
 ### Syntax
 
-    Remove-IqpOperationalEvent [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsOperationalEvent [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -137,11 +137,11 @@ Removes Events that match specified filter
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    An event id. Required parameter. Can be retrieved from Get-IqpOperationalEvents
+    An event id. Required parameter. Can be retrieved from Get-IqsOperationalEvents
 
 - < CommonParameters >
 
@@ -156,4 +156,4 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-   C:\PS>Remove-IqpOperationalEvent -SiteId 1 -Filter @{ object_id="123" }
+   C:\PS>Remove-IqsOperationalEvent -SiteId 1 -Filter @{ object_id="123" }

@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpObjectPositions
+function Get-IqsObjectPositions
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpObjectPositions -SiteId 1 -Filter @{ object_id="123" } -Take 10
+Get-IqsObjectPositions -SiteId 1 -Filter @{ object_id="123" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpObjectPositions -SiteId 1 -Filter @{ object_id="123" } -Take 10
 }
 
 
-function Add-IqpObjectPosition
+function Add-IqsObjectPosition
 {
 <#
 .SYNOPSIS
@@ -113,7 +113,7 @@ A position with the following structure:
 
 .EXAMPLE
 
-Add-IqpObjectPosition -SiteId 1 -Position @{ site_id="1"; object_id="123"; lat=1; long=1 }
+Add-IqsObjectPosition -SiteId 1 -Position @{ site_id="1"; object_id="123"; lat=1; long=1 }
 
 #>
     [CmdletBinding()]
@@ -139,7 +139,7 @@ Add-IqpObjectPosition -SiteId 1 -Position @{ site_id="1"; object_id="123"; lat=1
 }
 
 
-function Add-IqpObjectPositions
+function Add-IqsObjectPositions
 {
 <#
 .SYNOPSIS
@@ -169,7 +169,7 @@ A positions with the following structure:
 
 .EXAMPLE
 
-Add-IqpObjectPositions -SiteId 1 -Positions @( @{ site_id="1"; object_id="123"; lat=1; long=1 }, ... )
+Add-IqsObjectPositions -SiteId 1 -Positions @( @{ site_id="1"; object_id="123"; lat=1; long=1 }, ... )
 
 #>
     [CmdletBinding()]
@@ -195,7 +195,7 @@ Add-IqpObjectPositions -SiteId 1 -Positions @( @{ site_id="1"; object_id="123"; 
 }
 
 
-function Remove-IqpObjectPositions
+function Remove-IqsObjectPositions
 {
 <#
 .SYNOPSIS
@@ -221,7 +221,7 @@ A filter with search criteria (default: no filter)
 .EXAMPLE
 
 # Delete positions for object 123
-Remove-IqpObjectPositions -SiteId 1 -Filter @{ object_id="123" }
+Remove-IqsObjectPositions -SiteId 1 -Filter @{ object_id="123" }
 
 #>
     [CmdletBinding()]

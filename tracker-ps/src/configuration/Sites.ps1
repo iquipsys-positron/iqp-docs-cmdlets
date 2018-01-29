@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpSites
+function Get-IqsSites
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpSites -Filter @{ ids=@("1", "2") } -Take 10
+Get-IqsSites -Filter @{ ids=@("1", "2") } -Take 10
 
 #>
     [CmdletBinding()]
@@ -77,7 +77,7 @@ Get-IqpSites -Filter @{ ids=@("1", "2") } -Take 10
 }
 
 
-function Get-IqpSite
+function Get-IqsSite
 {
 <#
 .SYNOPSIS
@@ -98,7 +98,7 @@ A site id
 
 .EXAMPLE
 
-Get-IqpSite -Id 123
+Get-IqsSite -Id 123
 
 #>
     [CmdletBinding()]
@@ -122,7 +122,7 @@ Get-IqpSite -Id 123
 }
 
 
-function New-IqpSite
+function New-IqsSite
 {
 <#
 .SYNOPSIS
@@ -157,7 +157,7 @@ A site with the following structure:
 
 .EXAMPLE
 
-New-IqpSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
+New-IqsSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
 
 #>
     [CmdletBinding()]
@@ -181,7 +181,7 @@ New-IqpSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
 }
 
 
-function Update-IqpSite
+function Update-IqsSite
 {
 <#
 .SYNOPSIS
@@ -216,7 +216,7 @@ A site with the following structure:
 
 .EXAMPLE
 
-Update-IqpSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
+Update-IqsSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
 
 #>
     [CmdletBinding()]
@@ -240,7 +240,7 @@ Update-IqpSite -Site @{ code="COOL123"; name="Cool mine"; active=$true }
 }
 
 
-function Remove-IqpSite
+function Remove-IqsSite
 {
 <#
 .SYNOPSIS
@@ -261,7 +261,7 @@ A site id
 
 .EXAMPLE
 
-Remove-IqpSite -Id 123
+Remove-IqsSite -Id 123
 
 #>
     [CmdletBinding()]
@@ -285,7 +285,7 @@ Remove-IqpSite -Id 123
 }
 
 
-function Get-IqpSiteUsers
+function Get-IqsSiteUsers
 {
 <#
 .SYNOPSIS
@@ -318,7 +318,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpSiteUsers -Id 123 -Take 10
+Get-IqsSiteUsers -Id 123 -Take 10
 
 #>
     [CmdletBinding()]

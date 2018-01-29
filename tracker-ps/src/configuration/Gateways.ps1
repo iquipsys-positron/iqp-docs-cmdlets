@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpGateways
+function Get-IqsGateways
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpGateways -SiteId 1 -Filter @{ udi="23433455" } -Take 10
+Get-IqsGateways -SiteId 1 -Filter @{ udi="23433455" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpGateways -SiteId 1 -Filter @{ udi="23433455" } -Take 10
 }
 
 
-function Get-IqpGateway
+function Get-IqsGateway
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A gateway id
 
 .EXAMPLE
 
-Get-IqpGateway -SiteId 1 -Id 123
+Get-IqsGateway -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpGateway -SiteId 1 -Id 123
 }
 
 
-function New-IqpGateway
+function New-IqsGateway
 {
 <#
 .SYNOPSIS
@@ -167,7 +167,7 @@ A gateway with the following structure:
 
 .EXAMPLE
 
-New-IqpGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="134552345"; label="Main building"; active=$true }
+New-IqsGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="134552345"; label="Main building"; active=$true }
 
 #>
     [CmdletBinding()]
@@ -193,7 +193,7 @@ New-IqpGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="134552345";
 }
 
 
-function Update-IqpGateway
+function Update-IqsGateway
 {
 <#
 .SYNOPSIS
@@ -226,7 +226,7 @@ A gateway with the following structure:
 
 .EXAMPLE
 
-Update-IqpGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="3454363645"; label="Main building"; active=$true }
+Update-IqsGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="3454363645"; label="Main building"; active=$true }
 
 #>
     [CmdletBinding()]
@@ -252,7 +252,7 @@ Update-IqpGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="34543636
 }
 
 
-function Remove-IqpGateway
+function Remove-IqsGateway
 {
 <#
 .SYNOPSIS
@@ -277,7 +277,7 @@ A gateway id
 
 .EXAMPLE
 
-Remove-IqpGateway -SiteId 1 -Id 123
+Remove-IqsGateway -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -302,7 +302,7 @@ Remove-IqpGateway -SiteId 1 -Id 123
     end {}
 }
 
-function Ping-IqpGateway
+function Ping-IqsGateway
 {
 <#
 .SYNOPSIS
@@ -327,7 +327,7 @@ A gateway id
 
 .EXAMPLE
 
-Ping-IqpGateway -SiteId 1 -Id "123"
+Ping-IqsGateway -SiteId 1 -Id "123"
 
 #>
     [CmdletBinding()]
@@ -352,7 +352,7 @@ Ping-IqpGateway -SiteId 1 -Id "123"
     end {}
 }
 
-function Request-IqpGatewayStats
+function Request-IqsGatewayStats
 {
 <#
 .SYNOPSIS
@@ -377,7 +377,7 @@ A gateway id
 
 .EXAMPLE
 
-Request-IqpGatewayStats -SiteId 1 -Id "123"
+Request-IqsGatewayStats -SiteId 1 -Id "123"
 
 #>
     [CmdletBinding()]

@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpAttendances
+function Get-IqsAttendances
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpAttendances -SiteId 1 -Filter @{ from_time="2017-01-01T00:00:00Z" } -Take 10
+Get-IqsAttendances -SiteId 1 -Filter @{ from_time="2017-01-01T00:00:00Z" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpAttendances -SiteId 1 -Filter @{ from_time="2017-01-01T00:00:00Z" } -Take
 }
 
 
-function Get-IqpAttendancesWithinTime
+function Get-IqsAttendancesWithinTime
 {
 <#
 .SYNOPSIS
@@ -112,7 +112,7 @@ End of the time interval
 
 .EXAMPLE
 
-Get-IqpAttendancesWithinTime -SiteId 1 -FromTime="2017-01-01T00:00:00Z" -ToTime="2017-01-02T00:00:00Z" 
+Get-IqsAttendancesWithinTime -SiteId 1 -FromTime="2017-01-01T00:00:00Z" -ToTime="2017-01-02T00:00:00Z" 
 
 #>
     [CmdletBinding()]
@@ -146,7 +146,7 @@ Get-IqpAttendancesWithinTime -SiteId 1 -FromTime="2017-01-01T00:00:00Z" -ToTime=
 }
 
 
-function Add-IqpAttendance
+function Add-IqsAttendance
 {
 <#
 .SYNOPSIS
@@ -175,7 +175,7 @@ An attendance with the following structure:
 
 .EXAMPLE
 
-Add-IqpAttendance -SiteId 1 -Attendance @{ site_id="1"; object_id="1"; start_time=$(Get-Date) }
+Add-IqsAttendance -SiteId 1 -Attendance @{ site_id="1"; object_id="1"; start_time=$(Get-Date) }
 
 #>
     [CmdletBinding()]
@@ -200,7 +200,7 @@ Add-IqpAttendance -SiteId 1 -Attendance @{ site_id="1"; object_id="1"; start_tim
     end {}
 }
 
-function Add-IqpAttendances
+function Add-IqsAttendances
 {
 <#
 .SYNOPSIS
@@ -229,7 +229,7 @@ An attendance with the following structure:
 
 .EXAMPLE
 
-Add-IqpAttendance -SiteId 1 -Attendances @( @{ site_id="1"; object_id="1"; start_time=$(Get-Date) }, ... )
+Add-IqsAttendance -SiteId 1 -Attendances @( @{ site_id="1"; object_id="1"; start_time=$(Get-Date) }, ... )
 
 #>
     [CmdletBinding()]
@@ -254,7 +254,7 @@ Add-IqpAttendance -SiteId 1 -Attendances @( @{ site_id="1"; object_id="1"; start
     end {}
 }
 
-function Remove-IqpAttendances
+function Remove-IqsAttendances
 {
 <#
 .SYNOPSIS
@@ -279,7 +279,7 @@ A filter with search criteria (default: no filter)
 
 .EXAMPLE
 
-Remove-IqpAttendance -SiteId 1 -Filter @{ from_time=${Get-Date} }
+Remove-IqsAttendance -SiteId 1 -Filter @{ from_time=${Get-Date} }
 
 #>
     [CmdletBinding()]

@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpDevices
+function Get-IqsDevices
 {
 <#
 .SYNOPSIS
@@ -44,7 +44,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpDevices -SiteId 1 -Filter @{ search="234" } -Take 10
+Get-IqsDevices -SiteId 1 -Filter @{ search="234" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -83,7 +83,7 @@ Get-IqpDevices -SiteId 1 -Filter @{ search="234" } -Take 10
 }
 
 
-function Get-IqpDevice
+function Get-IqsDevice
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ A device id
 
 .EXAMPLE
 
-Get-IqpDevice -SiteId 1 -Id 123
+Get-IqsDevice -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -134,7 +134,7 @@ Get-IqpDevice -SiteId 1 -Id 123
 }
 
 
-function New-IqpDevice
+function New-IqsDevice
 {
 <#
 .SYNOPSIS
@@ -169,7 +169,7 @@ A device with the following structure:
 
 .EXAMPLE
 
-New-IqpDevice -SiteId 1 -Device @{ site_id="1"; model="smartphone"; udi="1-520-332-3423"; label="Main gate"; active=$true }
+New-IqsDevice -SiteId 1 -Device @{ site_id="1"; model="smartphone"; udi="1-520-332-3423"; label="Main gate"; active=$true }
 
 #>
     [CmdletBinding()]
@@ -195,7 +195,7 @@ New-IqpDevice -SiteId 1 -Device @{ site_id="1"; model="smartphone"; udi="1-520-3
 }
 
 
-function Update-IqpDevice
+function Update-IqsDevice
 {
 <#
 .SYNOPSIS
@@ -230,7 +230,7 @@ A device with the following structure:
 
 .EXAMPLE
 
-Update-IqpDevice -SiteId 1 -Device @{ site_id="1"; model="smartphone"; udi="1-520-332-3423"; label="Main gate"; active=$true }
+Update-IqsDevice -SiteId 1 -Device @{ site_id="1"; model="smartphone"; udi="1-520-332-3423"; label="Main gate"; active=$true }
 
 #>
     [CmdletBinding()]
@@ -256,7 +256,7 @@ Update-IqpDevice -SiteId 1 -Device @{ site_id="1"; model="smartphone"; udi="1-52
 }
 
 
-function Remove-IqpDevice
+function Remove-IqsDevice
 {
 <#
 .SYNOPSIS
@@ -281,7 +281,7 @@ A device id
 
 .EXAMPLE
 
-Remove-IqpDevice -SiteId 1 -Id 123
+Remove-IqsDevice -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]

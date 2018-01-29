@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Get-IqpCurrentObjectStates
+function Get-IqsCurrentObjectStates
 {
 <#
 .SYNOPSIS
@@ -43,7 +43,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Read-IqpCurrentObjectStates -SiteId 1 -Take 10
+Read-IqsCurrentObjectStates -SiteId 1 -Take 10
 
 #>
     [CmdletBinding()]
@@ -82,7 +82,7 @@ Read-IqpCurrentObjectStates -SiteId 1 -Take 10
 }
 
 
-function Get-IqpCurrentObjectState
+function Get-IqsCurrentObjectState
 {
 <#
 .SYNOPSIS
@@ -107,7 +107,7 @@ A state or device id
 
 .EXAMPLE
 
-Get-IqpCurrentObjectState -SiteId 1 -Id 123
+Get-IqsCurrentObjectState -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -133,7 +133,7 @@ Get-IqpCurrentObjectState -SiteId 1 -Id 123
 }
 
 
-function Set-IqpCurrentObjectState
+function Set-IqsCurrentObjectState
 {
 <#
 .SYNOPSIS
@@ -170,7 +170,7 @@ A current object state with the following structure
 
 .EXAMPLE
 
-Set-IqpCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=0; emergency=0  }
+Set-IqsCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=0; emergency=0  }
 
 #>
     [CmdletBinding()]
@@ -196,7 +196,7 @@ Set-IqpCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-D
 }
 
 
-function Update-IqpCurrentObjectState
+function Update-IqsCurrentObjectState
 {
 <#
 .SYNOPSIS
@@ -230,7 +230,7 @@ A state update with the following structure
 
 .EXAMPLE
 
-Update-IqpCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }
+Update-IqsCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }
 
 #>
     [CmdletBinding()]
@@ -256,7 +256,7 @@ Update-IqpCurrentState -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Ge
 }
 
 
-function Remove-IqpCurrentObjectState
+function Remove-IqsCurrentObjectState
 {
 <#
 .SYNOPSIS
@@ -281,7 +281,7 @@ A state or device id
 
 .EXAMPLE
 
-Remove-IqpCurrentObjectState -SiteId 1 -Id 123
+Remove-IqsCurrentObjectState -SiteId 1 -Id 123
 
 #>
     [CmdletBinding()]
@@ -307,7 +307,7 @@ Remove-IqpCurrentObjectState -SiteId 1 -Id 123
 }
 
 
-function Remove-IqpCurrentObjectStates
+function Remove-IqsCurrentObjectStates
 {
 <#
 .SYNOPSIS
@@ -332,7 +332,7 @@ A filter with search criteria (default: no filter)
 
 .EXAMPLE
 
-Remove-IqpCurrentObjectStates -SiteId 1
+Remove-IqsCurrentObjectStates -SiteId 1
 
 #>
     [CmdletBinding()]
@@ -355,7 +355,7 @@ Remove-IqpCurrentObjectStates -SiteId 1
     }
     end {}
 }
-function Send-IqpObjectStateUpdate
+function Send-IqsObjectStateUpdate
 {
 <#
 .SYNOPSIS
@@ -389,7 +389,7 @@ A state update with the following structure
 
 .EXAMPLE
 
-Send-IqpObjectStateUpdate -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }
+Send-IqsObjectStateUpdate -SiteId 1 -State @{ site_id="1"; device_id="1"; time=$(Get-Date); immobile=$false; emergency=$false  }
 
 #>
     [CmdletBinding()]

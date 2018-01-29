@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="rosters">Get-IqpRosters</a>
+# <a name="rosters">Get-IqsRosters</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with rosters that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpRosters [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsRosters [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with rosters that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpRosters -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ shift_id="85e52f3abf2e4091b489dc4f01df2df2" } -Take 10
+    C:\PS>Get-IqsRosters -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ shift_id="85e52f3abf2e4091b489dc4f01df2df2" } -Take 10
 
 ---
 
-# <a name="roster">Get-IqpRoster</a>
+# <a name="roster">Get-IqsRoster</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets roster by its unique id
     
 ### Syntax
 
-    Get-IqpRoster [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsRoster [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets roster by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A roster id. Required parameter. Can be retrieved from Get-IqpRosters
+    A roster id. Required parameter. Can be retrieved from Get-IqsRosters
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpRoster -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsRoster -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-roster">New-IqpRoster</a>
+# <a name="new-roster">New-IqsRoster</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new roster
     
 ### Syntax
 
-    New-IqpRoster [-Connection < Hashtable >] [-SiteId] < String > [-Roster] < Object > [< CommonParameters >]
+    New-IqsRoster [-Connection < Hashtable >] [-SiteId] < String > [-Roster] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates new roster
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Roster < Object >
 
@@ -154,11 +154,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpRoster -SiteId 1 -Roster @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
+    C:\PS>New-IqsRoster -SiteId 1 -Roster @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
 
 ---
 
-# <a name="edit-roster">Update-IqpRoster</a>
+# <a name="edit-roster">Update-IqsRoster</a>
  
 ### Description
 
@@ -166,7 +166,7 @@ Updates existing roster
     
 ### Syntax
 
-    Update-IqpRoster [-Connection < Hashtable >] [-SiteId] < String > [-Roster] < Object > [< CommonParameters >]
+    Update-IqsRoster [-Connection < Hashtable >] [-SiteId] < String > [-Roster] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -176,7 +176,7 @@ Updates existing roster
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Roster < Object >
 
@@ -210,11 +210,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpRoster -SiteId 1 -Roster  @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
+    C:\PS>Update-IqsRoster -SiteId 1 -Roster  @{ site_id="1"; name="Entire day"; start_date=@(Get-Date) }
 
 ---
 
-# <a name="delete-roster">Remove-IqpRoster</a>
+# <a name="delete-roster">Remove-IqsRoster</a>
     
 ### Description
 
@@ -222,7 +222,7 @@ Deletes existing roster
     
 ### Syntax
 
-    Remove-IqpRoster [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsRoster [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -232,11 +232,11 @@ Deletes existing roster
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A roster id. Required parameter. Can be retrieved from Get-IqpRosters
+    A roster id. Required parameter. Can be retrieved from Get-IqsRosters
 
 - < CommonParameters >
 
@@ -251,4 +251,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpRoster -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsRoster -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

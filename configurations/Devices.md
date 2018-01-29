@@ -9,7 +9,7 @@ Page navigation
 
 ---
 
-# <a name="devices">Get-IqpDevices</a>
+# <a name="devices">Get-IqsDevices</a>
    
 ### Description
 
@@ -17,7 +17,7 @@ Gets page with devices by specified criteria
     
 ### Syntax
 
-    Get-IqpDevices [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsDevices [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -27,7 +27,7 @@ Gets page with devices by specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -58,11 +58,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpDevices -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqsDevices -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-# <a name="device">Get-IqpDevice</a>
+# <a name="device">Get-IqsDevice</a>
 
 ### Description
 
@@ -70,7 +70,7 @@ Gets device by id
     
 ### Syntax
 
-    Get-IqpDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -80,11 +80,11 @@ Gets device by id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A device id. Required parameter. Can be retrieved from Get-IqpDevices
+    A device id. Required parameter. Can be retrieved from Get-IqsDevices
 
 - < CommonParameters >
 
@@ -99,11 +99,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-device">New-IqpDevice</a>
+# <a name="new-device">New-IqsDevice</a>
 
 ### Description
 
@@ -111,7 +111,7 @@ Creates new device
     
 ### Syntax
 
-    New-IqpDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] < Object > [< CommonParameters >]
+    New-IqsDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -121,7 +121,7 @@ Creates new device
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Device < Object >
 
@@ -151,11 +151,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Device @{ site_id="9cfaf79bc95b4a9e912314eb3db7a4ba"; model="simulated"; udi="0001"; label="Device01"; active=$true }
+    C:\PS>New-IqsDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Device @{ site_id="9cfaf79bc95b4a9e912314eb3db7a4ba"; model="simulated"; udi="0001"; label="Device01"; active=$true }
 
 ---
 
-# <a name="edit-device">Update-IqpDevice</a>
+# <a name="edit-device">Update-IqsDevice</a>
  
 ### Description
 
@@ -163,7 +163,7 @@ Updates existing device
     
 ### Syntax
 
-    Update-IqpDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] < Object > [< CommonParameters >]
+    Update-IqsDevice [-Connection < Hashtable >] [-SiteId] < String > [-Device] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -173,7 +173,7 @@ Updates existing device
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Device < Object >
 
@@ -203,11 +203,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Device @{ site_id="9cfaf79bc95b4a9e912314eb3db7a4ba"; model="simulated"; udi="0001"; label="Device01"; active=$true }
+    C:\PS>Update-IqsDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Device @{ site_id="9cfaf79bc95b4a9e912314eb3db7a4ba"; model="simulated"; udi="0001"; label="Device01"; active=$true }
 
 ---
 
-# <a name="delete-device">Remove-IqpDevice</a>
+# <a name="delete-device">Remove-IqsDevice</a>
     
 ### Description
 
@@ -215,7 +215,7 @@ Deletes existing device
     
 ### Syntax
 
-    Remove-IqpDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -225,11 +225,11 @@ Deletes existing device
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A device id. Required parameter. Can be retrieved from Get-IqpDevices
+    A device id. Required parameter. Can be retrieved from Get-IqsDevices
 
 - < CommonParameters >
 
@@ -244,11 +244,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="ping-device">Ping-IqpDevice</a>
+# <a name="ping-device">Ping-IqsDevice</a>
 
 ### Description
 
@@ -256,7 +256,7 @@ Pings an existing device
     
 ### Syntax
 
-    Ping-IqpDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Ping-IqsDevice [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -266,11 +266,11 @@ Pings an existing device
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A device id. Required parameter. Can be retrieved from Get-IqpDevices
+    A device id. Required parameter. Can be retrieved from Get-IqsDevices
 
 - < CommonParameters >
 
@@ -285,4 +285,4 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Ping-IqpDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id e0a31d48021e492c8c7d45b17ac36175
+    C:\PS>Ping-IqsDevice -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id e0a31d48021e492c8c7d45b17ac36175

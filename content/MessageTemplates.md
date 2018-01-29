@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="MessageTemplates">Get-IqpMessageTemplates</a>
+# <a name="MessageTemplates">Get-IqsMessageTemplates</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with message templates that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpMessageTemplates [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsMessageTemplates [-Connection < Hashtable >] [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -53,11 +53,11 @@ To execute this cmdlet needed system administator role.
 
 ### Example
     
-    C:\PS>Get-IqpMessageTemplates -Filter @{ name="Welcome Message" } -Take 10
+    C:\PS>Get-IqsMessageTemplates -Filter @{ name="Welcome Message" } -Take 10
 
 ---
 
-# <a name="MessageTemplate">Get-IqpMessageTemplate</a>
+# <a name="MessageTemplate">Get-IqsMessageTemplate</a>
 
 ### Description
 
@@ -65,7 +65,7 @@ Gets MessageTemplate by its unique id
     
 ### Syntax
 
-    Get-IqpMessageTemplate [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Get-IqsMessageTemplate [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -75,7 +75,7 @@ Gets MessageTemplate by its unique id
         
 - Id < String >
 
-    A message template id. Required parameter. Can be retrieved from Get-IqpMessageTemplates
+    A message template id. Required parameter. Can be retrieved from Get-IqsMessageTemplates
 
 - < CommonParameters >
 
@@ -90,11 +90,11 @@ To execute this cmdlet needed system administator role.
 
 ### Example
     
-    C:\PS>Get-IqpMessageTemplate -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsMessageTemplate -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-MessageTemplate">New-IqpMessageTemplate</a>
+# <a name="new-MessageTemplate">New-IqsMessageTemplate</a>
 
 ### Description
 
@@ -102,7 +102,7 @@ Creates new message template
     
 ### Syntax
 
-    New-IqpMessageTemplate [-Connection < Hashtable >] [-MessageTemplate] < Object > [< CommonParameters >]
+    New-IqsMessageTemplate [-Connection < Hashtable >] [-MessageTemplate] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -136,11 +136,11 @@ To execute this cmdlet needed system administator role.
 
 ### Example
     
-    C:\PS>New-IqpMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
+    C:\PS>New-IqsMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
 
 ---
 
-# <a name="edit-MessageTemplate">Update-IqpMessageTemplate</a>
+# <a name="edit-MessageTemplate">Update-IqsMessageTemplate</a>
  
 ### Description
 
@@ -148,7 +148,7 @@ Updates existing message template
     
 ### Syntax
 
-    Update-IqpMessageTemplate [-Connection < Hashtable >] [-MessageTemplate] < Object > [< CommonParameters >]
+    Update-IqsMessageTemplate [-Connection < Hashtable >] [-MessageTemplate] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -182,11 +182,11 @@ To execute this cmdlet needed system administator role.
 
 ### Example
     
-    C:\PS>Update-IqpMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
+    C:\PS>Update-IqsMessageTemplate -MessageTemplate @{ text=@{ en="Hurry slowly" }; author=@{ en="Russian proverb" }; status="completed" }
 
 ---
 
-# <a name="delete-MessageTemplate">Remove-IqpMessageTemplate</a>
+# <a name="delete-MessageTemplate">Remove-IqsMessageTemplate</a>
     
 ### Description
 
@@ -194,7 +194,7 @@ Deletes existing message template
     
 ### Syntax
 
-    Remove-IqpMessageTemplate [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
+    Remove-IqsMessageTemplate [-Connection < Hashtable >] [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -204,7 +204,7 @@ Deletes existing message template
         
 - Id < String >
 
-    A message template id. Required parameter. Can be retrieved from Get-IqpMessageTemplates
+    A message template id. Required parameter. Can be retrieved from Get-IqsMessageTemplates
 
 - < CommonParameters >
 
@@ -219,4 +219,4 @@ To execute this cmdlet needed system administator role.
 
 ### Example
     
-    C:\PS>Remove-IqpMessageTemplate -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsMessageTemplate -Id 85e52f3abf2e4091b489dc4f01df2df2

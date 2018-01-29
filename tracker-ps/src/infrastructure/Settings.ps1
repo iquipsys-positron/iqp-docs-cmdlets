@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Get-IqpSettingsSections
+function Get-IqsSettingsSections
 {
 <#
 .SYNOPSIS
@@ -39,7 +39,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpSettingsSections
+Get-IqsSettingsSections
 
 #>
     [CmdletBinding()]
@@ -63,7 +63,7 @@ Get-IqpSettingsSections
 }
 
 
-function Read-IqpSettingsSection
+function Read-IqsSettingsSection
 {
 <#
 .SYNOPSIS
@@ -84,7 +84,7 @@ A section id
 
 .EXAMPLE
 
-Read-IqpSettingsSection -Section 123
+Read-IqsSettingsSection -Section 123
 
 #>
     [CmdletBinding()]
@@ -104,7 +104,7 @@ Read-IqpSettingsSection -Section 123
 }
 
 
-function Write-IqpSettingsSection
+function Write-IqsSettingsSection
 {
 <#
 .SYNOPSIS
@@ -129,7 +129,7 @@ A section parameters
 
 .EXAMPLE
 
-Write-IqpSettingsSection -Section 123 -Parameters @{ key1=123; key2="ABC" }
+Write-IqsSettingsSection -Section 123 -Parameters @{ key1=123; key2="ABC" }
 
 #>
     [CmdletBinding()]
@@ -151,7 +151,7 @@ Write-IqpSettingsSection -Section 123 -Parameters @{ key1=123; key2="ABC" }
 }
 
 
-function Read-IqpSettingsParam
+function Read-IqsSettingsParam
 {
 <#
 .SYNOPSIS
@@ -176,7 +176,7 @@ A parameter key
 
 .EXAMPLE
 
-Read-IqpSettingsParam -Section 123 -Key "language"
+Read-IqsSettingsParam -Section 123 -Key "language"
 
 #>
     [CmdletBinding()]
@@ -198,7 +198,7 @@ Read-IqpSettingsParam -Section 123 -Key "language"
 }
 
 
-function Write-IqpSettingsParam
+function Write-IqsSettingsParam
 {
 <#
 .SYNOPSIS
@@ -227,7 +227,7 @@ A parameter value
 
 .EXAMPLE
 
-Write-IqpSettingsParam -Section 123 -Key language -Value en
+Write-IqsSettingsParam -Section 123 -Key language -Value en
 
 #>
     [CmdletBinding()]
@@ -251,7 +251,7 @@ Write-IqpSettingsParam -Section 123 -Key language -Value en
 }
 
 
-function Add-IqpSettingsParam
+function Add-IqsSettingsParam
 {
 <#
 .SYNOPSIS
@@ -280,7 +280,7 @@ An increment count
 
 .EXAMPLE
 
-Add-IqpSettingsParam -Section 123 -Key attempt -Count 1
+Add-IqsSettingsParam -Section 123 -Key attempt -Count 1
 
 #>
     [CmdletBinding()]

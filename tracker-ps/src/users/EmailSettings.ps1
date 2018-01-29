@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Get-IqpEmailSettings
+function Get-IqsEmailSettings
 {
 <#
 .SYNOPSIS
@@ -27,7 +27,7 @@ A unique user id
 
 .EXAMPLE
 
-Get-IqpEmailSettings -Id 123
+Get-IqsEmailSettings -Id 123
 
 #>
     [CmdletBinding()]
@@ -47,7 +47,7 @@ Get-IqpEmailSettings -Id 123
 }
 
 
-function Set-IqpEmailSettings
+function Set-IqsEmailSettings
 {
 <#
 .SYNOPSIS
@@ -75,7 +75,7 @@ An user email settings with the following structure
 
 .EXAMPLE
 
-Set-IqpEmailSettings -Settings @{ id="123"; name="Test user"; email="test@somewhere.com"; language="en" }
+Set-IqsEmailSettings -Settings @{ id="123"; name="Test user"; email="test@somewhere.com"; language="en" }
 
 #>
     [CmdletBinding()]
@@ -95,7 +95,7 @@ Set-IqpEmailSettings -Settings @{ id="123"; name="Test user"; email="test@somewh
 }
 
 
-function Request-IqpEmailVerification
+function Request-IqsEmailVerification
 {
 <#
 .SYNOPSIS
@@ -116,7 +116,7 @@ User login
 
 .EXAMPLE
 
-Request-IqpEmailVerification -Login test@somewhere.com
+Request-IqsEmailVerification -Login test@somewhere.com
 
 #>
     [CmdletBinding()]
@@ -136,7 +136,7 @@ Request-IqpEmailVerification -Login test@somewhere.com
 }
 
 
-function Submit-IqpEmailVerification
+function Submit-IqsEmailVerification
 {
 <#
 .SYNOPSIS
@@ -161,7 +161,7 @@ Reset code
 
 .EXAMPLE
 
-Submit-IqpEmailVerification -Login test@somewhere.com -Code 1245
+Submit-IqsEmailVerification -Login test@somewhere.com -Code 1245
 
 #>
     [CmdletBinding()]

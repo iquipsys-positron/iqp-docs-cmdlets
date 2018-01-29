@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="ObjectGroups">Get-IqpObjectGroups</a>
+# <a name="ObjectGroups">Get-IqsObjectGroups</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with groups that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpObjectGroups [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsObjectGroups [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with groups that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpObjectGroups -SiteId 1 -Filter @{ name="trucks" } -Take 10
+    C:\PS>Get-IqsObjectGroups -SiteId 1 -Filter @{ name="trucks" } -Take 10
 
 ---
 
-# <a name="ObjectGroup">Get-IqpObjectGroup</a>
+# <a name="ObjectGroup">Get-IqsObjectGroup</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets group by its unique id
     
 ### Syntax
 
-    Get-IqpObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,11 +79,11 @@ Gets group by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A group id. Required parameter. Can be retrieved from Get-IqpObjectGroups
+    A group id. Required parameter. Can be retrieved from Get-IqsObjectGroups
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpObjectGroup -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsObjectGroup -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-ObjectGroup">New-IqpObjectGroup</a>
+# <a name="new-ObjectGroup">New-IqsObjectGroup</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates a new group.
     
 ### Syntax
 
-    New-IqpObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Group] < Object > [< CommonParameters >]
+    New-IqsObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Group] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -120,7 +120,7 @@ Creates a new group.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Group < Object >
 
@@ -144,11 +144,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
+    C:\PS>New-IqsObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
 
 ---
 
-# <a name="edit-ObjectGroup">Update-IqpObjectGroup</a>
+# <a name="edit-ObjectGroup">Update-IqsObjectGroup</a>
  
 ### Description
 
@@ -156,7 +156,7 @@ Updates existing group.
     
 ### Syntax
 
-    Update-IqpObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Group] < Object > [< CommonParameters >]
+    Update-IqsObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Group] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -166,7 +166,7 @@ Updates existing group.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Group < Object >
 
@@ -190,11 +190,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
+    C:\PS>Update-IqsObjectGroup -SiteId 1 -Group @{ site_id="1"; name="Pickups"; object_ids=@("1", "2") }
 
 ---
 
-# <a name="delete-ObjectGroup">Remove-IqpObjectGroup</a>
+# <a name="delete-ObjectGroup">Remove-IqsObjectGroup</a>
     
 ### Description
 
@@ -202,7 +202,7 @@ Deletes existing group
     
 ### Syntax
 
-    Remove-IqpObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsObjectGroup [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -212,11 +212,11 @@ Deletes existing group
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A group id. Required parameter. Can be retrieved from Get-IqpObjectGroups
+    A group id. Required parameter. Can be retrieved from Get-IqsObjectGroups
 
 - < CommonParameters >
 
@@ -231,4 +231,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpObjectGroup -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsObjectGroup -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

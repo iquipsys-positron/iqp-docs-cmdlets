@@ -6,7 +6,7 @@
 ##
 #######################################################
 
-function Read-IqpLog
+function Read-IqsLog
 {
 <#
 .SYNOPSIS
@@ -43,7 +43,7 @@ Switch to read log messages as text
 
 .EXAMPLE
 
-Read-IqpLog -Filter @{ search="Invoice" } -Take 10 -AsText
+Read-IqsLog -Filter @{ search="Invoice" } -Take 10 -AsText
 
 #>
     [CmdletBinding()]
@@ -75,7 +75,7 @@ Read-IqpLog -Filter @{ search="Invoice" } -Take 10 -AsText
 }
 
 
-function Read-IqpErrors 
+function Read-IqsErrors 
 {
 <#
 .SYNOPSIS
@@ -108,7 +108,7 @@ Switch to read traces as text
 
 .EXAMPLE
 
-Read-IqpErrors -Filter @{ search="Invoice" } -Take 10 -AsText
+Read-IqsErrors -Filter @{ search="Invoice" } -Take 10 -AsText
 
 #>
     [CmdletBinding()]
@@ -140,7 +140,7 @@ Read-IqpErrors -Filter @{ search="Invoice" } -Take 10 -AsText
 }
 
 
-function Write-IqpLog
+function Write-IqsLog
 {
 <#
 .SYNOPSIS
@@ -167,7 +167,7 @@ A message with the following structure
 
 .EXAMPLE
 
-Write-IqpLog -Message @{ correlation_id="123"; level=2; source="Powershell" error=@{ message="Failed" }; message="Just a test" }
+Write-IqsLog -Message @{ correlation_id="123"; level=2; source="Powershell" error=@{ message="Failed" }; message="Just a test" }
 
 #>
     [CmdletBinding()]
@@ -186,7 +186,7 @@ Write-IqpLog -Message @{ correlation_id="123"; level=2; source="Powershell" erro
     end {}
 }
 
-function Clear-IqpLog
+function Clear-IqsLog
 {
 <#
 .SYNOPSIS
@@ -203,7 +203,7 @@ A connection object
 
 .EXAMPLE
 
-Clear-IqpLog
+Clear-IqsLog
 
 #>
     [CmdletBinding()]

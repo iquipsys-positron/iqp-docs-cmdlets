@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="signals">Get-IqpSignals</a>
+# <a name="signals">Get-IqsSignals</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with signals that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpSignals [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsSignals [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -26,7 +26,7 @@ Gets a page with signals that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpSignals -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type=1 } -Take 10
+    C:\PS>Get-IqsSignals -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type=1 } -Take 10
 
 ---
 
-# <a name="send-signal">Send-IqpSignal</a>
+# <a name="send-signal">Send-IqsSignal</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Sends a signal to device
     
 ### Syntax
 
-    New-IqpSignal [-Connection < Hashtable >] [-SiteId] < String > [-Signal] < Object > [< CommonParameters >]
+    New-IqsSignal [-Connection < Hashtable >] [-SiteId] < String > [-Signal] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -79,7 +79,7 @@ Sends a signal to device
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Signal < Object >
 
@@ -103,11 +103,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Send-IqpSignal -SiteId 1 -Signal @{ site_id="1"; device_id="123"; type=3 }
+    C:\PS>Send-IqsSignal -SiteId 1 -Signal @{ site_id="1"; device_id="123"; type=3 }
 
 ---
 
-# <a name="lock-signal">Lock-IqpSignal</a>
+# <a name="lock-signal">Lock-IqsSignal</a>
  
 ### Description
 
@@ -115,7 +115,7 @@ Puts a temporary lock on signal by its unique id
     
 ### Syntax
 
-    Lock-IqpSignal [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Lock-IqsSignal [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -125,11 +125,11 @@ Puts a temporary lock on signal by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A signal id. Required parameter. Can be retrieved from Get-IqpSignals.
+    A signal id. Required parameter. Can be retrieved from Get-IqsSignals.
 
 - < CommonParameters >
 
@@ -144,11 +144,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Lock-IqpSignal -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Lock-IqsSignal -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="complete-signal">Complete-IqpSignal</a>
+# <a name="complete-signal">Complete-IqsSignal</a>
  
 ### Description
 
@@ -156,7 +156,7 @@ Marks signal as sent to complete its delivery
     
 ### Syntax
 
-    Complete-IqpSignal [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Complete-IqsSignal [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -166,11 +166,11 @@ Marks signal as sent to complete its delivery
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A signal id. Required parameter. Can be retrieved from Get-IqpSignals.
+    A signal id. Required parameter. Can be retrieved from Get-IqsSignals.
 
 - < CommonParameters >
 
@@ -185,11 +185,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Complete-IqpSignal -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Complete-IqsSignal -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="delete-signal">Remove-IqpSignal</a>
+# <a name="delete-signal">Remove-IqsSignal</a>
     
 ### Description
 
@@ -197,7 +197,7 @@ Removes signal by its unique id
     
 ### Syntax
 
-    Remove-IqpSignal [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsSignal [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -207,11 +207,11 @@ Removes signal by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A signal id. Required parameter. Can be retrieved from Get-IqpSignals
+    A signal id. Required parameter. Can be retrieved from Get-IqsSignals
 
 - < CommonParameters >
 
@@ -226,4 +226,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpSignal -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsSignal -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

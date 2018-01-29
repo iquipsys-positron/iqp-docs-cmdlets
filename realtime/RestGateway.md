@@ -4,7 +4,7 @@ Page navigation
 
 ---
 
-# <a name="send-update">Send-IqpStatusUpdate</a>
+# <a name="send-update">Send-IqsStatusUpdate</a>
 
 ### Description
 
@@ -12,7 +12,7 @@ Sends device status update through REST gateway. The device shall be registered 
     
 ### Syntax
 
-    Send-IqpStatusUpdate [-Connection < Hashtable >] [-Message] < Object > [< CommonParameters >]
+    Send-IqsStatusUpdate [-Connection < Hashtable >] [-Message] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -37,4 +37,4 @@ To execute this cmdlet needed system administrator role.
 
 ### Example
     
-    C:\PS>Send-IqpStatusUpdate -Message @{ device_udi="+15202250000"; lat=32.01; long=-110.22; alt=720; angle=45; speed=30; quality=2; pressed=false }
+    C:\PS>Send-IqsStatusUpdate -Message @{ device_udi="+15202250000"; lat=32.01; long=-110.22; alt=720; angle=45; speed=30; quality=2; pressed=false }

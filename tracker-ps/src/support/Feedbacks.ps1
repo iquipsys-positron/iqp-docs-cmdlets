@@ -7,7 +7,7 @@
 #######################################################
 
 
-function Get-IqpFeedbacks
+function Get-IqsFeedbacks
 {
 <#
 .SYNOPSIS
@@ -40,7 +40,7 @@ A include total count (default: false)
 
 .EXAMPLE
 
-Get-IqpFeedbacks -Filter @{ tags="goals,success" } -Take 10
+Get-IqsFeedbacks -Filter @{ tags="goals,success" } -Take 10
 
 #>
     [CmdletBinding()]
@@ -66,7 +66,7 @@ Get-IqpFeedbacks -Filter @{ tags="goals,success" } -Take 10
 }
 
 
-function Get-IqpFeedback
+function Get-IqsFeedback
 {
 <#
 .SYNOPSIS
@@ -87,7 +87,7 @@ A feedback id
 
 .EXAMPLE
 
-Get-IqpFeedback -Id 123
+Get-IqsFeedback -Id 123
 
 #>
     [CmdletBinding()]
@@ -107,7 +107,7 @@ Get-IqpFeedback -Id 123
 }
 
 
-function Send-IqpFeedback
+function Send-IqsFeedback
 {
 <#
 .SYNOPSIS
@@ -148,7 +148,7 @@ A feedback with the following structure:
 
 .EXAMPLE
 
-Send-IqpFeedback -Feedback @{ category="feature request"; app="myapp"; title="I propose an idea"; content="Add somethign cool to your product" }
+Send-IqsFeedback -Feedback @{ category="feature request"; app="myapp"; title="I propose an idea"; content="Add somethign cool to your product" }
 
 #>
     [CmdletBinding()]
@@ -168,7 +168,7 @@ Send-IqpFeedback -Feedback @{ category="feature request"; app="myapp"; title="I 
 }
 
 
-function Resolve-IqpFeedback
+function Resolve-IqsFeedback
 {
 <#
 .SYNOPSIS
@@ -193,7 +193,7 @@ A rely text
 
 .EXAMPLE
 
-Resolve-IqpFeedback -Id 123 -Reply "Thanks for your feedback and see you later!"
+Resolve-IqsFeedback -Id 123 -Reply "Thanks for your feedback and see you later!"
 
 #>
     [CmdletBinding()]
@@ -215,7 +215,7 @@ Resolve-IqpFeedback -Id 123 -Reply "Thanks for your feedback and see you later!"
 }
 
 
-function Remove-IqpFeedback
+function Remove-IqsFeedback
 {
 <#
 .SYNOPSIS
@@ -236,7 +236,7 @@ A feedback id
 
 .EXAMPLE
 
-Remove-IqpFeedback -Id 123
+Remove-IqsFeedback -Id 123
 
 #>
     [CmdletBinding()]

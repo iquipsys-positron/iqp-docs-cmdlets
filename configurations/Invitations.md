@@ -7,7 +7,7 @@ Page navigation
 
 ---
 
-# <a name="invitations">Get-IqpInvitations</a>
+# <a name="invitations">Get-IqsInvitations</a>
    
 ### Description
 
@@ -15,7 +15,7 @@ Gets a page with invitations that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpInvitations [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsInvitations [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -25,7 +25,7 @@ Gets a page with invitations that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -56,11 +56,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpInvitations -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
+    C:\PS>Get-IqsInvitations -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba
 
 ---
 
-# <a name="invitation">Get-IqpInvitation</a>
+# <a name="invitation">Get-IqsInvitation</a>
 
 ### Description
 
@@ -68,7 +68,7 @@ Gets invitation by its unique id
     
 ### Syntax
 
-    Get-IqpInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -78,11 +78,11 @@ Gets invitation by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A invitation id. Required parameter. Can be retrieved from Get-IqpInvitations
+    A invitation id. Required parameter. Can be retrieved from Get-IqsInvitations
 
 - < CommonParameters >
 
@@ -97,11 +97,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpInvitation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsInvitation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="send-invitation">Send-IqpInvitation</a>
+# <a name="send-invitation">Send-IqsInvitation</a>
 
 ### Description
 
@@ -109,7 +109,7 @@ Sends a new invitation
     
 ### Syntax
 
-    Send-IqpInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Invitation] < Object > [< CommonParameters >]
+    Send-IqsInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Invitation] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -119,7 +119,7 @@ Sends a new invitation
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Invitation < Object >
 
@@ -145,11 +145,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-     C:\PS>Send-IqpInvitation -SiteId 1 -Invitation @{ site_id="1"; site_name="Test site"; invitee_email="test@somewhere.com" 
+     C:\PS>Send-IqsInvitation -SiteId 1 -Invitation @{ site_id="1"; site_name="Test site"; invitee_email="test@somewhere.com" 
 
 ---
 
-# <a name="delete-invitation">Remove-IqpInvitation</a>
+# <a name="delete-invitation">Remove-IqsInvitation</a>
     
 ### Description
 
@@ -157,7 +157,7 @@ Removes invitation by its unique id
     
 ### Syntax
 
-    Remove-IqpInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsInvitation [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -167,11 +167,11 @@ Removes invitation by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A invitation id. Required parameter. Can be retrieved from Get-IqpInvitations
+    A invitation id. Required parameter. Can be retrieved from Get-IqsInvitations
 
 - < CommonParameters >
 
@@ -186,4 +186,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpInvitation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsInvitation -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2

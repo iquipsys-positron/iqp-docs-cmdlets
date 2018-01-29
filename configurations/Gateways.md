@@ -10,7 +10,7 @@ Page navigation
 
 ---
 
-# <a name="gateways">Get-IqpGateways</a>
+# <a name="gateways">Get-IqsGateways</a>
    
 ### Description
 
@@ -18,7 +18,7 @@ Gets a page with gateways that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqpGateways [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsGateways [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -28,7 +28,7 @@ Gets a page with gateways that satisfy specified criteria
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Filter < Hashtable >
 
@@ -59,11 +59,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpGateways -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ udi="23433455" } -Take 10
+    C:\PS>Get-IqsGateways -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ udi="23433455" } -Take 10
 
 ---
 
-# <a name="gateway">Get-IqpGateway</a>
+# <a name="gateway">Get-IqsGateway</a>
 
 ### Description
 
@@ -71,7 +71,7 @@ Gets gateway by its unique id
     
 ### Syntax
 
-    Get-IqpGateway [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsGateway [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -81,11 +81,11 @@ Gets gateway by its unique id
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A gateway id. Required parameter. Can be retrieved from Get-IqpGateways
+    A gateway id. Required parameter. Can be retrieved from Get-IqsGateways
 
 - < CommonParameters >
 
@@ -99,11 +99,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqpGateway -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsGateway -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-gateway">New-IqpGateway</a>
+# <a name="new-gateway">New-IqsGateway</a>
 
 ### Description
 
@@ -111,7 +111,7 @@ Creates new gateway
     
 ### Syntax
 
-    New-IqpGateway [-Connection < Hashtable >] [-SiteId] < String > [-Gateway] < Object > [< CommonParameters >]
+    New-IqsGateway [-Connection < Hashtable >] [-SiteId] < String > [-Gateway] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -121,7 +121,7 @@ Creates new gateway
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Gateway < Object >
 
@@ -149,11 +149,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>New-IqpGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="134552345"; label="Main building"; active=$true }
+    C:\PS>New-IqsGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="134552345"; label="Main building"; active=$true }
 
 ---
 
-# <a name="edit-gateway">Update-IqpGateway</a>
+# <a name="edit-gateway">Update-IqsGateway</a>
  
 ### Description
 
@@ -161,7 +161,7 @@ Updates existing gateway
     
 ### Syntax
 
-    Update-IqpGateway [-Connection < Hashtable >] [-SiteId] < String > [-Gateway] < Object > [< CommonParameters >]
+    Update-IqsGateway [-Connection < Hashtable >] [-SiteId] < String > [-Gateway] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -171,7 +171,7 @@ Updates existing gateway
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Gateway < Object >
 
@@ -199,11 +199,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqpGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="3454363645"; label="Main building"; active=$true }
+    C:\PS>Update-IqsGateway -SiteId 1 -Gateway @{ site_id="1"; model="MCTD"; udi="3454363645"; label="Main building"; active=$true }
 
 ---
 
-# <a name="delete-gateway">Remove-IqpGateway</a>
+# <a name="delete-gateway">Remove-IqsGateway</a>
     
 ### Description
 
@@ -211,7 +211,7 @@ Deletes existing gateway by id.
     
 ### Syntax
 
-    Remove-IqpGateway [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsGateway [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -221,11 +221,11 @@ Deletes existing gateway by id.
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A gateway id. Required parameter. Can be retrieved from Get-IqpGateways
+    A gateway id. Required parameter. Can be retrieved from Get-IqsGateways
 
 - < CommonParameters >
 
@@ -240,11 +240,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqpGateway -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsGateway -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="ping-gateway">Ping-IqpGateway</a>
+# <a name="ping-gateway">Ping-IqsGateway</a>
 
 ### Description
 
@@ -252,7 +252,7 @@ Pings an existing gateway
     
 ### Syntax
 
-    Ping-IqpGateway [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Ping-IqsGateway [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -262,11 +262,11 @@ Pings an existing gateway
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A gateway id. Required parameter. Can be retrieved from Get-IqpGateways
+    A gateway id. Required parameter. Can be retrieved from Get-IqsGateways
 
 - < CommonParameters >
 
@@ -281,11 +281,11 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Ping-IqpGateway -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Ping-IqsGateway -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="stats-gateway">Request-IqpGatewayStats</a>
+# <a name="stats-gateway">Request-IqsGatewayStats</a>
 
 ### Description
 
@@ -293,7 +293,7 @@ Requests comm statistics from an existing gateway
     
 ### Syntax
 
-    Request-IqpGatewayStats [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Request-IqsGatewayStats [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -303,11 +303,11 @@ Requests comm statistics from an existing gateway
         
 - SiteId < String >
 
-    A site id. Required parameter. Can be retrieved from Get-IqpSites
+    A site id. Required parameter. Can be retrieved from Get-IqsSites
         
 - Id < String >
 
-    A gateway id. Required parameter. Can be retrieved from Get-IqpGateways
+    A gateway id. Required parameter. Can be retrieved from Get-IqsGateways
 
 - < CommonParameters >
 
@@ -322,4 +322,4 @@ To execute this cmdlet needed site admin or higher roles.
 
 ### Example
     
-    C:\PS>Request-IqpGatewayStats -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Request-IqsGatewayStats -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
