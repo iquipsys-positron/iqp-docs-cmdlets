@@ -8,7 +8,7 @@ Page navigation
 
 ---
 
-# <a name="rules">Get-IqsRules</a>
+# <a name="rules">Get-IqsEventRules</a>
    
 ### Description
 
@@ -16,7 +16,7 @@ Gets a page with rules that satisfy specified criteria
     
 ### Syntax
 
-    Get-IqsRules [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
+    Get-IqsEventRules [-Connection < Hashtable >] [-SiteId] < String > [[-Filter] < Hashtable >] [[-Skip] < Int32 >] [[-Take] < Int32 >] [[-Total] < Boolean >] [< CommonParameters >]
     
 ### Parameters
 
@@ -57,11 +57,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqsRules -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type="object" } -Take 10
+    C:\PS>Get-IqsEventRules -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Filter @{ type="object" } -Take 10
 
 ---
 
-# <a name="rule">Get-IqsRule</a>
+# <a name="rule">Get-IqsEventRule</a>
 
 ### Description
 
@@ -69,7 +69,7 @@ Gets rule by its unique id
     
 ### Syntax
 
-    Get-IqsRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Get-IqsEventRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -83,7 +83,7 @@ Gets rule by its unique id
         
 - Id < String >
 
-    A rule id. Required parameter. Can be retrieved from Get-IqsRules
+    A rule id. Required parameter. Can be retrieved from Get-IqsEventRules
 
 - < CommonParameters >
 
@@ -98,11 +98,11 @@ To execute this cmdlet needed site user or higher roles.
 
 ### Example
     
-    C:\PS>Get-IqsRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Get-IqsEventRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
 
 ---
 
-# <a name="new-rule">New-IqsRule</a>
+# <a name="new-rule">New-IqsEventRule</a>
 
 ### Description
 
@@ -110,7 +110,7 @@ Creates new rule
     
 ### Syntax
 
-    New-IqsRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
+    New-IqsEventRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -158,11 +158,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>New-IqsRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
+    C:\PS>New-IqsEventRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
 
 ---
 
-# <a name="edit-rule">Update-IqsRule</a>
+# <a name="edit-rule">Update-IqsEventRule</a>
  
 ### Description
 
@@ -170,7 +170,7 @@ Updates existing rule
     
 ### Syntax
 
-    Update-IqsRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
+    Update-IqsEventRule [-Connection < Hashtable >] [-SiteId] < String > [-Rule] < Object > [< CommonParameters >]
     
 ### Parameters
 
@@ -218,11 +218,11 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Update-IqsRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
+    C:\PS>Update-IqsEventRule -SiteId 1 -Rule @{ site_id="1"; type="presence"; name="Present in area"; event_type="auto" }
 
 ---
 
-# <a name="delete-rule">Remove-IqsRule</a>
+# <a name="delete-rule">Remove-IqsEventRule</a>
     
 ### Description
 
@@ -230,7 +230,7 @@ Deletes existing rule
     
 ### Syntax
 
-    Remove-IqsRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
+    Remove-IqsEventRule [-Connection < Hashtable >] [-SiteId] < String > [-Id] < String > [< CommonParameters >]
     
 ### Parameters
 
@@ -244,7 +244,7 @@ Deletes existing rule
         
 - Id < String >
 
-    A rule id. Required parameter. Can be retrieved from Get-IqsRules
+    A rule id. Required parameter. Can be retrieved from Get-IqsEventRules
 
 - < CommonParameters >
 
@@ -259,4 +259,4 @@ To execute this cmdlet needed site manager or higher roles.
 
 ### Example
     
-    C:\PS>Remove-IqsRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
+    C:\PS>Remove-IqsEventRule -SiteId 9cfaf79bc95b4a9e912314eb3db7a4ba -Id 85e52f3abf2e4091b489dc4f01df2df2
